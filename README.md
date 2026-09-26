@@ -12,6 +12,8 @@ It then answers three questions:
 2. Which problems drive the complaints, and in which app?
 3. What should DANA fix first, compared with its peers?
 
+**Live dashboards:** https://public.tableau.com/app/profile/emelio.exaudi/viz/ewallet_review_insights/1MarketScorecard
+
 **Interactive Tableau dashboards:** 3 views. Filter by app and by review type (latest vs most helpful). Click any cell of the complaint heatmap to read the reviews behind it.
 
 ![Market and scorecard](images/dashboard_1_market.png)
