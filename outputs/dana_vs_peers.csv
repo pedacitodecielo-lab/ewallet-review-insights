@@ -1,0 +1,11 @@
+theme,DANA,peer_avg,best_peer,best_peer_app,gap_pp
+"Paylater, loans & debt collection",0.128,0.0555,0.01,LinkAja,7.25
+Balance lost / unauthorised deduction,0.086,0.066,0.036,ShopeePay,2.0
+Account security & fraud,0.024,0.034,0.022,ShopeePay,-1.0
+Hard to use,0.026,0.045,0.024,GoPay,-1.9
+"Ads, notifications & promos",0.008,0.032,0.02,OVO,-2.4
+Fees & charges,0.016,0.0595,0.02,GoPay,-4.35
+App performance & bugs,0.054,0.1125,0.066,ShopeePay,-5.85
+"Login, OTP & verification",0.064,0.1305,0.042,GoPay,-6.65
+Customer service,0.076,0.1545,0.066,GoPay,-7.85
+Failed / pending transfer or top-up,0.092,0.1895,0.092,GoPay,-9.75

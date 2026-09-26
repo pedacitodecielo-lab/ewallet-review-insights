@@ -1,0 +1,5 @@
+~*
+*.twbr
+__pycache__/
+*.pyc
+Belajar_*.md

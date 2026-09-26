@@ -1,0 +1,11 @@
+theme,frequency,mentions,severity_one_star,quadrant
+Failed / pending transfer or top-up,0.17,425,0.8612,Fix first
+Customer service,0.1388,347,0.8501,Fix first
+"Login, OTP & verification",0.1172,293,0.8123,Fix first
+App performance & bugs,0.1008,252,0.7698,"Frequent, milder"
+Balance lost / unauthorised deduction,0.07,175,0.9029,Fix first
+"Paylater, loans & debt collection",0.07,175,0.5829,"Frequent, milder"
+Fees & charges,0.0508,127,0.748,Monitor
+Hard to use,0.0412,103,0.7184,Monitor
+Account security & fraud,0.032,80,0.9375,Rare but severe
+"Ads, notifications & promos",0.0272,68,0.5441,Monitor

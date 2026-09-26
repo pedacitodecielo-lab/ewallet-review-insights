@@ -1,0 +1,2879 @@
+id,app,rating,in_recent,in_helpful,is_negative,theme
+14590807080,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14590069499,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14590069499,DANA,1,True,False,True,Failed / pending transfer or top-up
+14590045405,DANA,5,True,True,False,"Paylater, loans & debt collection"
+14589942057,DANA,5,True,True,False,"Paylater, loans & debt collection"
+14589639559,DANA,1,True,True,True,Account security & fraud
+14589639559,DANA,1,True,True,True,Customer service
+14587965838,DANA,1,True,True,True,"Paylater, loans & debt collection"
+14587733986,DANA,1,True,True,True,Failed / pending transfer or top-up
+14587551989,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14586563408,DANA,2,True,True,True,Fees & charges
+14585875545,DANA,1,True,True,True,Failed / pending transfer or top-up
+14585875545,DANA,1,True,True,True,Customer service
+14585724991,DANA,5,True,True,False,Fees & charges
+14584824237,DANA,1,True,True,True,"Login, OTP & verification"
+14584824237,DANA,1,True,True,True,App performance & bugs
+14584701097,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14584653825,DANA,1,True,True,True,"Paylater, loans & debt collection"
+14583863191,DANA,3,True,True,False,"Login, OTP & verification"
+14583366148,DANA,1,True,True,True,"Login, OTP & verification"
+14583256239,DANA,1,True,True,True,Customer service
+14583067632,DANA,1,True,True,True,"Login, OTP & verification"
+14582444932,DANA,1,True,True,True,"Login, OTP & verification"
+14582245753,DANA,4,True,True,False,Balance lost / unauthorised deduction
+14582245753,DANA,4,True,True,False,"Login, OTP & verification"
+14582245753,DANA,4,True,True,False,Customer service
+14580153526,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14580153526,DANA,1,True,True,True,"Paylater, loans & debt collection"
+14580136165,DANA,1,True,True,True,Account security & fraud
+14580136165,DANA,1,True,True,True,"Ads, notifications & promos"
+14579726438,DANA,1,True,True,True,Failed / pending transfer or top-up
+14579726438,DANA,1,True,True,True,App performance & bugs
+14579398679,DANA,1,True,True,True,"Paylater, loans & debt collection"
+14579302083,DANA,1,True,True,True,Failed / pending transfer or top-up
+14579302083,DANA,1,True,True,True,Customer service
+14579297913,DANA,3,True,True,False,"Paylater, loans & debt collection"
+14578714595,DANA,1,True,True,True,Failed / pending transfer or top-up
+14578395935,DANA,1,True,True,True,"Login, OTP & verification"
+14578327039,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14578224534,DANA,1,True,True,True,Account security & fraud
+14578224534,DANA,1,True,True,True,Customer service
+14578224534,DANA,1,True,True,True,"Paylater, loans & debt collection"
+14577214383,DANA,1,True,True,True,Failed / pending transfer or top-up
+14577214383,DANA,1,True,True,True,Customer service
+14576457566,DANA,1,True,True,True,Failed / pending transfer or top-up
+14576457566,DANA,1,True,True,True,Customer service
+14576457566,DANA,1,True,True,True,Hard to use
+14576174353,DANA,1,True,True,True,"Login, OTP & verification"
+14576174353,DANA,1,True,True,True,Hard to use
+14575880582,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14575880582,DANA,1,True,True,True,Failed / pending transfer or top-up
+14575755559,DANA,5,True,True,False,"Paylater, loans & debt collection"
+14575427904,DANA,1,True,False,True,App performance & bugs
+14575227649,DANA,5,True,True,False,"Paylater, loans & debt collection"
+14574832772,DANA,5,True,True,False,Fees & charges
+14574787571,DANA,1,True,True,True,Failed / pending transfer or top-up
+14574787571,DANA,1,True,True,True,Customer service
+14574608583,DANA,1,True,True,True,Account security & fraud
+14574550907,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14574119672,DANA,2,True,True,True,"Paylater, loans & debt collection"
+14572466739,DANA,1,True,True,True,App performance & bugs
+14571617766,DANA,2,True,True,True,App performance & bugs
+14571379997,DANA,5,True,True,False,"Paylater, loans & debt collection"
+14571316550,DANA,5,True,True,False,"Paylater, loans & debt collection"
+14571221561,DANA,2,True,True,True,Customer service
+14571020621,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14570492618,DANA,5,True,True,False,Fees & charges
+14570492618,DANA,5,True,True,False,Hard to use
+14570016311,DANA,2,True,True,True,"Paylater, loans & debt collection"
+14569906444,DANA,5,True,True,False,"Paylater, loans & debt collection"
+14569849831,DANA,2,True,True,True,Failed / pending transfer or top-up
+14569413553,DANA,3,True,True,False,"Paylater, loans & debt collection"
+14568148209,DANA,1,True,True,True,Failed / pending transfer or top-up
+14568148209,DANA,1,True,True,True,App performance & bugs
+14567944210,DANA,1,True,True,True,Failed / pending transfer or top-up
+14567944210,DANA,1,True,True,True,Customer service
+14567534623,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14566942635,DANA,5,True,True,False,Fees & charges
+14566638018,DANA,2,True,True,True,App performance & bugs
+14565661135,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14565661135,DANA,1,True,True,True,Customer service
+14565618350,DANA,1,True,True,True,Customer service
+14564954437,DANA,1,True,True,True,Account security & fraud
+14564147396,DANA,5,True,True,False,Hard to use
+14563613181,DANA,5,True,True,False,"Paylater, loans & debt collection"
+14563266592,DANA,5,True,True,False,"Paylater, loans & debt collection"
+14563169314,DANA,5,True,True,False,Balance lost / unauthorised deduction
+14563108089,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14562852320,DANA,1,True,True,True,Failed / pending transfer or top-up
+14562852320,DANA,1,True,True,True,Customer service
+14562497387,DANA,1,True,True,True,Failed / pending transfer or top-up
+14561246988,DANA,1,True,True,True,Customer service
+14561246988,DANA,1,True,True,True,"Paylater, loans & debt collection"
+14560870823,DANA,1,True,True,True,Failed / pending transfer or top-up
+14560100096,DANA,1,True,True,True,App performance & bugs
+14559973948,DANA,1,True,True,True,Failed / pending transfer or top-up
+14559973948,DANA,1,True,True,True,App performance & bugs
+14559620050,DANA,2,True,True,True,"Paylater, loans & debt collection"
+14559495653,DANA,1,True,True,True,Failed / pending transfer or top-up
+14559414811,DANA,5,True,True,False,Customer service
+14559185882,DANA,2,True,True,True,"Paylater, loans & debt collection"
+14558536509,DANA,1,True,True,True,"Login, OTP & verification"
+14558488255,DANA,1,True,True,True,"Paylater, loans & debt collection"
+14558125872,DANA,5,True,True,False,App performance & bugs
+14557428796,DANA,2,True,True,True,"Paylater, loans & debt collection"
+14556485976,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14556485976,DANA,1,True,True,True,Account security & fraud
+14556407962,DANA,4,True,True,False,"Login, OTP & verification"
+14555488604,DANA,1,True,True,True,"Paylater, loans & debt collection"
+14555261999,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14555261999,DANA,1,True,True,True,Account security & fraud
+14555257656,DANA,1,True,True,True,Failed / pending transfer or top-up
+14555257656,DANA,1,True,True,True,"Login, OTP & verification"
+14555256676,DANA,1,True,True,True,"Login, OTP & verification"
+14555256676,DANA,1,True,True,True,Customer service
+14555187605,DANA,1,True,True,True,App performance & bugs
+14554993329,DANA,1,True,True,True,"Paylater, loans & debt collection"
+14554816023,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14554768394,DANA,1,True,True,True,Failed / pending transfer or top-up
+14553732323,DANA,1,True,True,True,"Login, OTP & verification"
+14552870945,DANA,4,True,True,False,"Paylater, loans & debt collection"
+14552746562,DANA,1,True,True,True,"Login, OTP & verification"
+14552471280,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14552191021,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14551538778,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14551506214,DANA,1,True,False,True,Failed / pending transfer or top-up
+14551506214,DANA,1,True,False,True,"Login, OTP & verification"
+14551491804,DANA,4,True,False,False,App performance & bugs
+14551436576,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14551436576,DANA,1,True,False,True,Customer service
+14551293163,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14551293163,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14551251879,DANA,1,True,False,True,App performance & bugs
+14550946918,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14550140095,DANA,5,True,False,False,Fees & charges
+14549935345,DANA,3,True,False,False,App performance & bugs
+14549935345,DANA,3,True,False,False,"Paylater, loans & debt collection"
+14549901655,DANA,2,True,False,True,Balance lost / unauthorised deduction
+14549901655,DANA,2,True,False,True,Customer service
+14549440214,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14549213643,DANA,2,True,False,True,Failed / pending transfer or top-up
+14548666498,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14548601039,DANA,1,True,False,True,Customer service
+14548601039,DANA,1,True,False,True,App performance & bugs
+14548510132,DANA,5,True,False,False,Fees & charges
+14547865623,DANA,4,True,False,False,"Paylater, loans & debt collection"
+14547290717,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14547012686,DANA,1,True,False,True,Failed / pending transfer or top-up
+14547012686,DANA,1,True,False,True,"Login, OTP & verification"
+14547012686,DANA,1,True,False,True,Customer service
+14547012686,DANA,1,True,False,True,App performance & bugs
+14546014956,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14543714591,DANA,1,True,False,True,Failed / pending transfer or top-up
+14543714591,DANA,1,True,False,True,"Login, OTP & verification"
+14543714591,DANA,1,True,False,True,Customer service
+14541419135,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14540596036,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14540596036,DANA,1,True,False,True,Account security & fraud
+14540596036,DANA,1,True,False,True,Customer service
+14540547617,DANA,1,True,False,True,Account security & fraud
+14540547617,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14540292315,DANA,1,True,False,True,Failed / pending transfer or top-up
+14539925713,DANA,5,True,False,False,Balance lost / unauthorised deduction
+14539717161,DANA,2,True,False,True,Balance lost / unauthorised deduction
+14539454807,DANA,2,True,False,True,"Paylater, loans & debt collection"
+14538620070,DANA,1,True,False,True,"Login, OTP & verification"
+14538620070,DANA,1,True,False,True,Customer service
+14537045768,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14536925219,DANA,1,True,False,True,Hard to use
+14536181163,DANA,1,True,False,True,App performance & bugs
+14535725887,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14535688907,DANA,1,True,False,True,"Login, OTP & verification"
+14535688907,DANA,1,True,False,True,Hard to use
+14534371095,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14533882055,DANA,2,True,False,True,"Paylater, loans & debt collection"
+14533688989,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14532320614,DANA,1,True,False,True,"Login, OTP & verification"
+14532304874,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14532038729,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14531827829,DANA,3,True,False,False,Failed / pending transfer or top-up
+14531827829,DANA,3,True,False,False,App performance & bugs
+14531827829,DANA,3,True,False,False,"Paylater, loans & debt collection"
+14531791031,DANA,1,True,False,True,Failed / pending transfer or top-up
+14531791031,DANA,1,True,False,True,"Login, OTP & verification"
+14531639385,DANA,1,True,False,True,Failed / pending transfer or top-up
+14531535229,DANA,1,True,False,True,Customer service
+14531505222,DANA,1,True,False,True,Hard to use
+14531295881,DANA,1,True,False,True,App performance & bugs
+14531115943,DANA,5,True,False,False,Fees & charges
+14530798922,DANA,2,True,False,True,Failed / pending transfer or top-up
+14530798922,DANA,2,True,False,True,"Paylater, loans & debt collection"
+14529187598,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14529187598,DANA,1,True,False,True,Failed / pending transfer or top-up
+14529187598,DANA,1,True,False,True,"Login, OTP & verification"
+14528904785,DANA,4,True,False,False,App performance & bugs
+14528834090,DANA,2,True,False,True,Failed / pending transfer or top-up
+14528634670,DANA,1,True,False,True,"Login, OTP & verification"
+14528634670,DANA,1,True,False,True,Customer service
+14528599643,DANA,1,True,False,True,"Login, OTP & verification"
+14527930081,DANA,1,True,False,True,Customer service
+14527857373,DANA,1,True,False,True,Customer service
+14527357777,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14525641245,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14524849002,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14524849002,DANA,1,True,False,True,Hard to use
+14524485803,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14524485803,DANA,1,True,False,True,Failed / pending transfer or top-up
+14524485803,DANA,1,True,False,True,Customer service
+14524404411,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14524404411,DANA,1,True,False,True,Failed / pending transfer or top-up
+14524211984,DANA,1,True,False,True,"Login, OTP & verification"
+14524211984,DANA,1,True,False,True,Customer service
+14524211984,DANA,1,True,False,True,App performance & bugs
+14523317290,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14522223372,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14522104180,DANA,1,True,True,True,Balance lost / unauthorised deduction
+14521566090,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14521142414,DANA,1,True,False,True,Hard to use
+14520835826,DANA,5,True,False,False,Failed / pending transfer or top-up
+14520532139,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14520455706,DANA,1,True,False,True,Customer service
+14518466775,DANA,3,True,False,False,App performance & bugs
+14518439259,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14517595767,DANA,5,True,False,False,"Login, OTP & verification"
+14517595767,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14516875544,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14516749860,DANA,2,True,False,True,"Paylater, loans & debt collection"
+14516559621,DANA,2,True,False,True,Hard to use
+14516145669,DANA,1,True,False,True,"Login, OTP & verification"
+14515049427,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14514535505,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14514535505,DANA,1,True,False,True,Failed / pending transfer or top-up
+14514413371,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14514409652,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14513035496,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14512976944,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14511916436,DANA,5,True,False,False,"Login, OTP & verification"
+14511425716,DANA,1,True,False,True,"Login, OTP & verification"
+14510540012,DANA,1,True,False,True,Failed / pending transfer or top-up
+14510333745,DANA,1,True,False,True,App performance & bugs
+14510138639,DANA,1,True,False,True,Hard to use
+14509370715,DANA,3,True,False,False,"Paylater, loans & debt collection"
+14508490968,DANA,1,True,False,True,Failed / pending transfer or top-up
+14508429210,DANA,5,True,False,False,Hard to use
+14508332326,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14508223995,DANA,1,True,False,True,Customer service
+14507729311,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14507729311,DANA,1,True,False,True,Failed / pending transfer or top-up
+14507367276,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14507090132,DANA,4,True,False,False,"Paylater, loans & debt collection"
+14506786647,DANA,1,True,False,True,Failed / pending transfer or top-up
+14506501518,DANA,5,True,False,False,Customer service
+14505468428,DANA,1,True,False,True,App performance & bugs
+14505468428,DANA,1,True,False,True,"Ads, notifications & promos"
+14504837449,DANA,5,True,False,False,"Login, OTP & verification"
+14504645589,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14504632405,DANA,1,True,False,True,Failed / pending transfer or top-up
+14504632405,DANA,1,True,False,True,Customer service
+14504374064,DANA,2,True,False,True,Balance lost / unauthorised deduction
+14504374064,DANA,2,True,False,True,"Login, OTP & verification"
+14503728766,DANA,5,True,False,False,"Ads, notifications & promos"
+14502572050,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14501585641,DANA,5,True,False,False,Failed / pending transfer or top-up
+14501557992,DANA,1,True,False,True,Failed / pending transfer or top-up
+14501557992,DANA,1,True,False,True,Customer service
+14501529144,DANA,1,True,False,True,App performance & bugs
+14501518389,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14501518389,DANA,1,True,False,True,"Paylater, loans & debt collection"
+14501291000,DANA,5,True,False,False,Customer service
+14501111266,DANA,1,True,False,True,Hard to use
+14500964837,DANA,1,True,False,True,Account security & fraud
+14500914669,DANA,1,True,False,True,Account security & fraud
+14500344465,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14500259821,DANA,1,True,False,True,Failed / pending transfer or top-up
+14500259821,DANA,1,True,False,True,Customer service
+14500259821,DANA,1,True,False,True,App performance & bugs
+14500221611,DANA,5,True,False,False,"Paylater, loans & debt collection"
+14498740794,DANA,1,True,False,True,Balance lost / unauthorised deduction
+14498740794,DANA,1,True,False,True,Failed / pending transfer or top-up
+14498377296,DANA,1,True,False,True,Failed / pending transfer or top-up
+14498306842,DANA,1,True,False,True,Customer service
+14498306842,DANA,1,True,False,True,App performance & bugs
+14496730481,DANA,4,True,False,False,"Paylater, loans & debt collection"
+14496622023,DANA,5,True,False,False,"Ads, notifications & promos"
+14496508389,DANA,1,True,False,True,Failed / pending transfer or top-up
+14496455958,DANA,2,True,False,True,"Login, OTP & verification"
+14496455958,DANA,2,True,False,True,Account security & fraud
+4701849846,DANA,5,False,True,False,"Ads, notifications & promos"
+4896591085,DANA,1,False,True,True,"Login, OTP & verification"
+4896591085,DANA,1,False,True,True,Customer service
+4896591085,DANA,1,False,True,True,"Ads, notifications & promos"
+7077391126,DANA,1,False,True,True,Balance lost / unauthorised deduction
+4909690142,DANA,5,False,True,False,Failed / pending transfer or top-up
+4909690142,DANA,5,False,True,False,Customer service
+6336126970,DANA,1,False,True,True,App performance & bugs
+4890129606,DANA,1,False,True,True,Customer service
+4890129606,DANA,1,False,True,True,App performance & bugs
+4890129606,DANA,1,False,True,True,"Ads, notifications & promos"
+8145514509,DANA,1,False,True,True,Balance lost / unauthorised deduction
+8145514509,DANA,1,False,True,True,Failed / pending transfer or top-up
+8145514509,DANA,1,False,True,True,Customer service
+4902849463,DANA,1,False,True,True,Failed / pending transfer or top-up
+4902849463,DANA,1,False,True,True,Customer service
+9931980270,DANA,5,False,True,False,Balance lost / unauthorised deduction
+9931980270,DANA,5,False,True,False,Failed / pending transfer or top-up
+5206474787,DANA,1,False,True,True,Failed / pending transfer or top-up
+5206474787,DANA,1,False,True,True,Customer service
+7864619570,DANA,1,False,True,True,"Login, OTP & verification"
+7864619570,DANA,1,False,True,True,Customer service
+7864619570,DANA,1,False,True,True,"Paylater, loans & debt collection"
+8260453503,DANA,1,False,True,True,Customer service
+8260453503,DANA,1,False,True,True,App performance & bugs
+7924512572,DANA,1,False,True,True,Customer service
+7924512572,DANA,1,False,True,True,App performance & bugs
+6654584151,DANA,1,False,True,True,"Login, OTP & verification"
+4909250959,DANA,1,False,True,True,Failed / pending transfer or top-up
+4909250959,DANA,1,False,True,True,Customer service
+7092650535,DANA,1,False,True,True,Customer service
+7864644685,DANA,1,False,True,True,Failed / pending transfer or top-up
+7864644685,DANA,1,False,True,True,Customer service
+10974808762,DANA,1,False,True,True,Balance lost / unauthorised deduction
+10974808762,DANA,1,False,True,True,Customer service
+8768314840,DANA,1,False,True,True,Failed / pending transfer or top-up
+8768314840,DANA,1,False,True,True,Customer service
+8001900075,DANA,1,False,True,True,Failed / pending transfer or top-up
+8001900075,DANA,1,False,True,True,Customer service
+7901356615,DANA,1,False,True,True,App performance & bugs
+6726782868,DANA,1,False,True,True,App performance & bugs
+7983985561,DANA,1,False,True,True,Balance lost / unauthorised deduction
+7983985561,DANA,1,False,True,True,"Login, OTP & verification"
+7983985561,DANA,1,False,True,True,"Paylater, loans & debt collection"
+6709576541,DANA,1,False,True,True,"Login, OTP & verification"
+13453237718,DANA,1,False,True,True,"Paylater, loans & debt collection"
+11027703528,DANA,4,False,True,False,App performance & bugs
+10021000078,DANA,1,False,True,True,Failed / pending transfer or top-up
+9890350423,DANA,1,False,True,True,Balance lost / unauthorised deduction
+9890350423,DANA,1,False,True,True,Failed / pending transfer or top-up
+9890350423,DANA,1,False,True,True,Customer service
+9667648583,DANA,1,False,True,True,Failed / pending transfer or top-up
+9667648583,DANA,1,False,True,True,"Login, OTP & verification"
+9667648583,DANA,1,False,True,True,Account security & fraud
+9667648583,DANA,1,False,True,True,Customer service
+8775055916,DANA,1,False,True,True,Balance lost / unauthorised deduction
+6892189018,DANA,1,False,True,True,Failed / pending transfer or top-up
+6892189018,DANA,1,False,True,True,"Login, OTP & verification"
+9669865507,DANA,5,False,True,False,"Login, OTP & verification"
+9669865507,DANA,5,False,True,False,Account security & fraud
+9669865507,DANA,5,False,True,False,Customer service
+7879262770,DANA,1,False,True,True,"Login, OTP & verification"
+7879262770,DANA,1,False,True,True,Customer service
+7821299155,DANA,1,False,True,True,"Paylater, loans & debt collection"
+7087221616,DANA,1,False,True,True,Failed / pending transfer or top-up
+7087221616,DANA,1,False,True,True,Customer service
+4863115841,DANA,1,False,True,True,"Ads, notifications & promos"
+4853692575,DANA,1,False,True,True,"Ads, notifications & promos"
+4911500093,DANA,1,False,True,True,Customer service
+4911500093,DANA,1,False,True,True,"Ads, notifications & promos"
+4891561804,DANA,1,False,True,True,"Login, OTP & verification"
+4891561804,DANA,1,False,True,True,"Ads, notifications & promos"
+11757945111,DANA,5,False,True,False,Customer service
+14212439500,DANA,1,False,True,True,App performance & bugs
+14009758022,DANA,1,False,True,True,Balance lost / unauthorised deduction
+14009758022,DANA,1,False,True,True,Failed / pending transfer or top-up
+13877754114,DANA,1,False,True,True,Failed / pending transfer or top-up
+13877754114,DANA,1,False,True,True,"Login, OTP & verification"
+13858974944,DANA,1,False,True,True,Failed / pending transfer or top-up
+13858974944,DANA,1,False,True,True,Account security & fraud
+13734658159,DANA,1,False,True,True,Failed / pending transfer or top-up
+13734571900,DANA,1,False,True,True,Failed / pending transfer or top-up
+13466396056,DANA,2,False,True,True,"Paylater, loans & debt collection"
+13451532648,DANA,1,False,True,True,Balance lost / unauthorised deduction
+13451532648,DANA,1,False,True,True,Failed / pending transfer or top-up
+13451532648,DANA,1,False,True,True,"Paylater, loans & debt collection"
+13130853553,DANA,1,False,True,True,Balance lost / unauthorised deduction
+13128392479,DANA,1,False,True,True,Balance lost / unauthorised deduction
+13127816461,DANA,1,False,True,True,Balance lost / unauthorised deduction
+13127816461,DANA,1,False,True,True,Account security & fraud
+13127728655,DANA,1,False,True,True,Balance lost / unauthorised deduction
+13127617519,DANA,1,False,True,True,Failed / pending transfer or top-up
+13127191700,DANA,1,False,True,True,Balance lost / unauthorised deduction
+13126815607,DANA,1,False,True,True,Balance lost / unauthorised deduction
+13124166517,DANA,1,False,True,True,Balance lost / unauthorised deduction
+13124166517,DANA,1,False,True,True,Failed / pending transfer or top-up
+13036341972,DANA,1,False,True,True,"Login, OTP & verification"
+13036341972,DANA,1,False,True,True,App performance & bugs
+12969615174,DANA,1,False,True,True,"Login, OTP & verification"
+12777899576,DANA,1,False,True,True,"Login, OTP & verification"
+12777899576,DANA,1,False,True,True,Customer service
+12705523262,DANA,1,False,True,True,Balance lost / unauthorised deduction
+12705523262,DANA,1,False,True,True,Failed / pending transfer or top-up
+12705523262,DANA,1,False,True,True,Customer service
+12647111343,DANA,1,False,True,True,Balance lost / unauthorised deduction
+12638770254,DANA,1,False,True,True,Balance lost / unauthorised deduction
+12636593690,DANA,1,False,True,True,Balance lost / unauthorised deduction
+12636593690,DANA,1,False,True,True,"Login, OTP & verification"
+12262513311,DANA,1,False,True,True,Customer service
+11796913023,DANA,1,False,True,True,Balance lost / unauthorised deduction
+11796913023,DANA,1,False,True,True,"Login, OTP & verification"
+11758259880,DANA,1,False,True,True,Balance lost / unauthorised deduction
+11758259880,DANA,1,False,True,True,"Login, OTP & verification"
+11758163222,DANA,1,False,True,True,Balance lost / unauthorised deduction
+11756861362,DANA,1,False,True,True,Balance lost / unauthorised deduction
+11756861362,DANA,1,False,True,True,"Login, OTP & verification"
+11756861362,DANA,1,False,True,True,Account security & fraud
+11756861362,DANA,1,False,True,True,Customer service
+11756124784,DANA,1,False,True,True,Customer service
+11756096295,DANA,1,False,True,True,"Login, OTP & verification"
+11756096295,DANA,1,False,True,True,Hard to use
+11755148115,DANA,1,False,True,True,Failed / pending transfer or top-up
+11755121636,DANA,1,False,True,True,Balance lost / unauthorised deduction
+11755121636,DANA,1,False,True,True,Customer service
+11754994386,DANA,1,False,True,True,Balance lost / unauthorised deduction
+11740342059,DANA,1,False,True,True,"Login, OTP & verification"
+11574738316,DANA,1,False,True,True,Balance lost / unauthorised deduction
+11574738316,DANA,1,False,True,True,Customer service
+11574596149,DANA,1,False,True,True,Account security & fraud
+11574352057,DANA,1,False,True,True,Failed / pending transfer or top-up
+11574352057,DANA,1,False,True,True,Customer service
+11571450794,DANA,5,False,True,False,Failed / pending transfer or top-up
+11571450794,DANA,5,False,True,False,Customer service
+11571450794,DANA,5,False,True,False,App performance & bugs
+11573853497,DANA,1,False,True,True,Failed / pending transfer or top-up
+11573853497,DANA,1,False,True,True,Customer service
+11571776484,DANA,1,False,True,True,Balance lost / unauthorised deduction
+11571776484,DANA,1,False,True,True,Customer service
+11571776484,DANA,1,False,True,True,"Paylater, loans & debt collection"
+11570151057,DANA,1,False,True,True,"Login, OTP & verification"
+11523712965,DANA,1,False,True,True,Customer service
+11523712965,DANA,1,False,True,True,"Paylater, loans & debt collection"
+11521564058,DANA,1,False,True,True,Failed / pending transfer or top-up
+11520747664,DANA,1,False,True,True,Customer service
+11513351360,DANA,1,False,True,True,Customer service
+11513185747,DANA,1,False,True,True,Customer service
+11513185747,DANA,1,False,True,True,App performance & bugs
+11513124383,DANA,1,False,True,True,"Login, OTP & verification"
+11510459594,DANA,1,False,True,True,"Login, OTP & verification"
+11510459594,DANA,1,False,True,True,Hard to use
+11509908302,DANA,1,False,True,True,"Login, OTP & verification"
+11509908302,DANA,1,False,True,True,App performance & bugs
+11281539965,DANA,1,False,True,True,Account security & fraud
+11280838041,DANA,1,False,True,True,App performance & bugs
+11279167186,DANA,1,False,True,True,Account security & fraud
+11251088659,DANA,1,False,True,True,App performance & bugs
+11250930211,DANA,1,False,True,True,Failed / pending transfer or top-up
+11247638319,DANA,1,False,True,True,Failed / pending transfer or top-up
+11247638319,DANA,1,False,True,True,Account security & fraud
+11169595948,DANA,1,False,True,True,Balance lost / unauthorised deduction
+11169595948,DANA,1,False,True,True,Customer service
+11119590753,DANA,1,False,True,True,Customer service
+11031326330,DANA,3,False,True,False,Balance lost / unauthorised deduction
+11026760888,DANA,2,False,True,True,"Login, OTP & verification"
+11026760888,DANA,2,False,True,True,Account security & fraud
+11026760888,DANA,2,False,True,True,Customer service
+10979068351,DANA,1,False,True,True,Balance lost / unauthorised deduction
+10979068351,DANA,1,False,True,True,Failed / pending transfer or top-up
+10979068351,DANA,1,False,True,True,App performance & bugs
+10978857298,DANA,1,False,True,True,Balance lost / unauthorised deduction
+10978857298,DANA,1,False,True,True,Customer service
+10975870294,DANA,1,False,True,True,Customer service
+10975870294,DANA,1,False,True,True,App performance & bugs
+10956291551,DANA,1,False,True,True,Balance lost / unauthorised deduction
+10956239031,DANA,1,False,True,True,Account security & fraud
+10956239031,DANA,1,False,True,True,Customer service
+10776422967,DANA,1,False,True,True,App performance & bugs
+10768060284,DANA,1,False,True,True,App performance & bugs
+10753619759,DANA,1,False,True,True,Account security & fraud
+10753619759,DANA,1,False,True,True,Customer service
+10619840255,DANA,1,False,True,True,Customer service
+10569632698,DANA,1,False,True,True,Customer service
+10531115359,DANA,1,False,True,True,Balance lost / unauthorised deduction
+10531115359,DANA,1,False,True,True,Account security & fraud
+10500386530,DANA,1,False,True,True,Balance lost / unauthorised deduction
+10500386530,DANA,1,False,True,True,"Paylater, loans & debt collection"
+10487786906,DANA,1,False,True,True,Account security & fraud
+10487786906,DANA,1,False,True,True,Customer service
+10487786906,DANA,1,False,True,True,App performance & bugs
+10473935807,DANA,1,False,True,True,Balance lost / unauthorised deduction
+10473935807,DANA,1,False,True,True,Failed / pending transfer or top-up
+10473935807,DANA,1,False,True,True,Customer service
+10465190593,DANA,1,False,True,True,Customer service
+10380681064,DANA,1,False,True,True,"Login, OTP & verification"
+10380681064,DANA,1,False,True,True,Hard to use
+10380681064,DANA,1,False,True,True,App performance & bugs
+10282238586,DANA,1,False,True,True,Failed / pending transfer or top-up
+10282238586,DANA,1,False,True,True,"Login, OTP & verification"
+10282238586,DANA,1,False,True,True,Customer service
+10282238586,DANA,1,False,True,True,Hard to use
+10282238586,DANA,1,False,True,True,App performance & bugs
+10240709567,DANA,1,False,True,True,App performance & bugs
+10080348519,DANA,1,False,True,True,Failed / pending transfer or top-up
+10080348519,DANA,1,False,True,True,Account security & fraud
+10067181355,DANA,1,False,True,True,"Login, OTP & verification"
+9957269392,DANA,2,False,True,True,Failed / pending transfer or top-up
+9957269392,DANA,2,False,True,True,Customer service
+9957231525,DANA,1,False,True,True,Failed / pending transfer or top-up
+9957231525,DANA,1,False,True,True,App performance & bugs
+9952474994,DANA,1,False,True,True,Fees & charges
+9900815920,DANA,1,False,True,True,"Login, OTP & verification"
+9900815920,DANA,1,False,True,True,App performance & bugs
+9712771488,DANA,1,False,True,True,"Login, OTP & verification"
+9712771488,DANA,1,False,True,True,Customer service
+9231589332,DANA,1,False,True,True,Balance lost / unauthorised deduction
+9231589332,DANA,1,False,True,True,Customer service
+8903979192,DANA,1,False,True,True,"Login, OTP & verification"
+8771960239,DANA,1,False,True,True,Balance lost / unauthorised deduction
+8771960239,DANA,1,False,True,True,Customer service
+8634414500,DANA,1,False,True,True,"Login, OTP & verification"
+8634414500,DANA,1,False,True,True,Customer service
+8634414500,DANA,1,False,True,True,App performance & bugs
+8518307557,DANA,1,False,True,True,Balance lost / unauthorised deduction
+8518307557,DANA,1,False,True,True,Customer service
+8490069504,DANA,1,False,True,True,Balance lost / unauthorised deduction
+8490069504,DANA,1,False,True,True,"Login, OTP & verification"
+8341718573,DANA,1,False,True,True,Failed / pending transfer or top-up
+8313131225,DANA,2,False,True,True,App performance & bugs
+8313131225,DANA,2,False,True,True,"Ads, notifications & promos"
+8267420823,DANA,1,False,True,True,Failed / pending transfer or top-up
+8267420823,DANA,1,False,True,True,"Login, OTP & verification"
+8267420823,DANA,1,False,True,True,Hard to use
+8267420823,DANA,1,False,True,True,App performance & bugs
+8266210604,DANA,1,False,True,True,Account security & fraud
+8264641843,DANA,1,False,True,True,"Login, OTP & verification"
+8264641843,DANA,1,False,True,True,Hard to use
+8146129566,DANA,1,False,True,True,Failed / pending transfer or top-up
+8146129566,DANA,1,False,True,True,Customer service
+8089963654,DANA,1,False,True,True,"Login, OTP & verification"
+8089963654,DANA,1,False,True,True,Account security & fraud
+8086867463,DANA,1,False,True,True,Failed / pending transfer or top-up
+8086522564,DANA,1,False,True,True,Balance lost / unauthorised deduction
+8086522564,DANA,1,False,True,True,Customer service
+8086385431,DANA,1,False,True,True,App performance & bugs
+8085269924,DANA,1,False,True,True,Failed / pending transfer or top-up
+8083179698,DANA,1,False,True,True,Customer service
+8072570321,DANA,1,False,True,True,"Login, OTP & verification"
+8072570321,DANA,1,False,True,True,Account security & fraud
+8070423463,DANA,1,False,True,True,"Login, OTP & verification"
+8054500171,DANA,1,False,True,True,Balance lost / unauthorised deduction
+8054500171,DANA,1,False,True,True,"Login, OTP & verification"
+8054500171,DANA,1,False,True,True,Customer service
+8054500171,DANA,1,False,True,True,Hard to use
+8054500171,DANA,1,False,True,True,App performance & bugs
+8044861110,DANA,1,False,True,True,App performance & bugs
+8044861110,DANA,1,False,True,True,"Ads, notifications & promos"
+8023562431,DANA,1,False,True,True,Failed / pending transfer or top-up
+8023562431,DANA,1,False,True,True,Customer service
+8022670328,DANA,1,False,True,True,Failed / pending transfer or top-up
+8022670328,DANA,1,False,True,True,App performance & bugs
+8021402483,DANA,1,False,True,True,Failed / pending transfer or top-up
+8021402483,DANA,1,False,True,True,Customer service
+8021402483,DANA,1,False,True,True,App performance & bugs
+7988016715,DANA,5,False,True,False,Failed / pending transfer or top-up
+7988016715,DANA,5,False,True,False,Customer service
+7988016715,DANA,5,False,True,False,Hard to use
+7988016715,DANA,5,False,True,False,App performance & bugs
+8005314477,DANA,1,False,True,True,Failed / pending transfer or top-up
+8005314477,DANA,1,False,True,True,Customer service
+7998232559,DANA,1,False,True,True,Failed / pending transfer or top-up
+7997289370,DANA,1,False,True,True,Failed / pending transfer or top-up
+7989223434,DANA,1,False,True,True,App performance & bugs
+7961268182,DANA,5,False,True,False,App performance & bugs
+7987188382,DANA,1,False,True,True,Customer service
+7986296645,DANA,1,False,True,True,"Login, OTP & verification"
+7961557507,DANA,1,False,True,True,"Login, OTP & verification"
+7961557507,DANA,1,False,True,True,App performance & bugs
+7961457433,DANA,1,False,True,True,Failed / pending transfer or top-up
+7961457433,DANA,1,False,True,True,"Login, OTP & verification"
+7961163261,DANA,5,False,True,False,"Login, OTP & verification"
+7961163261,DANA,5,False,True,False,App performance & bugs
+7072261767,DANA,5,False,True,False,Failed / pending transfer or top-up
+7600207706,DANA,1,False,True,True,Failed / pending transfer or top-up
+7600207706,DANA,1,False,True,True,Account security & fraud
+7600207706,DANA,1,False,True,True,App performance & bugs
+7452333140,DANA,1,False,True,True,Failed / pending transfer or top-up
+7390465246,DANA,1,False,True,True,App performance & bugs
+7086272241,DANA,1,False,True,True,Failed / pending transfer or top-up
+7086272241,DANA,1,False,True,True,App performance & bugs
+7084989085,DANA,1,False,True,True,Balance lost / unauthorised deduction
+7084989085,DANA,1,False,True,True,Failed / pending transfer or top-up
+7084989085,DANA,1,False,True,True,Customer service
+7077542073,DANA,1,False,True,True,App performance & bugs
+7076071539,DANA,1,False,True,True,Account security & fraud
+6679301819,DANA,5,False,True,False,"Login, OTP & verification"
+7017463899,DANA,3,False,True,False,App performance & bugs
+6969024635,DANA,3,False,True,False,Failed / pending transfer or top-up
+6776202823,DANA,1,False,True,True,"Login, OTP & verification"
+6776202823,DANA,1,False,True,True,Hard to use
+6774335369,DANA,1,False,True,True,Failed / pending transfer or top-up
+6774335369,DANA,1,False,True,True,"Login, OTP & verification"
+6774335369,DANA,1,False,True,True,Hard to use
+6774335369,DANA,1,False,True,True,"Paylater, loans & debt collection"
+6744004863,DANA,1,False,True,True,"Login, OTP & verification"
+6740060334,DANA,1,False,True,True,Failed / pending transfer or top-up
+6725168366,DANA,1,False,True,True,"Login, OTP & verification"
+6725168366,DANA,1,False,True,True,App performance & bugs
+6720867871,DANA,1,False,True,True,Failed / pending transfer or top-up
+6720867871,DANA,1,False,True,True,"Login, OTP & verification"
+6720867871,DANA,1,False,True,True,Customer service
+6720867871,DANA,1,False,True,True,Hard to use
+6693435479,DANA,2,False,True,True,"Login, OTP & verification"
+6592702311,DANA,5,False,True,False,"Ads, notifications & promos"
+6511886548,DANA,5,False,True,False,App performance & bugs
+6431277988,DANA,1,False,True,True,Failed / pending transfer or top-up
+6431277988,DANA,1,False,True,True,Customer service
+5915676437,DANA,5,False,True,False,"Login, OTP & verification"
+5915676437,DANA,5,False,True,False,Customer service
+6334205001,DANA,1,False,True,True,Balance lost / unauthorised deduction
+6334205001,DANA,1,False,True,True,Failed / pending transfer or top-up
+6334205001,DANA,1,False,True,True,Customer service
+6317179261,DANA,1,False,True,True,Failed / pending transfer or top-up
+6317179261,DANA,1,False,True,True,Customer service
+6317113491,DANA,1,False,True,True,Hard to use
+6102732004,DANA,1,False,True,True,"Login, OTP & verification"
+6102732004,DANA,1,False,True,True,App performance & bugs
+11279707938,DANA,1,False,True,True,Balance lost / unauthorised deduction
+8086408213,DANA,1,False,True,True,Failed / pending transfer or top-up
+8081405381,DANA,1,False,True,True,"Login, OTP & verification"
+8020599452,DANA,1,False,True,True,Balance lost / unauthorised deduction
+8020599452,DANA,1,False,True,True,Failed / pending transfer or top-up
+7987652955,DANA,1,False,True,True,"Login, OTP & verification"
+7987652955,DANA,1,False,True,True,Account security & fraud
+7987652955,DANA,1,False,True,True,Customer service
+7811565491,DANA,1,False,True,True,Failed / pending transfer or top-up
+6696009212,DANA,1,False,True,True,"Login, OTP & verification"
+6696009212,DANA,1,False,True,True,App performance & bugs
+6674656427,DANA,1,False,True,True,"Login, OTP & verification"
+4878663600,DANA,1,False,True,True,Account security & fraud
+4878663600,DANA,1,False,True,True,"Ads, notifications & promos"
+6885219203,DANA,1,False,True,True,Failed / pending transfer or top-up
+6885219203,DANA,1,False,True,True,"Login, OTP & verification"
+6885219203,DANA,1,False,True,True,Customer service
+4895503030,DANA,1,False,True,True,"Ads, notifications & promos"
+14589696163,OVO,1,True,True,True,"Login, OTP & verification"
+14586240417,OVO,1,True,True,True,"Login, OTP & verification"
+14584820038,OVO,3,True,True,False,Failed / pending transfer or top-up
+14584420016,OVO,1,True,True,True,App performance & bugs
+14580186666,OVO,5,True,True,False,App performance & bugs
+14578176037,OVO,1,True,True,True,"Login, OTP & verification"
+14578176037,OVO,1,True,True,True,Customer service
+14576502129,OVO,1,True,True,True,Account security & fraud
+14574675465,OVO,1,True,True,True,Hard to use
+14571658628,OVO,3,True,True,False,Fees & charges
+14563345665,OVO,1,True,True,True,"Login, OTP & verification"
+14563345665,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14562465422,OVO,1,True,True,True,Fees & charges
+14554752553,OVO,1,True,True,True,Fees & charges
+14544805123,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14544805123,OVO,1,True,True,True,Failed / pending transfer or top-up
+14543817441,OVO,1,True,True,True,Account security & fraud
+14541660516,OVO,3,True,True,False,"Login, OTP & verification"
+14540764171,OVO,2,True,True,True,Fees & charges
+14538898530,OVO,1,True,True,True,"Login, OTP & verification"
+14537522833,OVO,1,True,False,True,Fees & charges
+14535289741,OVO,1,True,True,True,Failed / pending transfer or top-up
+14535289741,OVO,1,True,True,True,"Login, OTP & verification"
+14532134610,OVO,1,True,False,True,Fees & charges
+14529766395,OVO,1,True,True,True,Customer service
+14523673422,OVO,1,True,True,True,Fees & charges
+14517199365,OVO,3,True,True,False,Fees & charges
+14513292316,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14509431423,OVO,1,True,True,True,"Login, OTP & verification"
+14509431423,OVO,1,True,True,True,Customer service
+14509431423,OVO,1,True,True,True,Hard to use
+14504201211,OVO,2,True,True,True,Failed / pending transfer or top-up
+14504201211,OVO,2,True,True,True,Customer service
+14504201211,OVO,2,True,True,True,App performance & bugs
+14502448368,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14502448368,OVO,1,True,True,True,Account security & fraud
+14501149805,OVO,1,True,True,True,"Login, OTP & verification"
+14500552308,OVO,1,True,True,True,Fees & charges
+14496699025,OVO,1,True,True,True,"Login, OTP & verification"
+14493358202,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14493358202,OVO,1,True,True,True,"Login, OTP & verification"
+14493358202,OVO,1,True,True,True,Customer service
+14492142816,OVO,1,True,True,True,Fees & charges
+14485937914,OVO,1,True,True,True,Fees & charges
+14480410205,OVO,2,True,True,True,Fees & charges
+14473233241,OVO,3,True,True,False,Failed / pending transfer or top-up
+14473177349,OVO,2,True,True,True,Fees & charges
+14473050293,OVO,1,True,True,True,Failed / pending transfer or top-up
+14472758897,OVO,1,True,True,True,Customer service
+14472443707,OVO,1,True,True,True,App performance & bugs
+14470729160,OVO,1,True,True,True,Failed / pending transfer or top-up
+14470015294,OVO,1,True,True,True,App performance & bugs
+14468554300,OVO,1,True,True,True,"Login, OTP & verification"
+14465916539,OVO,1,True,True,True,Account security & fraud
+14463399139,OVO,1,True,True,True,Failed / pending transfer or top-up
+14462364199,OVO,1,True,True,True,Account security & fraud
+14455452729,OVO,1,True,True,True,Failed / pending transfer or top-up
+14450922711,OVO,5,True,True,False,Customer service
+14448470348,OVO,1,True,True,True,Failed / pending transfer or top-up
+14447432562,OVO,1,True,True,True,Account security & fraud
+14447432562,OVO,1,True,True,True,Customer service
+14447228703,OVO,1,True,True,True,Failed / pending transfer or top-up
+14446977645,OVO,1,True,True,True,"Login, OTP & verification"
+14446467692,OVO,2,True,True,True,Fees & charges
+14444202146,OVO,1,True,True,True,App performance & bugs
+14441803114,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14441803114,OVO,1,True,True,True,App performance & bugs
+14427100958,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14426722661,OVO,1,True,True,True,Fees & charges
+14426114156,OVO,1,True,True,True,Hard to use
+14425832333,OVO,1,True,True,True,Failed / pending transfer or top-up
+14424319173,OVO,1,True,True,True,"Login, OTP & verification"
+14423729426,OVO,1,True,True,True,"Login, OTP & verification"
+14421078052,OVO,1,True,True,True,Fees & charges
+14416882725,OVO,1,True,True,True,Failed / pending transfer or top-up
+14416882725,OVO,1,True,True,True,Customer service
+14416882725,OVO,1,True,True,True,Fees & charges
+14416882725,OVO,1,True,True,True,App performance & bugs
+14414998726,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14414998726,OVO,1,True,True,True,Failed / pending transfer or top-up
+14413993669,OVO,1,True,True,True,Customer service
+14412692808,OVO,1,True,True,True,App performance & bugs
+14412113381,OVO,1,True,True,True,Customer service
+14410424935,OVO,1,True,False,True,Failed / pending transfer or top-up
+14410424935,OVO,1,True,False,True,Customer service
+14410424935,OVO,1,True,False,True,App performance & bugs
+14407021953,OVO,1,True,True,True,Failed / pending transfer or top-up
+14407021953,OVO,1,True,True,True,"Login, OTP & verification"
+14406265720,OVO,1,True,True,True,Fees & charges
+14406122458,OVO,1,True,True,True,"Login, OTP & verification"
+14404838638,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14404838638,OVO,1,True,True,True,Account security & fraud
+14404838638,OVO,1,True,True,True,Customer service
+14402429185,OVO,1,True,True,True,Failed / pending transfer or top-up
+14402429185,OVO,1,True,True,True,Hard to use
+14401665080,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14401433934,OVO,1,True,True,True,Account security & fraud
+14401196951,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14401196951,OVO,1,True,True,True,Account security & fraud
+14401095860,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14400902572,OVO,1,True,True,True,Failed / pending transfer or top-up
+14400902572,OVO,1,True,True,True,Customer service
+14400902572,OVO,1,True,True,True,App performance & bugs
+14400094557,OVO,1,True,True,True,Customer service
+14399959637,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14399959637,OVO,1,True,True,True,App performance & bugs
+14399823477,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14399686460,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14399686460,OVO,1,True,True,True,Failed / pending transfer or top-up
+14399686460,OVO,1,True,True,True,Customer service
+14399628115,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14399628115,OVO,1,True,True,True,App performance & bugs
+14399562610,OVO,3,True,True,False,Failed / pending transfer or top-up
+14399470861,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14399470861,OVO,1,True,True,True,Failed / pending transfer or top-up
+14398342575,OVO,2,True,True,True,Customer service
+14398342575,OVO,2,True,True,True,App performance & bugs
+14391392570,OVO,1,True,False,True,Failed / pending transfer or top-up
+14391392570,OVO,1,True,False,True,Customer service
+14391392570,OVO,1,True,False,True,App performance & bugs
+14390212458,OVO,1,True,True,True,Customer service
+14388242079,OVO,1,True,True,True,Failed / pending transfer or top-up
+14386407625,OVO,1,True,True,True,Fees & charges
+14382008296,OVO,1,True,True,True,"Login, OTP & verification"
+14377401104,OVO,1,True,True,True,Fees & charges
+14369553409,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14368390859,OVO,1,True,True,True,Hard to use
+14365995160,OVO,1,True,True,True,"Login, OTP & verification"
+14357242977,OVO,1,True,True,True,Customer service
+14357184554,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14357184554,OVO,1,True,True,True,Failed / pending transfer or top-up
+14357184554,OVO,1,True,True,True,Customer service
+14357184554,OVO,1,True,True,True,Fees & charges
+14357164956,OVO,1,True,True,True,Customer service
+14357164956,OVO,1,True,True,True,Fees & charges
+14356909752,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14356909752,OVO,1,True,True,True,Failed / pending transfer or top-up
+14356909752,OVO,1,True,True,True,App performance & bugs
+14356906740,OVO,1,True,True,True,Failed / pending transfer or top-up
+14356792249,OVO,1,True,True,True,Customer service
+14356792249,OVO,1,True,True,True,App performance & bugs
+14356781540,OVO,1,True,True,True,Failed / pending transfer or top-up
+14356781540,OVO,1,True,True,True,App performance & bugs
+14356758095,OVO,1,True,True,True,Failed / pending transfer or top-up
+14356608360,OVO,1,True,True,True,Failed / pending transfer or top-up
+14356608360,OVO,1,True,True,True,Hard to use
+14352720233,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14352720233,OVO,1,True,True,True,Fees & charges
+14349804873,OVO,1,True,True,True,Fees & charges
+14340723447,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14337495680,OVO,3,True,True,False,Failed / pending transfer or top-up
+14329175628,OVO,1,True,True,True,Failed / pending transfer or top-up
+14325618773,OVO,1,True,True,True,Failed / pending transfer or top-up
+14321212630,OVO,2,True,True,True,Failed / pending transfer or top-up
+14316720698,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14312887049,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14312887049,OVO,1,True,True,True,Fees & charges
+14311676172,OVO,1,True,True,True,Failed / pending transfer or top-up
+14311676172,OVO,1,True,True,True,Fees & charges
+14311676172,OVO,1,True,True,True,App performance & bugs
+14311315653,OVO,1,True,True,True,Failed / pending transfer or top-up
+14311289864,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14311289864,OVO,1,True,True,True,Failed / pending transfer or top-up
+14311289864,OVO,1,True,True,True,Customer service
+14311289864,OVO,1,True,True,True,Fees & charges
+14311289754,OVO,1,True,True,True,App performance & bugs
+14308766414,OVO,1,True,True,True,Hard to use
+14297660720,OVO,1,True,True,True,Failed / pending transfer or top-up
+14294177177,OVO,1,True,True,True,Fees & charges
+14293018486,OVO,1,True,True,True,Failed / pending transfer or top-up
+14290118259,OVO,1,True,True,True,Failed / pending transfer or top-up
+14290118259,OVO,1,True,True,True,Customer service
+14288727122,OVO,2,True,True,True,App performance & bugs
+14286207611,OVO,1,True,True,True,Fees & charges
+14281315888,OVO,1,True,True,True,Failed / pending transfer or top-up
+14278492654,OVO,1,True,False,True,Failed / pending transfer or top-up
+14277274310,OVO,1,True,True,True,App performance & bugs
+14277274310,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14276972748,OVO,1,True,True,True,Account security & fraud
+14276972748,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14274554020,OVO,1,True,True,True,"Login, OTP & verification"
+14274554003,OVO,1,True,True,True,"Login, OTP & verification"
+14274554003,OVO,1,True,True,True,App performance & bugs
+14274530301,OVO,1,True,True,True,Failed / pending transfer or top-up
+14274452533,OVO,1,True,True,True,Fees & charges
+14273322750,OVO,1,True,True,True,Hard to use
+14271008545,OVO,1,True,True,True,Failed / pending transfer or top-up
+14271000313,OVO,1,True,True,True,Failed / pending transfer or top-up
+14270986337,OVO,1,True,True,True,Failed / pending transfer or top-up
+14270913819,OVO,1,True,True,True,Failed / pending transfer or top-up
+14270877625,OVO,1,True,True,True,App performance & bugs
+14266309802,OVO,1,True,True,True,Fees & charges
+14265562933,OVO,1,True,True,True,Failed / pending transfer or top-up
+14265562933,OVO,1,True,True,True,Customer service
+14265562933,OVO,1,True,True,True,App performance & bugs
+14265562933,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14262444561,OVO,1,True,True,True,Failed / pending transfer or top-up
+14262444561,OVO,1,True,True,True,Customer service
+14261760253,OVO,1,True,True,True,Failed / pending transfer or top-up
+14261182449,OVO,1,True,False,True,Fees & charges
+14260582632,OVO,1,True,True,True,"Login, OTP & verification"
+14260582632,OVO,1,True,True,True,Customer service
+14260582632,OVO,1,True,True,True,App performance & bugs
+14260355741,OVO,1,True,True,True,Failed / pending transfer or top-up
+14260355741,OVO,1,True,True,True,App performance & bugs
+14252221336,OVO,1,True,True,True,App performance & bugs
+14251608627,OVO,1,True,False,True,Balance lost / unauthorised deduction
+14251608627,OVO,1,True,False,True,Customer service
+14250302365,OVO,1,True,True,True,Fees & charges
+14249638616,OVO,1,True,True,True,Account security & fraud
+14249638616,OVO,1,True,True,True,Fees & charges
+14249638616,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14248969704,OVO,1,True,True,True,Hard to use
+14248591741,OVO,1,True,True,True,"Login, OTP & verification"
+14246344066,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14246344066,OVO,1,True,True,True,Customer service
+14244903572,OVO,1,True,True,True,Customer service
+14243524055,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14243524055,OVO,1,True,True,True,Failed / pending transfer or top-up
+14243524055,OVO,1,True,True,True,App performance & bugs
+14237732259,OVO,1,True,True,True,Failed / pending transfer or top-up
+14237732259,OVO,1,True,True,True,Customer service
+14237209773,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14237209773,OVO,1,True,True,True,Fees & charges
+14237209773,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14234478950,OVO,2,True,True,True,App performance & bugs
+14232631209,OVO,1,True,True,True,Fees & charges
+14231682542,OVO,2,True,True,True,Failed / pending transfer or top-up
+14231682542,OVO,2,True,True,True,App performance & bugs
+14228044618,OVO,1,True,True,True,Failed / pending transfer or top-up
+14226181482,OVO,1,True,True,True,Failed / pending transfer or top-up
+14225868771,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14225868771,OVO,1,True,True,True,App performance & bugs
+14225526900,OVO,2,True,True,True,Failed / pending transfer or top-up
+14223564433,OVO,1,True,True,True,Fees & charges
+14218861774,OVO,1,True,True,True,"Login, OTP & verification"
+14218861774,OVO,1,True,True,True,Fees & charges
+14218861774,OVO,1,True,True,True,Hard to use
+14218861774,OVO,1,True,True,True,"Ads, notifications & promos"
+14217269929,OVO,1,True,True,True,"Login, OTP & verification"
+14217269929,OVO,1,True,True,True,Customer service
+14217269929,OVO,1,True,True,True,Fees & charges
+14217269929,OVO,1,True,True,True,App performance & bugs
+14217269929,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14217194835,OVO,5,True,True,False,Balance lost / unauthorised deduction
+14217194835,OVO,5,True,True,False,Account security & fraud
+14215455970,OVO,2,True,True,True,"Login, OTP & verification"
+14213408730,OVO,1,True,True,True,Failed / pending transfer or top-up
+14212589790,OVO,1,True,True,True,Failed / pending transfer or top-up
+14212589790,OVO,1,True,True,True,Customer service
+14212511367,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14211594247,OVO,1,True,True,True,Failed / pending transfer or top-up
+14211594247,OVO,1,True,True,True,App performance & bugs
+14208907068,OVO,1,True,True,True,Customer service
+14207516270,OVO,1,True,True,True,App performance & bugs
+14207298678,OVO,1,True,True,True,Customer service
+14207298678,OVO,1,True,True,True,App performance & bugs
+14205726606,OVO,2,True,True,True,Balance lost / unauthorised deduction
+14205726606,OVO,2,True,True,True,Failed / pending transfer or top-up
+14205726606,OVO,2,True,True,True,App performance & bugs
+14205496845,OVO,2,True,True,True,Customer service
+14205496845,OVO,2,True,True,True,Hard to use
+14205019195,OVO,1,True,True,True,Account security & fraud
+14204862099,OVO,1,True,True,True,App performance & bugs
+14200968508,OVO,1,True,True,True,Fees & charges
+14197728893,OVO,1,True,True,True,Failed / pending transfer or top-up
+14197728893,OVO,1,True,True,True,"Login, OTP & verification"
+14191420639,OVO,1,True,True,True,Fees & charges
+14188450184,OVO,1,True,True,True,Failed / pending transfer or top-up
+14188450184,OVO,1,True,True,True,"Login, OTP & verification"
+14188450184,OVO,1,True,True,True,Customer service
+14188091378,OVO,1,True,True,True,"Login, OTP & verification"
+14180351104,OVO,1,True,True,True,Failed / pending transfer or top-up
+14180351104,OVO,1,True,True,True,Customer service
+14180221704,OVO,1,True,True,True,App performance & bugs
+14177197314,OVO,1,True,True,True,Failed / pending transfer or top-up
+14176995797,OVO,1,True,True,True,Account security & fraud
+14176995797,OVO,1,True,True,True,Fees & charges
+14176995797,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14176995797,OVO,1,True,True,True,"Ads, notifications & promos"
+14176470350,OVO,1,True,True,True,Fees & charges
+14173245533,OVO,1,True,True,True,Hard to use
+14170361196,OVO,1,True,False,True,"Login, OTP & verification"
+14166132660,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14163287466,OVO,1,True,True,True,"Login, OTP & verification"
+14161835412,OVO,1,True,True,True,"Login, OTP & verification"
+14161747308,OVO,1,True,True,True,Failed / pending transfer or top-up
+14161747308,OVO,1,True,True,True,Fees & charges
+14161747308,OVO,1,True,True,True,App performance & bugs
+14160243384,OVO,1,True,True,True,"Login, OTP & verification"
+14160243384,OVO,1,True,True,True,Hard to use
+14155106026,OVO,1,True,True,True,"Login, OTP & verification"
+14155106026,OVO,1,True,True,True,Account security & fraud
+14155106026,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14154449882,OVO,5,True,True,False,"Login, OTP & verification"
+14154449882,OVO,5,True,True,False,Customer service
+14149520704,OVO,1,True,True,True,Hard to use
+14135292704,OVO,1,True,True,True,Fees & charges
+14126210431,OVO,1,True,True,True,"Login, OTP & verification"
+14126210431,OVO,1,True,True,True,Customer service
+14126210431,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14122709979,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14122709979,OVO,1,True,True,True,Failed / pending transfer or top-up
+14122709979,OVO,1,True,True,True,App performance & bugs
+14122317475,OVO,1,True,True,True,Failed / pending transfer or top-up
+14120040279,OVO,1,True,True,True,Fees & charges
+14120040279,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14120040279,OVO,1,True,True,True,"Ads, notifications & promos"
+14119706727,OVO,1,True,True,True,Account security & fraud
+14119706727,OVO,1,True,True,True,Fees & charges
+14119706727,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14119706727,OVO,1,True,True,True,"Ads, notifications & promos"
+14118457610,OVO,1,True,True,True,Fees & charges
+14113458643,OVO,4,True,True,False,Failed / pending transfer or top-up
+14110625742,OVO,1,True,True,True,Fees & charges
+14110625742,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14107534633,OVO,1,True,True,True,Failed / pending transfer or top-up
+14106548862,OVO,3,True,True,False,Failed / pending transfer or top-up
+14106548862,OVO,3,True,True,False,Hard to use
+14104566639,OVO,1,True,True,True,Failed / pending transfer or top-up
+14103060186,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14103060186,OVO,1,True,True,True,Failed / pending transfer or top-up
+14103060186,OVO,1,True,True,True,Customer service
+14099444028,OVO,1,True,True,True,Customer service
+14099444028,OVO,1,True,True,True,Fees & charges
+14096433849,OVO,1,True,True,True,Fees & charges
+14096433849,OVO,1,True,True,True,"Ads, notifications & promos"
+14096022794,OVO,1,True,True,True,Failed / pending transfer or top-up
+14094562309,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14094562309,OVO,1,True,True,True,Failed / pending transfer or top-up
+14089079598,OVO,5,True,True,False,"Login, OTP & verification"
+14089079598,OVO,5,True,True,False,Customer service
+14087093139,OVO,1,True,True,True,Customer service
+14084740542,OVO,1,True,True,True,Failed / pending transfer or top-up
+14084627191,OVO,1,True,True,True,Failed / pending transfer or top-up
+14070898841,OVO,1,True,True,True,Fees & charges
+14070898841,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14070457692,OVO,1,True,True,True,Failed / pending transfer or top-up
+14070082617,OVO,1,True,True,True,Fees & charges
+14070082617,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14070082617,OVO,1,True,True,True,"Ads, notifications & promos"
+14069066488,OVO,1,True,True,True,Failed / pending transfer or top-up
+14069066488,OVO,1,True,True,True,Account security & fraud
+14066875152,OVO,1,True,True,True,Fees & charges
+14066065241,OVO,1,True,True,True,Hard to use
+14065972940,OVO,1,True,True,True,Fees & charges
+14065972940,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14059561089,OVO,1,True,True,True,Fees & charges
+14056952804,OVO,1,True,True,True,Customer service
+14052271293,OVO,1,True,True,True,Fees & charges
+14040030198,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14040030198,OVO,1,True,True,True,Failed / pending transfer or top-up
+14040030198,OVO,1,True,True,True,"Login, OTP & verification"
+14040030198,OVO,1,True,True,True,Account security & fraud
+14040030198,OVO,1,True,True,True,Customer service
+14034051694,OVO,1,True,True,True,Fees & charges
+14031979868,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14031979868,OVO,1,True,True,True,Failed / pending transfer or top-up
+14029734381,OVO,1,True,True,True,Failed / pending transfer or top-up
+14022985077,OVO,2,True,True,True,Failed / pending transfer or top-up
+14022985077,OVO,2,True,True,True,Fees & charges
+14021880548,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14018808294,OVO,1,True,True,True,Failed / pending transfer or top-up
+14014195793,OVO,1,True,True,True,App performance & bugs
+14011295206,OVO,1,True,True,True,Failed / pending transfer or top-up
+14011295206,OVO,1,True,True,True,Customer service
+14011295206,OVO,1,True,True,True,Fees & charges
+14011295206,OVO,1,True,True,True,App performance & bugs
+14011146942,OVO,1,True,True,True,Customer service
+14008241595,OVO,1,True,True,True,Hard to use
+14007922046,OVO,1,True,True,True,Balance lost / unauthorised deduction
+14007922046,OVO,1,True,True,True,Fees & charges
+14005812024,OVO,2,True,True,True,Failed / pending transfer or top-up
+14005812024,OVO,2,True,True,True,"Paylater, loans & debt collection"
+14004144096,OVO,1,True,True,True,"Paylater, loans & debt collection"
+14003796730,OVO,1,True,True,True,Failed / pending transfer or top-up
+14003796730,OVO,1,True,True,True,App performance & bugs
+14002198227,OVO,1,True,True,True,Failed / pending transfer or top-up
+14002198227,OVO,1,True,True,True,App performance & bugs
+14000254433,OVO,1,True,True,True,Failed / pending transfer or top-up
+14000016250,OVO,1,True,True,True,App performance & bugs
+13996845900,OVO,1,True,True,True,Failed / pending transfer or top-up
+13994322584,OVO,1,True,True,True,Balance lost / unauthorised deduction
+13994139304,OVO,1,True,True,True,Failed / pending transfer or top-up
+13994139304,OVO,1,True,True,True,"Login, OTP & verification"
+13994139304,OVO,1,True,True,True,App performance & bugs
+13993675993,OVO,1,True,True,True,Failed / pending transfer or top-up
+13993675993,OVO,1,True,True,True,Customer service
+13992973908,OVO,1,True,True,True,Hard to use
+13988532902,OVO,4,True,True,False,Hard to use
+13988032552,OVO,1,True,True,True,Failed / pending transfer or top-up
+13988032552,OVO,1,True,True,True,Customer service
+13987953011,OVO,1,True,True,True,Customer service
+13986701296,OVO,1,True,True,True,"Login, OTP & verification"
+13986701296,OVO,1,True,True,True,Customer service
+13983777762,OVO,1,True,True,True,Balance lost / unauthorised deduction
+13983777762,OVO,1,True,True,True,Failed / pending transfer or top-up
+13980665647,OVO,1,True,True,True,Fees & charges
+13980156849,OVO,1,True,True,True,Failed / pending transfer or top-up
+13980156849,OVO,1,True,True,True,Customer service
+13980156849,OVO,1,True,True,True,"Paylater, loans & debt collection"
+13978787611,OVO,1,True,True,True,"Paylater, loans & debt collection"
+13977156266,OVO,1,True,True,True,Failed / pending transfer or top-up
+13973596570,OVO,1,True,True,True,Failed / pending transfer or top-up
+13973596570,OVO,1,True,True,True,App performance & bugs
+13967992671,OVO,1,True,True,True,Failed / pending transfer or top-up
+13967992671,OVO,1,True,True,True,"Login, OTP & verification"
+13967992671,OVO,1,True,True,True,Customer service
+13960280595,OVO,1,True,True,True,"Login, OTP & verification"
+13959618609,OVO,1,True,True,True,"Paylater, loans & debt collection"
+13950565172,OVO,1,True,True,True,App performance & bugs
+13939639217,OVO,1,True,True,True,Failed / pending transfer or top-up
+13939639217,OVO,1,True,True,True,Fees & charges
+13939639217,OVO,1,True,True,True,"Paylater, loans & debt collection"
+13930806249,OVO,1,True,True,True,Failed / pending transfer or top-up
+13930806249,OVO,1,True,True,True,"Login, OTP & verification"
+13930806249,OVO,1,True,True,True,Customer service
+13930806249,OVO,1,True,True,True,App performance & bugs
+13929143816,OVO,1,True,True,True,Failed / pending transfer or top-up
+13929143816,OVO,1,True,True,True,App performance & bugs
+13923736607,OVO,1,True,True,True,"Login, OTP & verification"
+13922866826,OVO,2,True,True,True,Failed / pending transfer or top-up
+13912877263,OVO,2,True,True,True,Failed / pending transfer or top-up
+13903478912,OVO,1,True,True,True,"Login, OTP & verification"
+13903478912,OVO,1,True,True,True,App performance & bugs
+13898925527,OVO,1,True,False,True,"Login, OTP & verification"
+13898925527,OVO,1,True,False,True,App performance & bugs
+13897752093,OVO,1,True,True,True,"Login, OTP & verification"
+13897752093,OVO,1,True,True,True,Hard to use
+13897079481,OVO,1,True,True,True,"Login, OTP & verification"
+13894311341,OVO,1,True,True,True,Balance lost / unauthorised deduction
+13893582801,OVO,1,True,True,True,Failed / pending transfer or top-up
+13893582801,OVO,1,True,True,True,Customer service
+13888070851,OVO,2,True,True,True,Hard to use
+13887346232,OVO,1,True,True,True,Balance lost / unauthorised deduction
+13887346232,OVO,1,True,True,True,Failed / pending transfer or top-up
+13887346232,OVO,1,True,True,True,Account security & fraud
+13885045558,OVO,1,True,True,True,"Login, OTP & verification"
+13884437499,OVO,3,True,True,False,"Login, OTP & verification"
+13884437499,OVO,3,True,True,False,App performance & bugs
+13884398022,OVO,1,True,True,True,Failed / pending transfer or top-up
+13884398022,OVO,1,True,True,True,App performance & bugs
+13877330354,OVO,1,True,True,True,Fees & charges
+13876643784,OVO,1,True,True,True,Failed / pending transfer or top-up
+13876643784,OVO,1,True,True,True,Customer service
+13870492282,OVO,1,True,True,True,App performance & bugs
+13863663600,OVO,1,True,False,True,App performance & bugs
+13858073195,OVO,1,True,False,True,Failed / pending transfer or top-up
+13857176639,OVO,1,True,False,True,Fees & charges
+13856510505,OVO,1,True,False,True,"Login, OTP & verification"
+13855278858,OVO,2,True,False,True,"Ads, notifications & promos"
+13854674331,OVO,1,True,False,True,Failed / pending transfer or top-up
+13853523741,OVO,1,True,False,True,Fees & charges
+13853486593,OVO,1,True,False,True,Failed / pending transfer or top-up
+13853486593,OVO,1,True,False,True,Fees & charges
+13853486593,OVO,1,True,False,True,App performance & bugs
+13853172691,OVO,1,True,False,True,Failed / pending transfer or top-up
+13853172691,OVO,1,True,False,True,Customer service
+13852963464,OVO,2,True,False,True,Failed / pending transfer or top-up
+13852963464,OVO,2,True,False,True,Customer service
+13852294251,OVO,2,True,False,True,Account security & fraud
+13852294251,OVO,2,True,False,True,Customer service
+13851610908,OVO,2,True,False,True,"Ads, notifications & promos"
+13848129306,OVO,1,True,False,True,"Login, OTP & verification"
+13846827956,OVO,1,True,False,True,Balance lost / unauthorised deduction
+13846539122,OVO,1,True,False,True,Fees & charges
+13845927208,OVO,1,True,False,True,"Login, OTP & verification"
+13844244835,OVO,1,True,False,True,Balance lost / unauthorised deduction
+13844244835,OVO,1,True,False,True,Failed / pending transfer or top-up
+13841900689,OVO,1,True,False,True,Hard to use
+13839782440,OVO,1,True,False,True,Failed / pending transfer or top-up
+13837783514,OVO,2,True,False,True,Failed / pending transfer or top-up
+13836894829,OVO,1,True,False,True,"Login, OTP & verification"
+13836894829,OVO,1,True,False,True,Hard to use
+13836894829,OVO,1,True,False,True,"Paylater, loans & debt collection"
+13836303015,OVO,1,True,False,True,Balance lost / unauthorised deduction
+13836303015,OVO,1,True,False,True,Failed / pending transfer or top-up
+13835834762,OVO,5,True,False,False,Failed / pending transfer or top-up
+13834401426,OVO,1,True,False,True,Balance lost / unauthorised deduction
+13834309585,OVO,1,True,False,True,Balance lost / unauthorised deduction
+13834309585,OVO,1,True,False,True,Customer service
+13834309585,OVO,1,True,False,True,App performance & bugs
+13833766056,OVO,1,True,False,True,Account security & fraud
+13833235851,OVO,1,True,False,True,"Login, OTP & verification"
+13829891484,OVO,1,True,False,True,Customer service
+13829732876,OVO,1,True,False,True,Failed / pending transfer or top-up
+13829732876,OVO,1,True,False,True,Customer service
+13827422906,OVO,1,True,False,True,Failed / pending transfer or top-up
+13823899030,OVO,1,True,False,True,Failed / pending transfer or top-up
+13823899030,OVO,1,True,False,True,Account security & fraud
+13823899030,OVO,1,True,False,True,Customer service
+13822186924,OVO,1,True,False,True,Fees & charges
+13821951439,OVO,1,True,False,True,"Login, OTP & verification"
+13821894805,OVO,1,True,False,True,Fees & charges
+13819357505,OVO,1,True,False,True,App performance & bugs
+13814787326,OVO,1,True,False,True,Failed / pending transfer or top-up
+13813146912,OVO,2,True,False,True,Customer service
+13812698846,OVO,1,True,False,True,Failed / pending transfer or top-up
+13812403640,OVO,1,True,False,True,"Login, OTP & verification"
+13812403640,OVO,1,True,False,True,Customer service
+13811328678,OVO,1,True,False,True,Failed / pending transfer or top-up
+13808715557,OVO,1,True,False,True,Fees & charges
+13808464640,OVO,1,True,False,True,Account security & fraud
+13806142682,OVO,1,True,False,True,Fees & charges
+13806105092,OVO,1,True,False,True,Failed / pending transfer or top-up
+13805164228,OVO,1,True,False,True,"Login, OTP & verification"
+13805164228,OVO,1,True,False,True,Customer service
+13805164228,OVO,1,True,False,True,Hard to use
+13802190100,OVO,1,True,False,True,Balance lost / unauthorised deduction
+13801242695,OVO,2,True,False,True,Failed / pending transfer or top-up
+13794472606,OVO,1,True,False,True,Account security & fraud
+13794472606,OVO,1,True,False,True,App performance & bugs
+13789870722,OVO,1,True,False,True,Failed / pending transfer or top-up
+13789619049,OVO,1,True,False,True,Failed / pending transfer or top-up
+13786547570,OVO,1,True,False,True,Fees & charges
+13786489086,OVO,1,True,False,True,"Paylater, loans & debt collection"
+13785937313,OVO,3,True,False,False,Failed / pending transfer or top-up
+13785937313,OVO,3,True,False,False,"Login, OTP & verification"
+13783050479,OVO,1,True,False,True,Balance lost / unauthorised deduction
+13783050479,OVO,1,True,False,True,Failed / pending transfer or top-up
+13783050479,OVO,1,True,False,True,Customer service
+13780788796,OVO,2,True,False,True,"Login, OTP & verification"
+13779494560,OVO,1,True,False,True,"Paylater, loans & debt collection"
+13776664799,OVO,1,True,False,True,Fees & charges
+13773811823,OVO,4,True,False,False,App performance & bugs
+13768524048,OVO,1,True,False,True,"Login, OTP & verification"
+13768524048,OVO,1,True,False,True,Hard to use
+13765665978,OVO,1,True,False,True,Balance lost / unauthorised deduction
+13765665978,OVO,1,True,False,True,"Login, OTP & verification"
+13765665978,OVO,1,True,False,True,Customer service
+13764483484,OVO,1,True,False,True,App performance & bugs
+13761594270,OVO,1,True,False,True,Customer service
+13761594270,OVO,1,True,False,True,App performance & bugs
+13761524028,OVO,1,True,False,True,Balance lost / unauthorised deduction
+13761524028,OVO,1,True,False,True,Account security & fraud
+13761524028,OVO,1,True,False,True,Fees & charges
+13761066891,OVO,1,True,False,True,"Login, OTP & verification"
+13758860993,OVO,1,True,False,True,Account security & fraud
+13758666296,OVO,1,True,False,True,Hard to use
+13758523840,OVO,1,True,False,True,App performance & bugs
+13754391670,OVO,1,True,False,True,"Login, OTP & verification"
+13754391670,OVO,1,True,False,True,Hard to use
+13745735165,OVO,1,True,False,True,Fees & charges
+13745735165,OVO,1,True,False,True,Hard to use
+13745735165,OVO,1,True,False,True,App performance & bugs
+13744072175,OVO,1,True,False,True,"Login, OTP & verification"
+13744072175,OVO,1,True,False,True,Customer service
+13740199618,OVO,1,True,False,True,App performance & bugs
+13739380890,OVO,1,True,False,True,App performance & bugs
+13737904017,OVO,3,True,False,False,"Paylater, loans & debt collection"
+13737277619,OVO,1,True,False,True,Hard to use
+13737277619,OVO,1,True,False,True,App performance & bugs
+13735025042,OVO,1,True,False,True,Failed / pending transfer or top-up
+13726945461,OVO,1,True,False,True,"Login, OTP & verification"
+13721417225,OVO,1,True,False,True,"Login, OTP & verification"
+13715646097,OVO,1,True,False,True,App performance & bugs
+13714501776,OVO,1,True,False,True,Failed / pending transfer or top-up
+13714029182,OVO,2,True,False,True,Fees & charges
+13712482194,OVO,1,True,False,True,"Login, OTP & verification"
+13712482194,OVO,1,True,False,True,Hard to use
+13710746104,OVO,1,True,False,True,Fees & charges
+13707739115,OVO,3,True,False,False,Failed / pending transfer or top-up
+13707739115,OVO,3,True,False,False,"Login, OTP & verification"
+13707344763,OVO,1,True,False,True,"Login, OTP & verification"
+13701847551,OVO,3,True,False,False,Balance lost / unauthorised deduction
+13696496864,OVO,1,True,False,True,"Login, OTP & verification"
+13693235483,OVO,2,True,False,True,"Login, OTP & verification"
+13692496504,OVO,1,True,False,True,"Login, OTP & verification"
+13690950540,OVO,1,True,False,True,Failed / pending transfer or top-up
+13684679778,OVO,1,True,False,True,Failed / pending transfer or top-up
+13680722233,OVO,1,True,False,True,Customer service
+13680225788,OVO,1,True,False,True,Failed / pending transfer or top-up
+13680225788,OVO,1,True,False,True,Customer service
+13676371935,OVO,1,True,False,True,Hard to use
+13676026338,OVO,2,True,False,True,Failed / pending transfer or top-up
+13674377995,OVO,1,True,False,True,Fees & charges
+13666125959,OVO,1,True,False,True,Fees & charges
+13665593403,OVO,1,True,False,True,Account security & fraud
+13655180315,OVO,1,True,False,True,"Paylater, loans & debt collection"
+13655180315,OVO,1,True,False,True,"Ads, notifications & promos"
+13654503823,OVO,1,True,False,True,Customer service
+13649659899,OVO,1,True,False,True,Failed / pending transfer or top-up
+13649659899,OVO,1,True,False,True,Account security & fraud
+13649659899,OVO,1,True,False,True,Customer service
+13649659899,OVO,1,True,False,True,App performance & bugs
+13648855975,OVO,1,True,False,True,Failed / pending transfer or top-up
+13644210729,OVO,1,True,False,True,Fees & charges
+13640710044,OVO,1,True,False,True,Balance lost / unauthorised deduction
+13640710044,OVO,1,True,False,True,Customer service
+13639926074,OVO,5,True,False,False,App performance & bugs
+13638525322,OVO,1,True,False,True,Balance lost / unauthorised deduction
+13638525322,OVO,1,True,False,True,Failed / pending transfer or top-up
+13638525322,OVO,1,True,False,True,Customer service
+13634750225,OVO,1,True,False,True,Fees & charges
+13634750225,OVO,1,True,False,True,"Ads, notifications & promos"
+3740480218,OVO,2,False,True,True,App performance & bugs
+3740480218,OVO,2,False,True,True,"Ads, notifications & promos"
+1852453529,OVO,1,False,True,True,Failed / pending transfer or top-up
+1852453529,OVO,1,False,True,True,"Login, OTP & verification"
+1852453529,OVO,1,False,True,True,Account security & fraud
+1852453529,OVO,1,False,True,True,Customer service
+2197869094,OVO,1,False,True,True,Balance lost / unauthorised deduction
+2197869094,OVO,1,False,True,True,Failed / pending transfer or top-up
+2197869094,OVO,1,False,True,True,"Login, OTP & verification"
+2197869094,OVO,1,False,True,True,Customer service
+2197869094,OVO,1,False,True,True,App performance & bugs
+3227582067,OVO,1,False,True,True,"Login, OTP & verification"
+3227582067,OVO,1,False,True,True,App performance & bugs
+3911655283,OVO,1,False,True,True,App performance & bugs
+3543862902,OVO,1,False,True,True,Failed / pending transfer or top-up
+3543862902,OVO,1,False,True,True,Customer service
+3543862902,OVO,1,False,True,True,App performance & bugs
+3543862902,OVO,1,False,True,True,"Paylater, loans & debt collection"
+3734687709,OVO,1,False,True,True,Failed / pending transfer or top-up
+2675840966,OVO,1,False,True,True,"Login, OTP & verification"
+2675840966,OVO,1,False,True,True,App performance & bugs
+4343639705,OVO,1,False,True,True,Balance lost / unauthorised deduction
+7583437527,OVO,1,False,True,True,Failed / pending transfer or top-up
+7583437527,OVO,1,False,True,True,Customer service
+4045700070,OVO,1,False,True,True,Balance lost / unauthorised deduction
+4045700070,OVO,1,False,True,True,Failed / pending transfer or top-up
+4045700070,OVO,1,False,True,True,Fees & charges
+6138511368,OVO,1,False,True,True,Failed / pending transfer or top-up
+6138511368,OVO,1,False,True,True,"Login, OTP & verification"
+6138511368,OVO,1,False,True,True,Account security & fraud
+6138511368,OVO,1,False,True,True,"Paylater, loans & debt collection"
+5180407057,OVO,1,False,True,True,Balance lost / unauthorised deduction
+5180407057,OVO,1,False,True,True,Failed / pending transfer or top-up
+5180407057,OVO,1,False,True,True,Customer service
+8536149670,OVO,1,False,True,True,"Login, OTP & verification"
+8536149670,OVO,1,False,True,True,Customer service
+8536149670,OVO,1,False,True,True,App performance & bugs
+8088435850,OVO,1,False,True,True,Balance lost / unauthorised deduction
+8088435850,OVO,1,False,True,True,Failed / pending transfer or top-up
+8088435850,OVO,1,False,True,True,Customer service
+9625426312,OVO,1,False,True,True,Fees & charges
+4302079998,OVO,1,False,True,True,"Login, OTP & verification"
+4066887695,OVO,1,False,True,True,Balance lost / unauthorised deduction
+4066887695,OVO,1,False,True,True,Customer service
+8550067947,OVO,2,False,True,True,Failed / pending transfer or top-up
+8551557736,OVO,1,False,True,True,Failed / pending transfer or top-up
+8551557736,OVO,1,False,True,True,App performance & bugs
+8550089100,OVO,1,False,True,True,Failed / pending transfer or top-up
+8550089100,OVO,1,False,True,True,"Ads, notifications & promos"
+8548876333,OVO,2,False,True,True,Balance lost / unauthorised deduction
+8548876333,OVO,2,False,True,True,Failed / pending transfer or top-up
+7863799672,OVO,1,False,True,True,Failed / pending transfer or top-up
+7774897417,OVO,1,False,True,True,Failed / pending transfer or top-up
+5883230182,OVO,1,False,True,True,"Login, OTP & verification"
+5883230182,OVO,1,False,True,True,Customer service
+12737502980,OVO,1,False,True,True,Failed / pending transfer or top-up
+12639882125,OVO,1,False,True,True,Failed / pending transfer or top-up
+11534579431,OVO,1,False,True,True,Customer service
+10710592385,OVO,1,False,True,True,Customer service
+10709876346,OVO,1,False,True,True,Failed / pending transfer or top-up
+10708714351,OVO,1,False,True,True,Failed / pending transfer or top-up
+10692281101,OVO,1,False,True,True,"Login, OTP & verification"
+9637405076,OVO,1,False,True,True,Failed / pending transfer or top-up
+9637405076,OVO,1,False,True,True,Customer service
+9625131482,OVO,1,False,True,True,"Login, OTP & verification"
+9620215608,OVO,1,False,True,True,"Login, OTP & verification"
+9619062857,OVO,1,False,True,True,Failed / pending transfer or top-up
+9619062857,OVO,1,False,True,True,"Ads, notifications & promos"
+9615396402,OVO,1,False,True,True,Hard to use
+8128026126,OVO,4,False,True,False,"Ads, notifications & promos"
+9613587683,OVO,2,False,True,True,App performance & bugs
+9607801814,OVO,1,False,True,True,"Ads, notifications & promos"
+9601153419,OVO,1,False,True,True,Failed / pending transfer or top-up
+9585839795,OVO,1,False,True,True,Failed / pending transfer or top-up
+9585839795,OVO,1,False,True,True,"Login, OTP & verification"
+9585839795,OVO,1,False,True,True,Fees & charges
+9584095005,OVO,1,False,True,True,Fees & charges
+9578020312,OVO,1,False,True,True,Failed / pending transfer or top-up
+9565413261,OVO,1,False,True,True,Failed / pending transfer or top-up
+9565413261,OVO,1,False,True,True,"Login, OTP & verification"
+9565413261,OVO,1,False,True,True,Customer service
+8921872491,OVO,1,False,True,True,App performance & bugs
+8871825342,OVO,1,False,True,True,"Login, OTP & verification"
+8871825342,OVO,1,False,True,True,Account security & fraud
+8871825342,OVO,1,False,True,True,Customer service
+8871825342,OVO,1,False,True,True,Hard to use
+8871504018,OVO,1,False,True,True,Hard to use
+8551556861,OVO,1,False,True,True,"Login, OTP & verification"
+8551556861,OVO,1,False,True,True,Customer service
+8551357456,OVO,1,False,True,True,Failed / pending transfer or top-up
+8551357456,OVO,1,False,True,True,"Login, OTP & verification"
+8550139566,OVO,1,False,True,True,Failed / pending transfer or top-up
+8550139566,OVO,1,False,True,True,Customer service
+8549777888,OVO,1,False,True,True,Failed / pending transfer or top-up
+8445213866,OVO,1,False,True,True,Failed / pending transfer or top-up
+8445213866,OVO,1,False,True,True,Customer service
+8445213866,OVO,1,False,True,True,"Ads, notifications & promos"
+8415894725,OVO,1,False,True,True,Failed / pending transfer or top-up
+8124163482,OVO,1,False,True,True,Customer service
+8124163482,OVO,1,False,True,True,Fees & charges
+8084962559,OVO,1,False,True,True,Balance lost / unauthorised deduction
+8084962559,OVO,1,False,True,True,Failed / pending transfer or top-up
+8084962559,OVO,1,False,True,True,Customer service
+8084962559,OVO,1,False,True,True,Fees & charges
+8075130436,OVO,1,False,True,True,"Login, OTP & verification"
+8057536623,OVO,1,False,True,True,Balance lost / unauthorised deduction
+8057536623,OVO,1,False,True,True,Customer service
+8029828793,OVO,1,False,True,True,Failed / pending transfer or top-up
+8029828793,OVO,1,False,True,True,"Login, OTP & verification"
+8017336664,OVO,1,False,True,True,Customer service
+8008061160,OVO,1,False,True,True,Account security & fraud
+8000471526,OVO,1,False,True,True,Failed / pending transfer or top-up
+8000471526,OVO,1,False,True,True,Customer service
+7990561822,OVO,1,False,True,True,Failed / pending transfer or top-up
+7990561822,OVO,1,False,True,True,Customer service
+7990561822,OVO,1,False,True,True,Hard to use
+7883285364,OVO,1,False,True,True,"Login, OTP & verification"
+7883285364,OVO,1,False,True,True,Customer service
+7866279885,OVO,1,False,True,True,Balance lost / unauthorised deduction
+7866279885,OVO,1,False,True,True,Failed / pending transfer or top-up
+7794599562,OVO,1,False,True,True,App performance & bugs
+7779688932,OVO,1,False,True,True,App performance & bugs
+7774291969,OVO,1,False,True,True,Account security & fraud
+7600657256,OVO,1,False,True,True,Balance lost / unauthorised deduction
+7600657256,OVO,1,False,True,True,Failed / pending transfer or top-up
+7600657256,OVO,1,False,True,True,Customer service
+7447871594,OVO,1,False,True,True,"Login, OTP & verification"
+7447871594,OVO,1,False,True,True,Customer service
+7443869262,OVO,1,False,True,True,"Login, OTP & verification"
+7443869262,OVO,1,False,True,True,Customer service
+7443864821,OVO,1,False,True,True,Balance lost / unauthorised deduction
+7443864821,OVO,1,False,True,True,"Login, OTP & verification"
+7443864821,OVO,1,False,True,True,Hard to use
+7443864821,OVO,1,False,True,True,App performance & bugs
+7440596463,OVO,1,False,True,True,Customer service
+7434444425,OVO,1,False,True,True,"Login, OTP & verification"
+7431103892,OVO,1,False,True,True,Balance lost / unauthorised deduction
+7431103892,OVO,1,False,True,True,Failed / pending transfer or top-up
+7431103892,OVO,1,False,True,True,Account security & fraud
+7427778863,OVO,1,False,True,True,Failed / pending transfer or top-up
+7427778863,OVO,1,False,True,True,Customer service
+6268879680,OVO,4,False,True,False,Failed / pending transfer or top-up
+7204361359,OVO,1,False,True,True,Failed / pending transfer or top-up
+7204361359,OVO,1,False,True,True,"Login, OTP & verification"
+7204361359,OVO,1,False,True,True,App performance & bugs
+7127370039,OVO,3,False,True,False,"Login, OTP & verification"
+7127370039,OVO,3,False,True,False,App performance & bugs
+6936011444,OVO,1,False,True,True,Customer service
+6936011444,OVO,1,False,True,True,App performance & bugs
+6935699902,OVO,1,False,True,True,Failed / pending transfer or top-up
+6935452081,OVO,1,False,True,True,Failed / pending transfer or top-up
+6935332532,OVO,1,False,True,True,Failed / pending transfer or top-up
+6935332532,OVO,1,False,True,True,Hard to use
+6935332532,OVO,1,False,True,True,"Ads, notifications & promos"
+6103095525,OVO,1,False,True,True,"Login, OTP & verification"
+5941459320,OVO,1,False,True,True,"Login, OTP & verification"
+5941459320,OVO,1,False,True,True,Customer service
+5884157479,OVO,2,False,True,True,"Login, OTP & verification"
+4015642570,OVO,1,False,True,True,"Login, OTP & verification"
+4015642570,OVO,1,False,True,True,Customer service
+3992785552,OVO,1,False,True,True,Failed / pending transfer or top-up
+3992785552,OVO,1,False,True,True,Customer service
+3795107031,OVO,1,False,True,True,Customer service
+3682807267,OVO,1,False,True,True,"Login, OTP & verification"
+3554794342,OVO,1,False,True,True,Customer service
+3513932784,OVO,1,False,True,True,Balance lost / unauthorised deduction
+1933890766,OVO,1,False,True,True,Customer service
+1933890766,OVO,1,False,True,True,"Ads, notifications & promos"
+1926702944,OVO,1,False,True,True,Customer service
+1926702944,OVO,1,False,True,True,App performance & bugs
+1749513363,OVO,5,False,True,False,"Paylater, loans & debt collection"
+9592484272,OVO,1,False,True,True,Failed / pending transfer or top-up
+9592484272,OVO,1,False,True,True,Customer service
+9589028191,OVO,1,False,True,True,Hard to use
+9589028191,OVO,1,False,True,True,App performance & bugs
+7774205066,OVO,1,False,True,True,Fees & charges
+7130945033,OVO,1,False,True,True,"Login, OTP & verification"
+7130945033,OVO,1,False,True,True,Customer service
+7130584058,OVO,1,False,True,True,"Login, OTP & verification"
+7130584058,OVO,1,False,True,True,App performance & bugs
+7128320716,OVO,1,False,True,True,"Login, OTP & verification"
+7127964835,OVO,1,False,True,True,"Login, OTP & verification"
+7127964835,OVO,1,False,True,True,App performance & bugs
+6939487464,OVO,1,False,True,True,Balance lost / unauthorised deduction
+6939487464,OVO,1,False,True,True,App performance & bugs
+6938267810,OVO,1,False,True,True,Failed / pending transfer or top-up
+6937147059,OVO,1,False,True,True,Customer service
+6936459638,OVO,1,False,True,True,Failed / pending transfer or top-up
+6936459638,OVO,1,False,True,True,Customer service
+6936459638,OVO,1,False,True,True,Hard to use
+6936459638,OVO,1,False,True,True,App performance & bugs
+6936096251,OVO,1,False,True,True,Failed / pending transfer or top-up
+6138800955,OVO,1,False,True,True,"Login, OTP & verification"
+6134628805,OVO,1,False,True,True,"Login, OTP & verification"
+6134628805,OVO,1,False,True,True,Hard to use
+6131464213,OVO,1,False,True,True,Failed / pending transfer or top-up
+6131464213,OVO,1,False,True,True,"Login, OTP & verification"
+6131464213,OVO,1,False,True,True,Account security & fraud
+6131464213,OVO,1,False,True,True,"Paylater, loans & debt collection"
+4752003290,OVO,1,False,True,True,"Login, OTP & verification"
+4752003290,OVO,1,False,True,True,Customer service
+4066000840,OVO,1,False,True,True,"Login, OTP & verification"
+3689443010,OVO,1,False,True,True,"Login, OTP & verification"
+3555438384,OVO,1,False,True,True,Failed / pending transfer or top-up
+3555438384,OVO,1,False,True,True,Customer service
+14590319755,GoPay,1,True,False,True,Failed / pending transfer or top-up
+14590245988,GoPay,5,True,True,False,Fees & charges
+14589977120,GoPay,5,True,True,False,Customer service
+14589953499,GoPay,5,True,True,False,"Paylater, loans & debt collection"
+14588052649,GoPay,2,True,True,True,"Login, OTP & verification"
+14587605993,GoPay,5,True,True,False,"Ads, notifications & promos"
+14587494634,GoPay,1,True,True,True,"Login, OTP & verification"
+14587255224,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14587069037,GoPay,5,True,True,False,Failed / pending transfer or top-up
+14587058905,GoPay,2,True,True,True,Account security & fraud
+14587058905,GoPay,2,True,True,True,"Ads, notifications & promos"
+14586030221,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14585192558,GoPay,5,True,True,False,"Paylater, loans & debt collection"
+14584798888,GoPay,1,True,True,True,Account security & fraud
+14584392870,GoPay,5,True,True,False,App performance & bugs
+14584392870,GoPay,5,True,True,False,"Paylater, loans & debt collection"
+14583790579,GoPay,2,True,True,True,Customer service
+14583531763,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14583531763,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14583531763,GoPay,1,True,True,True,Customer service
+14583082435,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14583082435,GoPay,1,True,True,True,Customer service
+14582971149,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14582784740,GoPay,5,True,True,False,Failed / pending transfer or top-up
+14582127324,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14582127324,GoPay,1,True,True,True,Account security & fraud
+14582127324,GoPay,1,True,True,True,Customer service
+14582127324,GoPay,1,True,True,True,App performance & bugs
+14580326654,GoPay,3,True,True,False,"Ads, notifications & promos"
+14580320695,GoPay,1,True,True,True,App performance & bugs
+14580175222,GoPay,1,True,True,True,"Ads, notifications & promos"
+14579441883,GoPay,1,True,True,True,Account security & fraud
+14579441883,GoPay,1,True,True,True,Customer service
+14579441883,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14579063836,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14578693654,GoPay,5,True,True,False,Fees & charges
+14578497255,GoPay,5,True,True,False,Fees & charges
+14578182442,GoPay,1,True,False,True,Customer service
+14577711197,GoPay,5,True,True,False,"Paylater, loans & debt collection"
+14575278963,GoPay,2,True,True,True,App performance & bugs
+14574954791,GoPay,5,True,True,False,App performance & bugs
+14573804098,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14573804098,GoPay,1,True,True,True,Customer service
+14571288737,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14567216542,GoPay,3,True,True,False,"Ads, notifications & promos"
+14566929080,GoPay,1,True,True,True,Account security & fraud
+14566785382,GoPay,1,True,True,True,"Login, OTP & verification"
+14566785382,GoPay,1,True,True,True,Hard to use
+14564607198,GoPay,1,True,True,True,App performance & bugs
+14564027512,GoPay,2,True,True,True,Hard to use
+14564027512,GoPay,2,True,True,True,App performance & bugs
+14563574869,GoPay,5,True,True,False,"Ads, notifications & promos"
+14563474894,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14563474894,GoPay,1,True,True,True,App performance & bugs
+14563416923,GoPay,1,True,True,True,Customer service
+14563416923,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14563415146,GoPay,2,True,True,True,Failed / pending transfer or top-up
+14563127657,GoPay,1,True,True,True,"Login, OTP & verification"
+14562779760,GoPay,5,True,True,False,Customer service
+14562779760,GoPay,5,True,True,False,Hard to use
+14562031090,GoPay,1,True,False,True,"Paylater, loans & debt collection"
+14560349117,GoPay,1,True,True,True,App performance & bugs
+14559552591,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14559552591,GoPay,1,True,True,True,Customer service
+14558649140,GoPay,5,True,True,False,Fees & charges
+14558420761,GoPay,1,True,True,True,App performance & bugs
+14557269686,GoPay,5,True,True,False,Hard to use
+14556931675,GoPay,1,True,False,True,Failed / pending transfer or top-up
+14556931675,GoPay,1,True,False,True,Customer service
+14556605303,GoPay,2,True,True,True,App performance & bugs
+14555845706,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14555359064,GoPay,5,True,True,False,Failed / pending transfer or top-up
+14554984506,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14554984506,GoPay,1,True,True,True,Customer service
+14554834523,GoPay,2,True,True,True,Balance lost / unauthorised deduction
+14554834523,GoPay,2,True,True,True,"Login, OTP & verification"
+14554470263,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14554329625,GoPay,4,True,True,False,"Paylater, loans & debt collection"
+14553250932,GoPay,1,True,True,True,"Login, OTP & verification"
+14553250932,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14553023450,GoPay,2,True,True,True,"Login, OTP & verification"
+14552690819,GoPay,1,True,True,True,"Login, OTP & verification"
+14552690819,GoPay,1,True,True,True,Account security & fraud
+14552623750,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14552437578,GoPay,1,True,True,True,"Login, OTP & verification"
+14551006172,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14550758605,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14550758605,GoPay,1,True,True,True,Customer service
+14550758605,GoPay,1,True,True,True,App performance & bugs
+14549954276,GoPay,5,True,True,False,Fees & charges
+14549954276,GoPay,5,True,True,False,"Paylater, loans & debt collection"
+14549858687,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14548851108,GoPay,5,True,True,False,App performance & bugs
+14548493399,GoPay,1,True,True,True,"Login, OTP & verification"
+14548493399,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14548063732,GoPay,5,True,True,False,Fees & charges
+14548049448,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14547109955,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14547109955,GoPay,1,True,True,True,Account security & fraud
+14547109955,GoPay,1,True,True,True,Customer service
+14546633935,GoPay,1,True,True,True,Account security & fraud
+14545053639,GoPay,1,True,True,True,App performance & bugs
+14542299128,GoPay,3,True,True,False,App performance & bugs
+14542299128,GoPay,3,True,True,False,"Paylater, loans & debt collection"
+14540454539,GoPay,5,True,True,False,Hard to use
+14540441031,GoPay,1,True,False,True,Customer service
+14539638368,GoPay,5,True,True,False,Customer service
+14538860244,GoPay,2,True,True,True,App performance & bugs
+14538860244,GoPay,2,True,True,True,"Paylater, loans & debt collection"
+14538558162,GoPay,1,True,True,True,App performance & bugs
+14537521702,GoPay,2,True,True,True,Failed / pending transfer or top-up
+14536918409,GoPay,1,True,False,True,App performance & bugs
+14536481787,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14536464524,GoPay,2,True,True,True,"Login, OTP & verification"
+14535391149,GoPay,2,True,True,True,"Login, OTP & verification"
+14533441858,GoPay,1,True,False,True,"Paylater, loans & debt collection"
+14531953079,GoPay,2,True,True,True,Failed / pending transfer or top-up
+14531912743,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14531912743,GoPay,1,True,True,True,"Ads, notifications & promos"
+14531853955,GoPay,1,True,True,True,"Login, OTP & verification"
+14531853955,GoPay,1,True,True,True,Customer service
+14531769652,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14531509201,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14531466778,GoPay,1,True,True,True,Customer service
+14531433650,GoPay,5,True,True,False,Failed / pending transfer or top-up
+14530962299,GoPay,2,True,True,True,App performance & bugs
+14529977902,GoPay,4,True,True,False,"Login, OTP & verification"
+14528666316,GoPay,2,True,True,True,App performance & bugs
+14528452390,GoPay,2,True,True,True,"Paylater, loans & debt collection"
+14528201806,GoPay,5,True,True,False,Hard to use
+14527924593,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14527696421,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14527198343,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14527198343,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14524402906,GoPay,1,True,True,True,App performance & bugs
+14523987924,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14523987924,GoPay,1,True,True,True,Account security & fraud
+14523987570,GoPay,4,True,True,False,"Paylater, loans & debt collection"
+14521015566,GoPay,1,True,False,True,Account security & fraud
+14520366171,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14520366171,GoPay,1,True,True,True,"Login, OTP & verification"
+14520213125,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14520213125,GoPay,1,True,True,True,Customer service
+14520213125,GoPay,1,True,True,True,App performance & bugs
+14520213125,GoPay,1,True,True,True,"Ads, notifications & promos"
+14518566757,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14518566757,GoPay,1,True,True,True,Customer service
+14516546720,GoPay,1,True,True,True,Customer service
+14515986828,GoPay,1,True,True,True,Customer service
+14515727046,GoPay,5,True,True,False,"Ads, notifications & promos"
+14512891192,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14511982470,GoPay,1,True,True,True,Hard to use
+14511982470,GoPay,1,True,True,True,"Ads, notifications & promos"
+14509773152,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14509773152,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14509773152,GoPay,1,True,True,True,App performance & bugs
+14508914296,GoPay,5,True,True,False,"Paylater, loans & debt collection"
+14508876433,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14508843899,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14508453085,GoPay,1,True,True,True,Account security & fraud
+14508379191,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14507740388,GoPay,5,True,True,False,App performance & bugs
+14507415530,GoPay,4,True,True,False,"Paylater, loans & debt collection"
+14507302732,GoPay,5,True,True,False,Failed / pending transfer or top-up
+14505867797,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14505867797,GoPay,1,True,True,True,Customer service
+14505399522,GoPay,2,True,True,True,Fees & charges
+14504896095,GoPay,1,True,True,True,"Login, OTP & verification"
+14504896095,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14504761529,GoPay,1,True,True,True,"Ads, notifications & promos"
+14504398643,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14504227267,GoPay,1,True,True,True,Customer service
+14504227267,GoPay,1,True,True,True,App performance & bugs
+14504227267,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14502549648,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14502323793,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14501435202,GoPay,5,True,True,False,"Ads, notifications & promos"
+14500442020,GoPay,1,True,True,True,Customer service
+14500442020,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14500326342,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14500326342,GoPay,1,True,True,True,Customer service
+14500088749,GoPay,4,True,True,False,"Paylater, loans & debt collection"
+14499654157,GoPay,1,True,True,True,App performance & bugs
+14499654157,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14498760637,GoPay,5,True,True,False,"Ads, notifications & promos"
+14498602566,GoPay,2,True,True,True,Failed / pending transfer or top-up
+14498602566,GoPay,2,True,True,True,"Login, OTP & verification"
+14498591632,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14498591632,GoPay,1,True,True,True,App performance & bugs
+14498591632,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14498140481,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14498140481,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14498140481,GoPay,1,True,True,True,App performance & bugs
+14497130805,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14497130805,GoPay,1,True,True,True,Account security & fraud
+14497127752,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14497127752,GoPay,1,True,True,True,Customer service
+14497127752,GoPay,1,True,True,True,Hard to use
+14497102979,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14496978910,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14496978910,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14496822134,GoPay,1,True,True,True,Hard to use
+14496452072,GoPay,5,True,True,False,App performance & bugs
+14496126234,GoPay,1,True,False,True,"Login, OTP & verification"
+14494592935,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14494592935,GoPay,1,True,True,True,Customer service
+14493311382,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14493311382,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14490699715,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14490634555,GoPay,1,True,True,True,"Ads, notifications & promos"
+14490118059,GoPay,1,True,True,True,Customer service
+14489991075,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14489991075,GoPay,1,True,True,True,Customer service
+14489035779,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14488160122,GoPay,5,True,True,False,Hard to use
+14488160122,GoPay,5,True,True,False,"Ads, notifications & promos"
+14487441163,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14487441163,GoPay,1,True,True,True,App performance & bugs
+14487441163,GoPay,1,True,True,True,"Ads, notifications & promos"
+14486701898,GoPay,5,True,True,False,Fees & charges
+14485666887,GoPay,5,True,True,False,App performance & bugs
+14485383018,GoPay,5,True,True,False,"Ads, notifications & promos"
+14485370450,GoPay,4,True,True,False,"Paylater, loans & debt collection"
+14484701805,GoPay,1,True,True,True,Balance lost / unauthorised deduction
+14484701805,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14484672653,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14484311695,GoPay,1,True,False,True,Failed / pending transfer or top-up
+14484311695,GoPay,1,True,False,True,"Paylater, loans & debt collection"
+14484109968,GoPay,5,True,True,False,Fees & charges
+14483812631,GoPay,5,True,True,False,"Paylater, loans & debt collection"
+14482209057,GoPay,1,True,True,True,Failed / pending transfer or top-up
+14482209057,GoPay,1,True,True,True,"Login, OTP & verification"
+14482209057,GoPay,1,True,True,True,Customer service
+14482209057,GoPay,1,True,True,True,App performance & bugs
+14482209057,GoPay,1,True,True,True,"Paylater, loans & debt collection"
+14481223590,GoPay,1,True,False,True,"Paylater, loans & debt collection"
+14481108060,GoPay,5,True,False,False,Fees & charges
+14480712930,GoPay,1,True,False,True,"Ads, notifications & promos"
+14478500380,GoPay,5,True,False,False,App performance & bugs
+14478395008,GoPay,2,True,False,True,Hard to use
+14477784766,GoPay,1,True,False,True,Failed / pending transfer or top-up
+14477423124,GoPay,1,True,False,True,"Paylater, loans & debt collection"
+14476959643,GoPay,5,True,False,False,"Ads, notifications & promos"
+14476811341,GoPay,1,True,False,True,"Paylater, loans & debt collection"
+14476677296,GoPay,1,True,False,True,Balance lost / unauthorised deduction
+14476677296,GoPay,1,True,False,True,"Login, OTP & verification"
+14476484153,GoPay,2,True,False,True,"Login, OTP & verification"
+14476164532,GoPay,1,True,False,True,Customer service
+14473381998,GoPay,1,True,False,True,Hard to use
+14473381998,GoPay,1,True,False,True,App performance & bugs
+11768301729,GoPay,5,False,True,False,"Login, OTP & verification"
+11768301729,GoPay,5,False,True,False,"Paylater, loans & debt collection"
+10292125255,GoPay,4,False,True,False,App performance & bugs
+10292125255,GoPay,4,False,True,False,"Ads, notifications & promos"
+12019524297,GoPay,1,False,True,True,App performance & bugs
+12019524297,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+10186567051,GoPay,1,False,True,True,Hard to use
+11747486351,GoPay,1,False,True,True,"Login, OTP & verification"
+11747486351,GoPay,1,False,True,True,"Ads, notifications & promos"
+10307550664,GoPay,3,False,True,False,"Ads, notifications & promos"
+11891516464,GoPay,1,False,True,True,"Login, OTP & verification"
+11891516464,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+11767230513,GoPay,1,False,True,True,"Login, OTP & verification"
+11767230513,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+11755725547,GoPay,1,False,True,True,Balance lost / unauthorised deduction
+11743445746,GoPay,1,False,True,True,Balance lost / unauthorised deduction
+11743445746,GoPay,1,False,True,True,Failed / pending transfer or top-up
+11743445746,GoPay,1,False,True,True,App performance & bugs
+14047374135,GoPay,1,False,True,True,Customer service
+14047374135,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+14043647059,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+14038512501,GoPay,1,False,True,True,Failed / pending transfer or top-up
+14038512501,GoPay,1,False,True,True,Account security & fraud
+14038512501,GoPay,1,False,True,True,Customer service
+14038512501,GoPay,1,False,True,True,App performance & bugs
+14038512501,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+13909958517,GoPay,1,False,True,True,Failed / pending transfer or top-up
+13909958517,GoPay,1,False,True,True,Account security & fraud
+13909958517,GoPay,1,False,True,True,Customer service
+13909958517,GoPay,1,False,True,True,"Ads, notifications & promos"
+13804566379,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+13292410843,GoPay,1,False,True,True,"Login, OTP & verification"
+13292410843,GoPay,1,False,True,True,Customer service
+13176745899,GoPay,1,False,True,True,"Login, OTP & verification"
+13172782052,GoPay,1,False,True,True,Failed / pending transfer or top-up
+12941219111,GoPay,1,False,True,True,"Login, OTP & verification"
+12941219111,GoPay,1,False,True,True,Customer service
+12941219111,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+12857101148,GoPay,1,False,True,True,"Ads, notifications & promos"
+12328831993,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+12019156804,GoPay,1,False,True,True,"Login, OTP & verification"
+12019156804,GoPay,1,False,True,True,Customer service
+12019156804,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+11889346891,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+11872292016,GoPay,1,False,True,True,Customer service
+11872292016,GoPay,1,False,True,True,App performance & bugs
+11872292016,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+11869488439,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+11772968329,GoPay,1,False,True,True,Balance lost / unauthorised deduction
+11772968329,GoPay,1,False,True,True,Customer service
+10293149332,GoPay,5,False,True,False,"Ads, notifications & promos"
+11766748162,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+11766031261,GoPay,1,False,True,True,Balance lost / unauthorised deduction
+11766031261,GoPay,1,False,True,True,Failed / pending transfer or top-up
+11766031261,GoPay,1,False,True,True,Customer service
+11766031261,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+11763140969,GoPay,1,False,True,True,Failed / pending transfer or top-up
+11763140969,GoPay,1,False,True,True,Customer service
+11749551237,GoPay,1,False,True,True,App performance & bugs
+11747009944,GoPay,1,False,True,True,Failed / pending transfer or top-up
+11747009944,GoPay,1,False,True,True,"Login, OTP & verification"
+11747009944,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+11742537909,GoPay,1,False,True,True,Failed / pending transfer or top-up
+11742537909,GoPay,1,False,True,True,Customer service
+11435760182,GoPay,1,False,True,True,"Ads, notifications & promos"
+11216980301,GoPay,1,False,True,True,"Login, OTP & verification"
+11216980301,GoPay,1,False,True,True,Customer service
+11216980301,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+11152296916,GoPay,1,False,True,True,"Login, OTP & verification"
+11122904309,GoPay,1,False,True,True,Failed / pending transfer or top-up
+11122904309,GoPay,1,False,True,True,Customer service
+11122904309,GoPay,1,False,True,True,"Ads, notifications & promos"
+11112285521,GoPay,1,False,True,True,"Login, OTP & verification"
+11112285521,GoPay,1,False,True,True,Fees & charges
+11112285521,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+10963274957,GoPay,3,False,True,False,Failed / pending transfer or top-up
+10963274957,GoPay,3,False,True,False,"Ads, notifications & promos"
+10881721784,GoPay,1,False,True,True,Account security & fraud
+10881721784,GoPay,1,False,True,True,Hard to use
+10853516986,GoPay,1,False,True,True,Failed / pending transfer or top-up
+10853516986,GoPay,1,False,True,True,"Login, OTP & verification"
+10853516986,GoPay,1,False,True,True,"Paylater, loans & debt collection"
+10346578576,GoPay,2,False,True,True,App performance & bugs
+11746999483,GoPay,1,False,True,True,Hard to use
+10340465135,GoPay,3,False,True,False,App performance & bugs
+10185881181,GoPay,2,False,True,True,App performance & bugs
+14588538942,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14588538942,ShopeePay,1,True,True,True,Account security & fraud
+14588538942,ShopeePay,1,True,True,True,App performance & bugs
+14587843673,ShopeePay,2,True,True,True,"Login, OTP & verification"
+14587843673,ShopeePay,2,True,True,True,App performance & bugs
+14586365659,ShopeePay,1,True,True,True,Hard to use
+14586365659,ShopeePay,1,True,True,True,App performance & bugs
+14582921978,ShopeePay,5,True,True,False,"Paylater, loans & debt collection"
+14581036660,ShopeePay,1,True,True,True,Customer service
+14581036660,ShopeePay,1,True,True,True,"Ads, notifications & promos"
+14568529369,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14564183818,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14564183818,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14562912920,ShopeePay,1,True,True,True,App performance & bugs
+14562741219,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14562741219,ShopeePay,1,True,True,True,Customer service
+14560773870,ShopeePay,1,True,True,True,Hard to use
+14558795256,ShopeePay,1,True,True,True,Fees & charges
+14557402542,ShopeePay,1,True,True,True,App performance & bugs
+14557402542,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14556454428,ShopeePay,5,True,True,False,Customer service
+14556010583,ShopeePay,1,True,True,True,Account security & fraud
+14556010583,ShopeePay,1,True,True,True,Hard to use
+14555386133,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14555386133,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14554569502,ShopeePay,4,True,True,False,Hard to use
+14553137487,ShopeePay,1,True,False,True,Failed / pending transfer or top-up
+14553137487,ShopeePay,1,True,False,True,Customer service
+14552509473,ShopeePay,1,True,False,True,Customer service
+14552509473,ShopeePay,1,True,False,True,"Paylater, loans & debt collection"
+14551973452,ShopeePay,1,True,True,True,App performance & bugs
+14548931050,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14548622558,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14547588887,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14547556409,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14544984439,ShopeePay,3,True,True,False,Fees & charges
+14543417508,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14537757125,ShopeePay,1,True,True,True,Account security & fraud
+14532197760,ShopeePay,1,True,True,True,Customer service
+14531723321,ShopeePay,1,True,True,True,Account security & fraud
+14531111441,ShopeePay,1,True,True,True,Customer service
+14531081088,ShopeePay,5,True,True,False,"Paylater, loans & debt collection"
+14527747555,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14527747555,ShopeePay,1,True,True,True,Hard to use
+14520174766,ShopeePay,5,True,True,False,"Ads, notifications & promos"
+14512566580,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14512566580,ShopeePay,1,True,True,True,"Ads, notifications & promos"
+14512027684,ShopeePay,1,True,True,True,Customer service
+14512027684,ShopeePay,1,True,True,True,App performance & bugs
+14511431101,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14509461819,ShopeePay,5,True,True,False,App performance & bugs
+14508279516,ShopeePay,5,True,True,False,"Ads, notifications & promos"
+14506487031,ShopeePay,1,True,True,True,App performance & bugs
+14503919075,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14503919075,ShopeePay,1,True,True,True,App performance & bugs
+14503723122,ShopeePay,5,True,True,False,Fees & charges
+14501104483,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14501104483,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14498616916,ShopeePay,3,True,True,False,Balance lost / unauthorised deduction
+14496855961,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14480339235,ShopeePay,3,True,True,False,"Login, OTP & verification"
+14478730207,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14476311569,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14476311569,ShopeePay,1,True,True,True,App performance & bugs
+14473585386,ShopeePay,1,True,True,True,Fees & charges
+14473585386,ShopeePay,1,True,True,True,Hard to use
+14472833454,ShopeePay,1,True,False,True,Failed / pending transfer or top-up
+14472833454,ShopeePay,1,True,False,True,Customer service
+14472833454,ShopeePay,1,True,False,True,App performance & bugs
+14472733127,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14471627307,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14465729487,ShopeePay,1,True,True,True,Fees & charges
+14465729487,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14463022647,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14459621871,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14459621871,ShopeePay,1,True,True,True,Customer service
+14457591256,ShopeePay,1,True,True,True,Customer service
+14454263200,ShopeePay,1,True,False,True,Balance lost / unauthorised deduction
+14454263200,ShopeePay,1,True,False,True,Failed / pending transfer or top-up
+14449021197,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14449021197,ShopeePay,1,True,True,True,Customer service
+14444543650,ShopeePay,5,True,True,False,Failed / pending transfer or top-up
+14442940946,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14442940946,ShopeePay,1,True,True,True,Customer service
+14442940946,ShopeePay,1,True,True,True,Hard to use
+14441615108,ShopeePay,1,True,True,True,App performance & bugs
+14437930035,ShopeePay,5,True,True,False,Customer service
+14437930035,ShopeePay,5,True,True,False,"Paylater, loans & debt collection"
+14434445009,ShopeePay,1,True,True,True,Account security & fraud
+14434445009,ShopeePay,1,True,True,True,Customer service
+14433393737,ShopeePay,1,True,False,True,"Paylater, loans & debt collection"
+14423351944,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14423351944,ShopeePay,1,True,True,True,App performance & bugs
+14421196166,ShopeePay,1,True,True,True,Hard to use
+14414485949,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14414485949,ShopeePay,1,True,True,True,Customer service
+14408908635,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14404746068,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14402188007,ShopeePay,5,True,True,False,Customer service
+14398608839,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14396074964,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14395780733,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14394349178,ShopeePay,5,True,True,False,"Ads, notifications & promos"
+14393218410,ShopeePay,5,True,True,False,Customer service
+14392147124,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14392087164,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14392087164,ShopeePay,1,True,True,True,Customer service
+14391589153,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14391589153,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14390816816,ShopeePay,5,True,True,False,"Ads, notifications & promos"
+14390038264,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14389546436,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14389546436,ShopeePay,1,True,True,True,App performance & bugs
+14385846869,ShopeePay,5,True,True,False,"Paylater, loans & debt collection"
+14381320997,ShopeePay,1,True,True,True,Account security & fraud
+14375188454,ShopeePay,2,True,True,True,"Login, OTP & verification"
+14374408935,ShopeePay,1,True,True,True,Account security & fraud
+14374408935,ShopeePay,1,True,True,True,"Ads, notifications & promos"
+14373805264,ShopeePay,2,True,True,True,Balance lost / unauthorised deduction
+14373805264,ShopeePay,2,True,True,True,Failed / pending transfer or top-up
+14373629084,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14373235106,ShopeePay,1,True,True,True,Account security & fraud
+14370787822,ShopeePay,1,True,True,True,"Ads, notifications & promos"
+14370162767,ShopeePay,5,True,True,False,"Ads, notifications & promos"
+14367663151,ShopeePay,5,True,True,False,"Paylater, loans & debt collection"
+14365584664,ShopeePay,1,True,True,True,"Ads, notifications & promos"
+14352802373,ShopeePay,1,True,True,True,App performance & bugs
+14350298109,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14348519100,ShopeePay,1,True,False,True,Failed / pending transfer or top-up
+14348519100,ShopeePay,1,True,False,True,Fees & charges
+14346174361,ShopeePay,5,True,True,False,Fees & charges
+14329910760,ShopeePay,3,True,True,False,Customer service
+14329910760,ShopeePay,3,True,True,False,"Paylater, loans & debt collection"
+14329403936,ShopeePay,1,True,True,True,Customer service
+14329289020,ShopeePay,1,True,True,True,Customer service
+14329289020,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14329289020,ShopeePay,1,True,True,True,"Ads, notifications & promos"
+14327878613,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14327878613,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14326981495,ShopeePay,4,True,True,False,Hard to use
+14322181910,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14321025834,ShopeePay,5,True,True,False,Customer service
+14318861474,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14317828113,ShopeePay,1,True,False,True,"Paylater, loans & debt collection"
+14316039778,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14316039778,ShopeePay,1,True,True,True,App performance & bugs
+14316023485,ShopeePay,4,True,True,False,App performance & bugs
+14311840451,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14311840451,ShopeePay,1,True,True,True,Hard to use
+14301756165,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14301756165,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14300465594,ShopeePay,1,True,True,True,Account security & fraud
+14300465594,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14298340621,ShopeePay,5,True,True,False,"Ads, notifications & promos"
+14297767989,ShopeePay,1,True,True,True,Customer service
+14297580271,ShopeePay,1,True,True,True,"Ads, notifications & promos"
+14293440658,ShopeePay,5,True,True,False,"Paylater, loans & debt collection"
+14291317977,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14291317977,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14289675677,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14289675677,ShopeePay,1,True,True,True,App performance & bugs
+14288757071,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14281830870,ShopeePay,3,True,True,False,"Login, OTP & verification"
+14281830870,ShopeePay,3,True,True,False,Customer service
+14281830870,ShopeePay,3,True,True,False,Hard to use
+14277696096,ShopeePay,3,True,True,False,Failed / pending transfer or top-up
+14277608000,ShopeePay,1,True,True,True,"Ads, notifications & promos"
+14276456930,ShopeePay,4,True,True,False,"Paylater, loans & debt collection"
+14273096000,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14273096000,ShopeePay,1,True,True,True,App performance & bugs
+14272996665,ShopeePay,1,True,True,True,App performance & bugs
+14269194666,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14268783794,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14268783794,ShopeePay,1,True,True,True,Customer service
+14268444468,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14266224543,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14262003536,ShopeePay,1,True,True,True,App performance & bugs
+14261534212,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14261534212,ShopeePay,1,True,True,True,Customer service
+14261534212,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14259708354,ShopeePay,1,True,True,True,Fees & charges
+14259708354,ShopeePay,1,True,True,True,App performance & bugs
+14259708354,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14258656187,ShopeePay,5,True,True,False,"Paylater, loans & debt collection"
+14256027270,ShopeePay,5,True,True,False,Customer service
+14250344980,ShopeePay,5,True,True,False,"Paylater, loans & debt collection"
+14248935987,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14247981003,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14244434613,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14243895713,ShopeePay,1,True,True,True,Customer service
+14243895713,ShopeePay,1,True,True,True,"Ads, notifications & promos"
+14243754491,ShopeePay,5,True,True,False,"Paylater, loans & debt collection"
+14239424347,ShopeePay,3,True,True,False,Failed / pending transfer or top-up
+14239424347,ShopeePay,3,True,True,False,"Login, OTP & verification"
+14239424347,ShopeePay,3,True,True,False,App performance & bugs
+14238511054,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14236707506,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14236707506,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14231482164,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14231290936,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14226976116,ShopeePay,1,True,True,True,Customer service
+14226395713,ShopeePay,1,True,True,True,App performance & bugs
+14221310688,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14221310688,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14220530035,ShopeePay,5,True,True,False,"Ads, notifications & promos"
+14219389116,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14219389116,ShopeePay,1,True,True,True,Customer service
+14216292219,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14215949859,ShopeePay,1,True,True,True,Hard to use
+14211676798,ShopeePay,1,True,True,True,Customer service
+14211585793,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14211585793,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14210953535,ShopeePay,1,True,True,True,"Paylater, loans & debt collection"
+14208142485,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14205839669,ShopeePay,1,True,True,True,Fees & charges
+14204681072,ShopeePay,5,True,True,False,Hard to use
+14196933288,ShopeePay,1,True,True,True,Customer service
+14189643965,ShopeePay,1,True,True,True,Hard to use
+14188621028,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14188621028,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14188621028,ShopeePay,1,True,True,True,Account security & fraud
+14188621028,ShopeePay,1,True,True,True,Customer service
+14188352953,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14188352953,ShopeePay,1,True,True,True,Customer service
+14188273280,ShopeePay,1,True,True,True,Fees & charges
+14185056430,ShopeePay,1,True,True,True,Fees & charges
+14184843064,ShopeePay,3,True,True,False,"Login, OTP & verification"
+14184843064,ShopeePay,3,True,True,False,App performance & bugs
+14182850307,ShopeePay,1,True,True,True,"Ads, notifications & promos"
+14181534482,ShopeePay,1,True,True,True,Customer service
+14181534482,ShopeePay,1,True,True,True,Hard to use
+14181534482,ShopeePay,1,True,True,True,App performance & bugs
+14180867524,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14175775295,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14174807480,ShopeePay,1,True,True,True,App performance & bugs
+14173367069,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14173367069,ShopeePay,1,True,True,True,Customer service
+14173367069,ShopeePay,1,True,True,True,App performance & bugs
+14173328969,ShopeePay,1,True,True,True,Account security & fraud
+14172722985,ShopeePay,1,True,True,True,"Login, OTP & verification"
+14172325518,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14169253322,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14169253322,ShopeePay,1,True,True,True,App performance & bugs
+14168785866,ShopeePay,5,True,True,False,App performance & bugs
+14168785866,ShopeePay,5,True,True,False,"Ads, notifications & promos"
+14167884145,ShopeePay,1,True,True,True,Customer service
+14166789611,ShopeePay,1,True,True,True,Balance lost / unauthorised deduction
+14166789611,ShopeePay,1,True,True,True,"Ads, notifications & promos"
+14161209859,ShopeePay,5,True,True,False,Hard to use
+14157949670,ShopeePay,2,True,True,True,Hard to use
+14154335269,ShopeePay,5,True,True,False,Customer service
+14153942641,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14147552481,ShopeePay,1,True,True,True,App performance & bugs
+14146887729,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14146887729,ShopeePay,1,True,True,True,Customer service
+14145416702,ShopeePay,2,True,True,True,"Login, OTP & verification"
+14145416702,ShopeePay,2,True,True,True,Customer service
+14141867749,ShopeePay,2,True,True,True,Customer service
+14137577263,ShopeePay,1,True,True,True,Failed / pending transfer or top-up
+14137577263,ShopeePay,1,True,True,True,Customer service
+14134595446,ShopeePay,4,True,True,False,"Paylater, loans & debt collection"
+14129578402,ShopeePay,1,True,False,True,App performance & bugs
+14123808434,ShopeePay,1,True,False,True,"Login, OTP & verification"
+14122302286,ShopeePay,5,True,False,False,"Ads, notifications & promos"
+14122020582,ShopeePay,1,True,False,True,Failed / pending transfer or top-up
+14122020582,ShopeePay,1,True,False,True,Customer service
+11513330396,ShopeePay,1,False,True,True,Failed / pending transfer or top-up
+11513330396,ShopeePay,1,False,True,True,Fees & charges
+11513330396,ShopeePay,1,False,True,True,"Paylater, loans & debt collection"
+11661749922,ShopeePay,1,False,True,True,Failed / pending transfer or top-up
+11661749922,ShopeePay,1,False,True,True,"Paylater, loans & debt collection"
+11715073349,ShopeePay,1,False,True,True,Failed / pending transfer or top-up
+11715073349,ShopeePay,1,False,True,True,Customer service
+10947593864,ShopeePay,1,False,True,True,Fees & charges
+11704722635,ShopeePay,1,False,True,True,"Paylater, loans & debt collection"
+11457511352,ShopeePay,1,False,True,True,Balance lost / unauthorised deduction
+11458114872,ShopeePay,1,False,True,True,Balance lost / unauthorised deduction
+11458114872,ShopeePay,1,False,True,True,Failed / pending transfer or top-up
+12260631083,ShopeePay,1,False,True,True,"Login, OTP & verification"
+12260631083,ShopeePay,1,False,True,True,Customer service
+12260631083,ShopeePay,1,False,True,True,Hard to use
+11719371342,ShopeePay,1,False,True,True,Account security & fraud
+11719371342,ShopeePay,1,False,True,True,"Ads, notifications & promos"
+12600987010,ShopeePay,1,False,True,True,"Ads, notifications & promos"
+12302878220,ShopeePay,1,False,True,True,Failed / pending transfer or top-up
+12223603487,ShopeePay,1,False,True,True,Account security & fraud
+12201957840,ShopeePay,1,False,True,True,"Ads, notifications & promos"
+11452979228,ShopeePay,1,False,True,True,Account security & fraud
+13860120286,ShopeePay,5,False,True,False,Failed / pending transfer or top-up
+14008725078,ShopeePay,1,False,True,True,"Paylater, loans & debt collection"
+14006597462,ShopeePay,1,False,True,True,"Paylater, loans & debt collection"
+14002640224,ShopeePay,1,False,True,True,"Paylater, loans & debt collection"
+13863069611,ShopeePay,1,False,True,True,App performance & bugs
+13854155896,ShopeePay,1,False,True,True,Failed / pending transfer or top-up
+13854155896,ShopeePay,1,False,True,True,Account security & fraud
+13851169911,ShopeePay,1,False,True,True,App performance & bugs
+11704705187,ShopeePay,1,False,True,True,Hard to use
+11579750892,ShopeePay,1,False,True,True,Customer service
+11579750892,ShopeePay,1,False,True,True,"Paylater, loans & debt collection"
+11766041846,ShopeePay,1,False,True,True,Failed / pending transfer or top-up
+14579817086,LinkAja,1,True,True,True,Customer service
+14545180274,LinkAja,1,True,True,True,App performance & bugs
+14543238477,LinkAja,5,True,True,False,"Ads, notifications & promos"
+14540850714,LinkAja,2,True,True,True,App performance & bugs
+14540698591,LinkAja,1,True,True,True,"Login, OTP & verification"
+14540547522,LinkAja,1,True,True,True,App performance & bugs
+14540322811,LinkAja,1,True,True,True,"Login, OTP & verification"
+14540163467,LinkAja,1,True,True,True,"Login, OTP & verification"
+14535798064,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+14528392253,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+14524028118,LinkAja,4,True,True,False,Failed / pending transfer or top-up
+14505519285,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+14484847060,LinkAja,2,True,True,True,Balance lost / unauthorised deduction
+14484847060,LinkAja,2,True,True,True,Customer service
+14471080935,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+14471080935,LinkAja,1,True,True,True,App performance & bugs
+14452028563,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+14422513571,LinkAja,3,True,True,False,Failed / pending transfer or top-up
+14421738974,LinkAja,1,True,True,True,Customer service
+14419844685,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+14408615807,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+14408615807,LinkAja,1,True,True,True,Customer service
+14406044086,LinkAja,1,True,True,True,"Login, OTP & verification"
+14401005144,LinkAja,1,True,True,True,Fees & charges
+14401005144,LinkAja,1,True,True,True,App performance & bugs
+14385584089,LinkAja,1,True,True,True,Customer service
+14347439422,LinkAja,1,True,True,True,"Login, OTP & verification"
+14347439422,LinkAja,1,True,True,True,App performance & bugs
+14324923676,LinkAja,1,True,True,True,"Login, OTP & verification"
+14324923676,LinkAja,1,True,True,True,Customer service
+14317795691,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+14317795691,LinkAja,1,True,True,True,Customer service
+14309034960,LinkAja,1,True,True,True,Customer service
+14301116783,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+14301116783,LinkAja,1,True,True,True,"Login, OTP & verification"
+14285345661,LinkAja,1,True,True,True,"Ads, notifications & promos"
+14284120704,LinkAja,1,True,True,True,"Login, OTP & verification"
+14248477182,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+14243084213,LinkAja,1,True,True,True,"Login, OTP & verification"
+14235551643,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+14235551643,LinkAja,1,True,True,True,Customer service
+14228387802,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+14212989961,LinkAja,2,True,True,True,"Login, OTP & verification"
+14208320143,LinkAja,2,True,True,True,"Login, OTP & verification"
+14208320143,LinkAja,2,True,True,True,Customer service
+14208320143,LinkAja,2,True,True,True,App performance & bugs
+14208188891,LinkAja,3,True,True,False,"Login, OTP & verification"
+14208188891,LinkAja,3,True,True,False,Customer service
+14192291683,LinkAja,1,True,True,True,Customer service
+14191330642,LinkAja,5,True,True,False,Customer service
+14184863789,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+14184863789,LinkAja,1,True,True,True,Customer service
+14184296467,LinkAja,2,True,True,True,"Login, OTP & verification"
+14184296467,LinkAja,2,True,True,True,Customer service
+14177021787,LinkAja,1,True,True,True,"Login, OTP & verification"
+14173154024,LinkAja,5,True,True,False,Customer service
+14172981143,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+14172981143,LinkAja,1,True,True,True,Fees & charges
+14162820195,LinkAja,2,True,True,True,Failed / pending transfer or top-up
+14153950694,LinkAja,1,True,True,True,Account security & fraud
+14141825619,LinkAja,1,True,True,True,Customer service
+14133842080,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+14121619607,LinkAja,5,True,True,False,"Login, OTP & verification"
+14108663607,LinkAja,2,True,True,True,App performance & bugs
+14102326414,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+14102326414,LinkAja,1,True,True,True,Fees & charges
+14099492650,LinkAja,1,True,True,True,Customer service
+14099492650,LinkAja,1,True,True,True,App performance & bugs
+14095576502,LinkAja,1,True,True,True,"Login, OTP & verification"
+14095576502,LinkAja,1,True,True,True,Hard to use
+14085462505,LinkAja,3,True,True,False,"Login, OTP & verification"
+14037164472,LinkAja,1,True,True,True,Customer service
+14037164472,LinkAja,1,True,True,True,App performance & bugs
+14032365176,LinkAja,1,True,True,True,"Login, OTP & verification"
+14023204262,LinkAja,2,True,True,True,Failed / pending transfer or top-up
+14023204262,LinkAja,2,True,True,True,Fees & charges
+14022881821,LinkAja,1,True,True,True,Fees & charges
+14022881821,LinkAja,1,True,True,True,"Ads, notifications & promos"
+14005646379,LinkAja,5,True,True,False,Hard to use
+13998775439,LinkAja,1,True,True,True,"Login, OTP & verification"
+13987025905,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13978286709,LinkAja,1,True,True,True,"Ads, notifications & promos"
+13977356688,LinkAja,4,True,True,False,Balance lost / unauthorised deduction
+13971973752,LinkAja,5,True,True,False,Account security & fraud
+13971103002,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13961066191,LinkAja,5,True,True,False,Customer service
+13956323050,LinkAja,1,True,True,True,Customer service
+13953558451,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13953558451,LinkAja,1,True,True,True,"Login, OTP & verification"
+13943165807,LinkAja,2,True,True,True,"Paylater, loans & debt collection"
+13937666667,LinkAja,1,True,True,True,App performance & bugs
+13937635622,LinkAja,5,True,True,False,Fees & charges
+13937635622,LinkAja,5,True,True,False,Hard to use
+13934814801,LinkAja,5,True,True,False,Hard to use
+13932610184,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13932610184,LinkAja,1,True,True,True,"Login, OTP & verification"
+13931988372,LinkAja,5,True,True,False,"Ads, notifications & promos"
+13930777802,LinkAja,2,True,True,True,Failed / pending transfer or top-up
+13930777802,LinkAja,2,True,True,True,"Ads, notifications & promos"
+13916617039,LinkAja,1,True,True,True,"Login, OTP & verification"
+13916617039,LinkAja,1,True,True,True,App performance & bugs
+13910362472,LinkAja,1,True,True,True,"Login, OTP & verification"
+13910362472,LinkAja,1,True,True,True,Customer service
+13910362472,LinkAja,1,True,True,True,App performance & bugs
+13905702899,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13897938959,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+13884020330,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13884020330,LinkAja,1,True,True,True,Customer service
+13875807380,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13871264558,LinkAja,2,True,True,True,"Login, OTP & verification"
+13871264558,LinkAja,2,True,True,True,App performance & bugs
+13866670145,LinkAja,1,True,True,True,"Login, OTP & verification"
+13846169332,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+13846169332,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13846169332,LinkAja,1,True,True,True,Customer service
+13839109809,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13833019022,LinkAja,1,True,True,True,"Login, OTP & verification"
+13833019022,LinkAja,1,True,True,True,Account security & fraud
+13831710924,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13831710924,LinkAja,1,True,True,True,Customer service
+13825887911,LinkAja,1,True,True,True,"Login, OTP & verification"
+13808089773,LinkAja,1,True,True,True,"Login, OTP & verification"
+13808089773,LinkAja,1,True,True,True,Fees & charges
+13808089773,LinkAja,1,True,True,True,App performance & bugs
+13805321072,LinkAja,1,True,True,True,Hard to use
+13785905806,LinkAja,3,True,True,False,"Ads, notifications & promos"
+13747800733,LinkAja,2,True,True,True,Failed / pending transfer or top-up
+13747800733,LinkAja,2,True,True,True,App performance & bugs
+13718652998,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13718652998,LinkAja,1,True,True,True,Customer service
+13699334197,LinkAja,1,True,True,True,"Ads, notifications & promos"
+13684045090,LinkAja,1,True,True,True,"Login, OTP & verification"
+13668248399,LinkAja,1,True,True,True,"Login, OTP & verification"
+13654449393,LinkAja,1,True,True,True,"Login, OTP & verification"
+13654190884,LinkAja,1,True,True,True,"Login, OTP & verification"
+13654190884,LinkAja,1,True,True,True,Account security & fraud
+13634186236,LinkAja,2,True,True,True,Fees & charges
+13623719831,LinkAja,1,True,True,True,Customer service
+13603605098,LinkAja,1,True,True,True,Hard to use
+13576440155,LinkAja,1,True,True,True,"Login, OTP & verification"
+13575839145,LinkAja,1,True,True,True,"Login, OTP & verification"
+13575235685,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13575235685,LinkAja,1,True,True,True,"Login, OTP & verification"
+13571586582,LinkAja,1,True,True,True,"Login, OTP & verification"
+13571586582,LinkAja,1,True,True,True,App performance & bugs
+13557160830,LinkAja,2,True,True,True,App performance & bugs
+13556409339,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+13556409339,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13556409339,LinkAja,1,True,True,True,"Login, OTP & verification"
+13556409339,LinkAja,1,True,True,True,Account security & fraud
+13552558003,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13552558003,LinkAja,1,True,True,True,Customer service
+13552558003,LinkAja,1,True,True,True,App performance & bugs
+13551492650,LinkAja,1,True,True,True,Customer service
+13550564326,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+13550564326,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13550564326,LinkAja,1,True,True,True,Customer service
+13541418716,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13541418716,LinkAja,1,True,True,True,"Login, OTP & verification"
+13541098962,LinkAja,1,True,True,True,"Login, OTP & verification"
+13541066758,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13520020844,LinkAja,2,True,True,True,"Ads, notifications & promos"
+13517051093,LinkAja,5,True,True,False,"Login, OTP & verification"
+13517051093,LinkAja,5,True,True,False,Customer service
+13505414584,LinkAja,1,True,True,True,Customer service
+13503436121,LinkAja,2,True,True,True,Balance lost / unauthorised deduction
+13503436121,LinkAja,2,True,True,True,"Login, OTP & verification"
+13501959735,LinkAja,1,True,True,True,"Ads, notifications & promos"
+13492026383,LinkAja,1,True,True,True,Customer service
+13488332588,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13488332588,LinkAja,1,True,True,True,Customer service
+13488332588,LinkAja,1,True,True,True,App performance & bugs
+13480652772,LinkAja,3,True,True,False,Customer service
+13480652772,LinkAja,3,True,True,False,App performance & bugs
+13461348258,LinkAja,1,True,True,True,"Login, OTP & verification"
+13461348258,LinkAja,1,True,True,True,Customer service
+13449764152,LinkAja,2,True,True,True,Failed / pending transfer or top-up
+13446070827,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13443088967,LinkAja,1,True,True,True,Customer service
+13433599234,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13433599234,LinkAja,1,True,True,True,"Login, OTP & verification"
+13433599234,LinkAja,1,True,True,True,Customer service
+13433599234,LinkAja,1,True,True,True,App performance & bugs
+13425739354,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13425739354,LinkAja,1,True,True,True,Customer service
+13423066907,LinkAja,1,True,True,True,"Login, OTP & verification"
+13415480872,LinkAja,1,True,True,True,"Login, OTP & verification"
+13412608576,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13364685138,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+13364685138,LinkAja,1,True,True,True,Customer service
+13357555049,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13357555049,LinkAja,1,True,True,True,App performance & bugs
+13332229297,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13324468950,LinkAja,1,True,True,True,"Login, OTP & verification"
+13323450674,LinkAja,1,True,True,True,Account security & fraud
+13304322798,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13304322798,LinkAja,1,True,True,True,Customer service
+13304322798,LinkAja,1,True,True,True,App performance & bugs
+13299835044,LinkAja,1,True,True,True,"Login, OTP & verification"
+13281264203,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+13281264203,LinkAja,1,True,False,True,"Login, OTP & verification"
+13281264203,LinkAja,1,True,False,True,Hard to use
+13272998136,LinkAja,2,True,True,True,App performance & bugs
+13255183721,LinkAja,2,True,True,True,Balance lost / unauthorised deduction
+13255183721,LinkAja,2,True,True,True,Failed / pending transfer or top-up
+13255183721,LinkAja,2,True,True,True,Customer service
+13255183721,LinkAja,2,True,True,True,App performance & bugs
+13253289879,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13253289879,LinkAja,1,True,True,True,"Login, OTP & verification"
+13234973429,LinkAja,1,True,True,True,Customer service
+13229343333,LinkAja,3,True,True,False,"Ads, notifications & promos"
+13219028968,LinkAja,1,True,True,True,App performance & bugs
+13218249143,LinkAja,1,True,True,True,"Login, OTP & verification"
+13216714616,LinkAja,1,True,True,True,Customer service
+13191437277,LinkAja,1,True,True,True,"Login, OTP & verification"
+13180635080,LinkAja,3,True,True,False,App performance & bugs
+13147064634,LinkAja,4,True,True,False,App performance & bugs
+13139225213,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+13139225213,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13129176541,LinkAja,3,True,True,False,Failed / pending transfer or top-up
+13095695176,LinkAja,1,True,True,True,"Login, OTP & verification"
+13095695176,LinkAja,1,True,True,True,App performance & bugs
+13085317891,LinkAja,1,True,True,True,App performance & bugs
+13082084276,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13082084276,LinkAja,1,True,True,True,App performance & bugs
+13082030718,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13082030718,LinkAja,1,True,True,True,App performance & bugs
+13070684460,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+13054003503,LinkAja,1,True,True,True,"Login, OTP & verification"
+13054003503,LinkAja,1,True,True,True,App performance & bugs
+13049945773,LinkAja,2,True,True,True,"Login, OTP & verification"
+13026350419,LinkAja,4,True,True,False,Customer service
+13023647945,LinkAja,1,True,True,True,"Login, OTP & verification"
+13008732205,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+13008732205,LinkAja,1,True,False,True,"Login, OTP & verification"
+13008732205,LinkAja,1,True,False,True,Customer service
+13008732205,LinkAja,1,True,False,True,Hard to use
+12986747545,LinkAja,1,True,True,True,"Login, OTP & verification"
+12983957927,LinkAja,1,True,True,True,"Login, OTP & verification"
+12981226521,LinkAja,1,True,True,True,App performance & bugs
+12973050215,LinkAja,1,True,True,True,Customer service
+12949763625,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+12949763625,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12949763625,LinkAja,1,True,True,True,Customer service
+12938768878,LinkAja,1,True,True,True,Fees & charges
+12938768878,LinkAja,1,True,True,True,Hard to use
+12936725493,LinkAja,1,True,True,True,Fees & charges
+12935023513,LinkAja,1,True,True,True,App performance & bugs
+12898320434,LinkAja,1,True,True,True,"Login, OTP & verification"
+12887701869,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12887701869,LinkAja,1,True,True,True,"Login, OTP & verification"
+12871362867,LinkAja,1,True,True,True,Customer service
+12871362867,LinkAja,1,True,True,True,App performance & bugs
+12847992008,LinkAja,1,True,True,True,"Login, OTP & verification"
+12847992008,LinkAja,1,True,True,True,Hard to use
+12841287599,LinkAja,2,True,True,True,Hard to use
+12833547415,LinkAja,1,True,True,True,Fees & charges
+12811098914,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12811098914,LinkAja,1,True,True,True,App performance & bugs
+12807519006,LinkAja,1,True,True,True,"Login, OTP & verification"
+12807519006,LinkAja,1,True,True,True,App performance & bugs
+12799948488,LinkAja,1,True,True,True,"Login, OTP & verification"
+12799948488,LinkAja,1,True,True,True,App performance & bugs
+12799547441,LinkAja,1,True,True,True,"Login, OTP & verification"
+12799547441,LinkAja,1,True,True,True,Customer service
+12799109109,LinkAja,1,True,True,True,"Login, OTP & verification"
+12798561734,LinkAja,2,True,True,True,App performance & bugs
+12795952082,LinkAja,1,True,True,True,"Login, OTP & verification"
+12795952082,LinkAja,1,True,True,True,Hard to use
+12790714148,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12785261700,LinkAja,1,True,True,True,"Login, OTP & verification"
+12785261700,LinkAja,1,True,True,True,App performance & bugs
+12783244075,LinkAja,1,True,True,True,"Login, OTP & verification"
+12775342841,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+12775342841,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12768348325,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12768348325,LinkAja,1,True,True,True,Customer service
+12757711795,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+12757711795,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12757711795,LinkAja,1,True,True,True,Customer service
+12746108657,LinkAja,1,True,True,True,"Login, OTP & verification"
+12746108657,LinkAja,1,True,True,True,App performance & bugs
+12703726284,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12703726284,LinkAja,1,True,True,True,"Login, OTP & verification"
+12703726284,LinkAja,1,True,True,True,Customer service
+12687896092,LinkAja,3,True,True,False,"Ads, notifications & promos"
+12676124035,LinkAja,2,True,True,True,Customer service
+12662326208,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12657671725,LinkAja,1,True,True,True,"Login, OTP & verification"
+12657671725,LinkAja,1,True,True,True,Customer service
+12654258871,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12654258871,LinkAja,1,True,True,True,Account security & fraud
+12643717503,LinkAja,1,True,False,True,App performance & bugs
+12629819208,LinkAja,4,True,True,False,"Login, OTP & verification"
+12629819208,LinkAja,4,True,True,False,App performance & bugs
+12629146230,LinkAja,1,True,True,True,Customer service
+12629146230,LinkAja,1,True,True,True,Hard to use
+12624368299,LinkAja,1,True,True,True,Fees & charges
+12621967422,LinkAja,3,True,True,False,Failed / pending transfer or top-up
+12621967422,LinkAja,3,True,True,False,Customer service
+12605341306,LinkAja,1,True,True,True,Customer service
+12590559941,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+12590559941,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12590559941,LinkAja,1,True,True,True,Customer service
+12583404622,LinkAja,3,True,True,False,App performance & bugs
+12573579271,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12573579271,LinkAja,1,True,True,True,Customer service
+12564698704,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12561609359,LinkAja,1,True,True,True,Customer service
+12553249727,LinkAja,1,True,True,True,"Login, OTP & verification"
+12550618006,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12544114861,LinkAja,3,True,True,False,Hard to use
+12543176382,LinkAja,1,True,True,True,"Login, OTP & verification"
+12541126224,LinkAja,1,True,True,True,"Login, OTP & verification"
+12535137426,LinkAja,1,True,True,True,"Login, OTP & verification"
+12522095959,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+12522095959,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12513726295,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+12513726295,LinkAja,1,True,False,True,Account security & fraud
+12496110281,LinkAja,1,True,True,True,"Login, OTP & verification"
+12496110281,LinkAja,1,True,True,True,Customer service
+12496110281,LinkAja,1,True,True,True,Hard to use
+12495040766,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12495040766,LinkAja,1,True,True,True,"Login, OTP & verification"
+12492350111,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12492350111,LinkAja,1,True,True,True,Account security & fraud
+12477598224,LinkAja,1,True,True,True,Hard to use
+12474136724,LinkAja,3,True,True,False,"Login, OTP & verification"
+12474136724,LinkAja,3,True,True,False,Hard to use
+12473437665,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12473369336,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12473369336,LinkAja,1,True,True,True,"Login, OTP & verification"
+12472084996,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12472084996,LinkAja,1,True,True,True,Customer service
+12469613638,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12453405276,LinkAja,1,True,True,True,"Ads, notifications & promos"
+12430410396,LinkAja,1,True,True,True,Account security & fraud
+12396185338,LinkAja,1,True,True,True,Fees & charges
+12388129985,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+12388129985,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12388129985,LinkAja,1,True,True,True,Account security & fraud
+12382371932,LinkAja,1,True,True,True,"Login, OTP & verification"
+12379912645,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12379912645,LinkAja,1,True,True,True,"Login, OTP & verification"
+12379912645,LinkAja,1,True,True,True,App performance & bugs
+12372419839,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12372419839,LinkAja,1,True,True,True,Customer service
+12368472709,LinkAja,1,True,True,True,App performance & bugs
+12368469277,LinkAja,1,True,True,True,"Login, OTP & verification"
+12365055473,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+12365055473,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12361372465,LinkAja,2,True,True,True,"Login, OTP & verification"
+12356212785,LinkAja,1,True,True,True,"Login, OTP & verification"
+12355816020,LinkAja,1,True,True,True,Customer service
+12351493745,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+12351493745,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12351493745,LinkAja,1,True,True,True,Customer service
+12335539547,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12335539547,LinkAja,1,True,True,True,App performance & bugs
+12326524002,LinkAja,1,True,True,True,Customer service
+12326524002,LinkAja,1,True,True,True,App performance & bugs
+12324374278,LinkAja,1,True,True,True,Balance lost / unauthorised deduction
+12324374278,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12324374278,LinkAja,1,True,True,True,Customer service
+12312052432,LinkAja,1,True,True,True,Customer service
+12297116708,LinkAja,3,True,False,False,"Login, OTP & verification"
+12289468736,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12289468736,LinkAja,1,True,True,True,Customer service
+12289468736,LinkAja,1,True,True,True,App performance & bugs
+12283293732,LinkAja,3,True,True,False,App performance & bugs
+12282248225,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12282248225,LinkAja,1,True,True,True,Customer service
+12281043844,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12281043844,LinkAja,1,True,True,True,Customer service
+12268490889,LinkAja,1,True,True,True,App performance & bugs
+12254992594,LinkAja,1,True,True,True,Customer service
+12243152226,LinkAja,1,True,True,True,App performance & bugs
+12224789525,LinkAja,1,True,True,True,Customer service
+12214142054,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12214142054,LinkAja,1,True,True,True,"Login, OTP & verification"
+12214142054,LinkAja,1,True,True,True,App performance & bugs
+12211240737,LinkAja,1,True,True,True,"Login, OTP & verification"
+12207767863,LinkAja,1,True,True,True,App performance & bugs
+12207267061,LinkAja,1,True,True,True,Customer service
+12174692025,LinkAja,5,True,True,False,"Login, OTP & verification"
+12174692025,LinkAja,5,True,True,False,Customer service
+12166031904,LinkAja,1,True,True,True,"Login, OTP & verification"
+12166031904,LinkAja,1,True,True,True,Customer service
+12166031904,LinkAja,1,True,True,True,App performance & bugs
+12164175895,LinkAja,1,True,True,True,Customer service
+12162363288,LinkAja,1,True,True,True,Failed / pending transfer or top-up
+12162363288,LinkAja,1,True,True,True,Customer service
+12158590014,LinkAja,1,True,True,True,Fees & charges
+12158110001,LinkAja,1,True,True,True,"Login, OTP & verification"
+12158110001,LinkAja,1,True,True,True,App performance & bugs
+12157800470,LinkAja,2,True,True,True,"Login, OTP & verification"
+12157800470,LinkAja,2,True,True,True,Customer service
+12150974624,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+12150974624,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+12150024696,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+12150024696,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+12150024696,LinkAja,1,True,False,True,Customer service
+12145654584,LinkAja,1,True,False,True,"Login, OTP & verification"
+12143376021,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+12139098319,LinkAja,1,True,False,True,Account security & fraud
+12114024397,LinkAja,3,True,False,False,"Login, OTP & verification"
+12110738008,LinkAja,1,True,False,True,Customer service
+12104209093,LinkAja,1,True,False,True,"Login, OTP & verification"
+12104209093,LinkAja,1,True,False,True,Hard to use
+12099017895,LinkAja,1,True,False,True,"Login, OTP & verification"
+12099017895,LinkAja,1,True,False,True,App performance & bugs
+12084207575,LinkAja,1,True,False,True,"Login, OTP & verification"
+12084207575,LinkAja,1,True,False,True,App performance & bugs
+12073159195,LinkAja,1,True,False,True,"Login, OTP & verification"
+12058209366,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+12058209366,LinkAja,1,True,False,True,"Login, OTP & verification"
+12058209366,LinkAja,1,True,False,True,Customer service
+12049944881,LinkAja,1,True,False,True,"Ads, notifications & promos"
+12047243183,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+12047243183,LinkAja,1,True,False,True,Customer service
+12039353266,LinkAja,1,True,False,True,"Login, OTP & verification"
+12039248194,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+12039248194,LinkAja,1,True,False,True,"Login, OTP & verification"
+12028843416,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+12028843416,LinkAja,1,True,False,True,App performance & bugs
+12017124390,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+12017124390,LinkAja,1,True,False,True,Customer service
+12015512948,LinkAja,4,True,False,False,"Login, OTP & verification"
+12015512948,LinkAja,4,True,False,False,Customer service
+11996489658,LinkAja,1,True,False,True,"Login, OTP & verification"
+11996489658,LinkAja,1,True,False,True,App performance & bugs
+11996414206,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11996414206,LinkAja,1,True,False,True,"Login, OTP & verification"
+11996414206,LinkAja,1,True,False,True,Customer service
+11988920516,LinkAja,1,True,False,True,"Login, OTP & verification"
+11988920516,LinkAja,1,True,False,True,Customer service
+11981454017,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11981454017,LinkAja,1,True,False,True,"Paylater, loans & debt collection"
+11980813433,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11980813433,LinkAja,1,True,False,True,Customer service
+11973749058,LinkAja,1,True,False,True,Customer service
+11963034546,LinkAja,1,True,False,True,Customer service
+11963034546,LinkAja,1,True,False,True,App performance & bugs
+11962874011,LinkAja,1,True,False,True,"Login, OTP & verification"
+11947793312,LinkAja,1,True,False,True,Customer service
+11944948745,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11944948745,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11944912805,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11944912805,LinkAja,1,True,False,True,Customer service
+11944434605,LinkAja,1,True,False,True,App performance & bugs
+11944372706,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11939394239,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11939394239,LinkAja,1,True,False,True,Customer service
+11937747546,LinkAja,1,True,False,True,App performance & bugs
+11937442959,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11932898852,LinkAja,1,True,False,True,Fees & charges
+11932898852,LinkAja,1,True,False,True,Hard to use
+11925262381,LinkAja,3,True,False,False,Failed / pending transfer or top-up
+11902812154,LinkAja,4,True,False,False,Failed / pending transfer or top-up
+11894574695,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11894574695,LinkAja,1,True,False,True,Customer service
+11892369175,LinkAja,1,True,False,True,Customer service
+11880365970,LinkAja,1,True,False,True,"Paylater, loans & debt collection"
+11867568100,LinkAja,5,True,False,False,"Login, OTP & verification"
+11864731381,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11864731381,LinkAja,1,True,False,True,Customer service
+11845547380,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11845547380,LinkAja,1,True,False,True,Customer service
+11831574800,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11831574800,LinkAja,1,True,False,True,Customer service
+11828057997,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11828057997,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11820597754,LinkAja,4,True,False,False,Failed / pending transfer or top-up
+11820597754,LinkAja,4,True,False,False,Customer service
+11820597754,LinkAja,4,True,False,False,App performance & bugs
+11820597754,LinkAja,4,True,False,False,"Paylater, loans & debt collection"
+11816688889,LinkAja,1,True,False,True,"Login, OTP & verification"
+11816688889,LinkAja,1,True,False,True,Hard to use
+11814676710,LinkAja,1,True,False,True,Customer service
+11814676710,LinkAja,1,True,False,True,App performance & bugs
+11795441231,LinkAja,5,True,False,False,Failed / pending transfer or top-up
+11795441231,LinkAja,5,True,False,False,"Login, OTP & verification"
+11795441231,LinkAja,5,True,False,False,Customer service
+11795352939,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11778647347,LinkAja,1,True,False,True,"Login, OTP & verification"
+11775753777,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11773863912,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11773863912,LinkAja,1,True,False,True,"Login, OTP & verification"
+11765459121,LinkAja,2,True,False,True,Balance lost / unauthorised deduction
+11765459121,LinkAja,2,True,False,True,Customer service
+11761566159,LinkAja,2,True,False,True,Failed / pending transfer or top-up
+11761566159,LinkAja,2,True,False,True,Customer service
+11755191421,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11755191421,LinkAja,1,True,False,True,Customer service
+11751209442,LinkAja,1,True,False,True,"Login, OTP & verification"
+11751160161,LinkAja,1,True,False,True,Customer service
+11751160161,LinkAja,1,True,False,True,App performance & bugs
+11749967167,LinkAja,3,True,False,False,App performance & bugs
+11747389232,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11747389232,LinkAja,1,True,False,True,Customer service
+11736965019,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11736965019,LinkAja,1,True,False,True,Customer service
+11736760029,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11736760029,LinkAja,1,True,False,True,Customer service
+11736760029,LinkAja,1,True,False,True,App performance & bugs
+11736667482,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11736667482,LinkAja,1,True,False,True,"Login, OTP & verification"
+11736667482,LinkAja,1,True,False,True,App performance & bugs
+11731871862,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11731871862,LinkAja,1,True,False,True,Account security & fraud
+11725247201,LinkAja,1,True,False,True,Hard to use
+11719058273,LinkAja,1,True,False,True,Customer service
+11719058273,LinkAja,1,True,False,True,Hard to use
+11719058273,LinkAja,1,True,False,True,App performance & bugs
+11715463653,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11715463653,LinkAja,1,True,False,True,Customer service
+11715346961,LinkAja,1,True,False,True,"Login, OTP & verification"
+11715346961,LinkAja,1,True,False,True,Customer service
+11711893512,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11711893512,LinkAja,1,True,False,True,Customer service
+11711893512,LinkAja,1,True,False,True,Hard to use
+11709232758,LinkAja,1,True,False,True,Customer service
+11689944950,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11689944950,LinkAja,1,True,False,True,"Login, OTP & verification"
+11689944950,LinkAja,1,True,False,True,Customer service
+11683826568,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11683826568,LinkAja,1,True,False,True,Customer service
+11681635718,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11681635718,LinkAja,1,True,False,True,"Login, OTP & verification"
+11679092577,LinkAja,3,True,False,False,Customer service
+11677240164,LinkAja,1,True,False,True,Customer service
+11676284353,LinkAja,1,True,False,True,"Login, OTP & verification"
+11672806155,LinkAja,1,True,False,True,"Login, OTP & verification"
+11672806155,LinkAja,1,True,False,True,Customer service
+11670060999,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11669814754,LinkAja,1,True,False,True,"Login, OTP & verification"
+11666845308,LinkAja,2,True,False,True,Failed / pending transfer or top-up
+11666845308,LinkAja,2,True,False,True,"Login, OTP & verification"
+11662422287,LinkAja,1,True,False,True,"Login, OTP & verification"
+11662422287,LinkAja,1,True,False,True,Customer service
+11655535505,LinkAja,1,True,False,True,Customer service
+11654236651,LinkAja,1,True,False,True,Customer service
+11647496105,LinkAja,1,True,False,True,App performance & bugs
+11646224295,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11646224295,LinkAja,1,True,False,True,Customer service
+11646224295,LinkAja,1,True,False,True,Fees & charges
+11646224295,LinkAja,1,True,False,True,App performance & bugs
+11637548202,LinkAja,1,True,False,True,Customer service
+11636265852,LinkAja,1,True,False,True,Account security & fraud
+11635284569,LinkAja,1,True,False,True,"Login, OTP & verification"
+11635284569,LinkAja,1,True,False,True,App performance & bugs
+11624337555,LinkAja,1,True,False,True,"Login, OTP & verification"
+11620125449,LinkAja,1,True,False,True,"Login, OTP & verification"
+11596891807,LinkAja,1,True,False,True,Customer service
+11596648937,LinkAja,1,True,False,True,Customer service
+11592690558,LinkAja,1,True,False,True,"Login, OTP & verification"
+11592690558,LinkAja,1,True,False,True,App performance & bugs
+11580673700,LinkAja,1,True,False,True,"Login, OTP & verification"
+11580673700,LinkAja,1,True,False,True,Account security & fraud
+11568758829,LinkAja,2,True,False,True,"Login, OTP & verification"
+11568758829,LinkAja,2,True,False,True,Hard to use
+11566577154,LinkAja,1,True,False,True,"Login, OTP & verification"
+11566577154,LinkAja,1,True,False,True,Customer service
+11566577154,LinkAja,1,True,False,True,Hard to use
+11566127130,LinkAja,2,True,False,True,App performance & bugs
+11562560026,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11562560026,LinkAja,1,True,False,True,Customer service
+11546537304,LinkAja,1,True,False,True,Hard to use
+11543150653,LinkAja,1,True,False,True,Customer service
+11536068421,LinkAja,1,True,False,True,Customer service
+11536068421,LinkAja,1,True,False,True,App performance & bugs
+11535459859,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11535459859,LinkAja,1,True,False,True,"Login, OTP & verification"
+11535459859,LinkAja,1,True,False,True,Customer service
+11531639377,LinkAja,1,True,False,True,Customer service
+11530744519,LinkAja,1,True,False,True,"Login, OTP & verification"
+11530744519,LinkAja,1,True,False,True,Account security & fraud
+11524121176,LinkAja,1,True,False,True,"Login, OTP & verification"
+11523875802,LinkAja,1,True,False,True,Account security & fraud
+11520925479,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11520925479,LinkAja,1,True,False,True,"Login, OTP & verification"
+11517304601,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11517304601,LinkAja,1,True,False,True,Customer service
+11514028188,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11514028188,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11514028188,LinkAja,1,True,False,True,Customer service
+11502662664,LinkAja,1,True,False,True,Customer service
+11499859284,LinkAja,1,True,False,True,"Login, OTP & verification"
+11499859284,LinkAja,1,True,False,True,App performance & bugs
+11499270616,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11499270616,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11498739098,LinkAja,1,True,False,True,App performance & bugs
+11494695144,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11494695144,LinkAja,1,True,False,True,Customer service
+11490913141,LinkAja,1,True,False,True,Customer service
+11488283188,LinkAja,2,True,False,True,App performance & bugs
+11483322323,LinkAja,1,True,False,True,App performance & bugs
+11479912585,LinkAja,1,True,False,True,Customer service
+11479556052,LinkAja,1,True,False,True,App performance & bugs
+11452160970,LinkAja,1,True,True,True,"Login, OTP & verification"
+11452160970,LinkAja,1,True,True,True,Customer service
+11449966249,LinkAja,1,True,False,True,App performance & bugs
+11444989953,LinkAja,1,True,False,True,"Login, OTP & verification"
+11432104450,LinkAja,1,True,False,True,Customer service
+11432104450,LinkAja,1,True,False,True,App performance & bugs
+11428779901,LinkAja,1,True,False,True,Customer service
+11423896606,LinkAja,1,True,False,True,"Login, OTP & verification"
+11423896606,LinkAja,1,True,False,True,"Paylater, loans & debt collection"
+11421175744,LinkAja,1,True,False,True,Hard to use
+11420597975,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11420597975,LinkAja,1,True,False,True,"Login, OTP & verification"
+11420597975,LinkAja,1,True,False,True,"Ads, notifications & promos"
+11416357596,LinkAja,2,True,False,True,App performance & bugs
+11415997490,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11415997490,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11405773041,LinkAja,1,True,False,True,"Login, OTP & verification"
+11405773041,LinkAja,1,True,False,True,Customer service
+11392641645,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11392641645,LinkAja,1,True,False,True,Customer service
+11379647177,LinkAja,1,True,False,True,"Login, OTP & verification"
+11379647177,LinkAja,1,True,False,True,Customer service
+11378684566,LinkAja,1,True,False,True,Customer service
+11375778324,LinkAja,2,True,False,True,Failed / pending transfer or top-up
+11375778324,LinkAja,2,True,False,True,"Login, OTP & verification"
+11375778324,LinkAja,2,True,False,True,Customer service
+11375778324,LinkAja,2,True,False,True,Hard to use
+11371657726,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11371657726,LinkAja,1,True,False,True,Customer service
+11358402789,LinkAja,1,True,False,True,Hard to use
+11357638044,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11357638044,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11357638044,LinkAja,1,True,False,True,Customer service
+11356009997,LinkAja,1,True,False,True,"Login, OTP & verification"
+11356009997,LinkAja,1,True,False,True,Hard to use
+11353811665,LinkAja,1,True,False,True,Customer service
+11352492234,LinkAja,1,True,False,True,"Login, OTP & verification"
+11346456347,LinkAja,1,True,False,True,Balance lost / unauthorised deduction
+11346456347,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11346456347,LinkAja,1,True,False,True,Customer service
+11345126615,LinkAja,1,True,False,True,"Login, OTP & verification"
+11345126615,LinkAja,1,True,False,True,Customer service
+11337282846,LinkAja,1,True,False,True,"Login, OTP & verification"
+11337282846,LinkAja,1,True,False,True,Customer service
+11323391538,LinkAja,1,True,False,True,"Login, OTP & verification"
+11323391538,LinkAja,1,True,False,True,Customer service
+11319648479,LinkAja,1,True,False,True,Failed / pending transfer or top-up
+11319648479,LinkAja,1,True,False,True,Customer service
+3151035036,LinkAja,5,False,True,False,App performance & bugs
+6179597175,LinkAja,5,False,True,False,Hard to use
+6177002192,LinkAja,5,False,True,False,"Ads, notifications & promos"
+1875414357,LinkAja,1,False,True,True,Fees & charges
+6183249923,LinkAja,5,False,True,False,Hard to use
+3813753664,LinkAja,2,False,True,True,"Login, OTP & verification"
+6635554092,LinkAja,2,False,True,True,"Login, OTP & verification"
+6227332728,LinkAja,5,False,True,False,"Ads, notifications & promos"
+5948917955,LinkAja,1,False,True,True,Customer service
+3798360984,LinkAja,5,False,True,False,Failed / pending transfer or top-up
+3798360984,LinkAja,5,False,True,False,"Login, OTP & verification"
+4133662571,LinkAja,1,False,True,True,App performance & bugs
+5133237882,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+5133237882,LinkAja,1,False,True,True,Customer service
+5133237882,LinkAja,1,False,True,True,"Ads, notifications & promos"
+5122372780,LinkAja,1,False,True,True,"Login, OTP & verification"
+5122372780,LinkAja,1,False,True,True,Customer service
+7785896601,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+6988095203,LinkAja,1,False,True,True,"Login, OTP & verification"
+6983689951,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+6983689951,LinkAja,1,False,True,True,"Login, OTP & verification"
+7273812539,LinkAja,2,False,True,True,App performance & bugs
+6218497966,LinkAja,5,False,True,False,Fees & charges
+6218497966,LinkAja,5,False,True,False,App performance & bugs
+6844460300,LinkAja,1,False,True,True,Balance lost / unauthorised deduction
+6844460300,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+6844460300,LinkAja,1,False,True,True,Customer service
+6544985009,LinkAja,5,False,True,False,Failed / pending transfer or top-up
+5906943888,LinkAja,1,False,True,True,App performance & bugs
+5134556848,LinkAja,2,False,True,True,App performance & bugs
+3974827918,LinkAja,1,False,True,True,Account security & fraud
+3838276462,LinkAja,1,False,True,True,App performance & bugs
+4178756500,LinkAja,2,False,True,True,App performance & bugs
+3838207098,LinkAja,1,False,True,True,App performance & bugs
+11315215735,LinkAja,1,False,True,True,Balance lost / unauthorised deduction
+10925771844,LinkAja,1,False,True,True,Customer service
+10717669372,LinkAja,1,False,True,True,Customer service
+10537152262,LinkAja,1,False,True,True,"Login, OTP & verification"
+10537152262,LinkAja,1,False,True,True,Customer service
+10537152262,LinkAja,1,False,True,True,Hard to use
+10247990469,LinkAja,1,False,True,True,Balance lost / unauthorised deduction
+10247990469,LinkAja,1,False,True,True,"Login, OTP & verification"
+10247990469,LinkAja,1,False,True,True,Customer service
+10175953100,LinkAja,1,False,True,True,"Login, OTP & verification"
+10175953100,LinkAja,1,False,True,True,Customer service
+10175953100,LinkAja,1,False,True,True,Hard to use
+10153718168,LinkAja,4,False,True,False,"Paylater, loans & debt collection"
+7880115740,LinkAja,4,False,True,False,"Login, OTP & verification"
+7880115740,LinkAja,4,False,True,False,App performance & bugs
+10092742130,LinkAja,1,False,True,True,"Login, OTP & verification"
+10092742130,LinkAja,1,False,True,True,Hard to use
+10092742130,LinkAja,1,False,True,True,"Paylater, loans & debt collection"
+9887028908,LinkAja,1,False,True,True,Customer service
+9638670398,LinkAja,1,False,True,True,Customer service
+9638569747,LinkAja,1,False,True,True,"Login, OTP & verification"
+9638569747,LinkAja,1,False,True,True,Customer service
+9636034556,LinkAja,1,False,True,True,Customer service
+9636034556,LinkAja,1,False,True,True,App performance & bugs
+9630032499,LinkAja,1,False,True,True,Customer service
+9511539556,LinkAja,1,False,True,True,App performance & bugs
+9511539556,LinkAja,1,False,True,True,"Ads, notifications & promos"
+9283875063,LinkAja,1,False,True,True,"Login, OTP & verification"
+9283875063,LinkAja,1,False,True,True,Customer service
+9283875063,LinkAja,1,False,True,True,Hard to use
+8089961768,LinkAja,1,False,True,True,App performance & bugs
+8076018429,LinkAja,1,False,True,True,"Login, OTP & verification"
+8076018429,LinkAja,1,False,True,True,Customer service
+8076018429,LinkAja,1,False,True,True,App performance & bugs
+7266547661,LinkAja,5,False,True,False,Customer service
+7846170089,LinkAja,2,False,True,True,Failed / pending transfer or top-up
+7809625932,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+7768601804,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+7036950623,LinkAja,5,False,True,False,Hard to use
+7022016635,LinkAja,1,False,True,True,Customer service
+6752732008,LinkAja,2,False,True,True,Customer service
+6752732008,LinkAja,2,False,True,True,App performance & bugs
+6750334473,LinkAja,1,False,True,True,App performance & bugs
+6747605600,LinkAja,1,False,True,True,App performance & bugs
+6745706572,LinkAja,1,False,True,True,"Login, OTP & verification"
+6745706572,LinkAja,1,False,True,True,App performance & bugs
+6687548436,LinkAja,5,False,True,False,App performance & bugs
+6584892643,LinkAja,1,False,True,True,App performance & bugs
+6584577265,LinkAja,2,False,True,True,App performance & bugs
+6571425863,LinkAja,1,False,True,True,App performance & bugs
+6544727879,LinkAja,5,False,True,False,"Paylater, loans & debt collection"
+6540295274,LinkAja,3,False,True,False,App performance & bugs
+6532181474,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+6532181474,LinkAja,1,False,True,True,"Login, OTP & verification"
+6532181474,LinkAja,1,False,True,True,App performance & bugs
+6526283354,LinkAja,5,False,True,False,Customer service
+6526283354,LinkAja,5,False,True,False,Fees & charges
+6451208663,LinkAja,5,False,True,False,"Ads, notifications & promos"
+6445649249,LinkAja,5,False,True,False,Hard to use
+6445649249,LinkAja,5,False,True,False,"Ads, notifications & promos"
+6372439414,LinkAja,5,False,True,False,Customer service
+6372439414,LinkAja,5,False,True,False,"Ads, notifications & promos"
+6332502140,LinkAja,1,False,True,True,"Ads, notifications & promos"
+6208130749,LinkAja,5,False,True,False,App performance & bugs
+6207871118,LinkAja,5,False,True,False,Hard to use
+6207871118,LinkAja,5,False,True,False,"Ads, notifications & promos"
+6180189568,LinkAja,5,False,True,False,"Paylater, loans & debt collection"
+6070631490,LinkAja,1,False,True,True,"Login, OTP & verification"
+6070631490,LinkAja,1,False,True,True,Customer service
+6067652253,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+6067652253,LinkAja,1,False,True,True,App performance & bugs
+5649166045,LinkAja,1,False,True,True,"Login, OTP & verification"
+5649166045,LinkAja,1,False,True,True,Fees & charges
+5649166045,LinkAja,1,False,True,True,Hard to use
+5627178323,LinkAja,1,False,True,True,"Login, OTP & verification"
+5627178323,LinkAja,1,False,True,True,Customer service
+5627178323,LinkAja,1,False,True,True,App performance & bugs
+5615407274,LinkAja,1,False,True,True,App performance & bugs
+5615407274,LinkAja,1,False,True,True,"Ads, notifications & promos"
+5613361493,LinkAja,1,False,True,True,App performance & bugs
+5527996900,LinkAja,1,False,True,True,Customer service
+5502973781,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+5415379993,LinkAja,5,False,True,False,Hard to use
+5178625696,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+5178625696,LinkAja,1,False,True,True,Hard to use
+5177938901,LinkAja,1,False,True,True,Balance lost / unauthorised deduction
+5177938901,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+5168313677,LinkAja,1,False,True,True,Balance lost / unauthorised deduction
+5166994206,LinkAja,1,False,True,True,Balance lost / unauthorised deduction
+5166994206,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+5166994206,LinkAja,1,False,True,True,Customer service
+5166435725,LinkAja,1,False,True,True,Balance lost / unauthorised deduction
+5166435725,LinkAja,1,False,True,True,Customer service
+5162859952,LinkAja,1,False,True,True,App performance & bugs
+5155949242,LinkAja,1,False,True,True,"Login, OTP & verification"
+4822723419,LinkAja,1,False,True,True,"Login, OTP & verification"
+10747058684,LinkAja,1,False,True,True,"Login, OTP & verification"
+7268025986,LinkAja,3,False,True,False,Customer service
+7268025986,LinkAja,3,False,True,False,App performance & bugs
+7268025986,LinkAja,3,False,True,False,"Paylater, loans & debt collection"
+5650277436,LinkAja,1,False,True,True,App performance & bugs
+4168754626,LinkAja,1,False,True,True,Hard to use
+4168754626,LinkAja,1,False,True,True,"Ads, notifications & promos"
+4165360155,LinkAja,1,False,True,True,Hard to use
+4165360155,LinkAja,1,False,True,True,"Ads, notifications & promos"
+4105786093,LinkAja,1,False,True,True,"Login, OTP & verification"
+3953218541,LinkAja,1,False,True,True,"Ads, notifications & promos"
+3949383583,LinkAja,1,False,True,True,"Login, OTP & verification"
+3949383583,LinkAja,1,False,True,True,Account security & fraud
+3900113479,LinkAja,1,False,True,True,App performance & bugs
+3801445150,LinkAja,1,False,True,True,Balance lost / unauthorised deduction
+3801445150,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+3801445150,LinkAja,1,False,True,True,"Login, OTP & verification"
+3801445150,LinkAja,1,False,True,True,Customer service
+3801386976,LinkAja,1,False,True,True,Balance lost / unauthorised deduction
+3801386976,LinkAja,1,False,True,True,"Login, OTP & verification"
+3801337006,LinkAja,1,False,True,True,Balance lost / unauthorised deduction
+3801337006,LinkAja,1,False,True,True,App performance & bugs
+3798402770,LinkAja,1,False,True,True,"Login, OTP & verification"
+3798402770,LinkAja,1,False,True,True,App performance & bugs
+3798397721,LinkAja,1,False,True,True,"Login, OTP & verification"
+3798397330,LinkAja,1,False,True,True,"Login, OTP & verification"
+3798385502,LinkAja,1,False,True,True,"Login, OTP & verification"
+3798377980,LinkAja,1,False,True,True,"Login, OTP & verification"
+3798371202,LinkAja,2,False,True,True,"Login, OTP & verification"
+3798368354,LinkAja,1,False,True,True,"Login, OTP & verification"
+4147831602,LinkAja,1,False,True,True,Hard to use
+4147831602,LinkAja,1,False,True,True,"Paylater, loans & debt collection"
+1717243508,LinkAja,1,False,True,True,Failed / pending transfer or top-up
+1717243508,LinkAja,1,False,True,True,App performance & bugs

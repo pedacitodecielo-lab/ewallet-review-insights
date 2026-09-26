@@ -1,0 +1,2863 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0912.1023                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='7f2afab80822b89679d4d7b2a0b10c76729a51802e64384c3c98b0fa1aeb234c' _.fcp.WorkbookFingerprinting.true...creator-author-id='7f2afab80822b89679d4d7b2a0b10c76729a51802e64384c3c98b0fa1aeb234c' _.fcp.WorkbookFingerprinting.true...creator-license-type='public' _.fcp.WorkbookFingerprinting.true...creator-machine-id='5f52751004791429aca398a81876f8f04a738d2a4151461ef4e0bccf7cddf428' _.fcp.WorkbookFingerprinting.true...license-type='public' _.fcp.WorkbookFingerprinting.true...machine-id='5f52751004791429aca398a81876f8f04a738d2a4151461ef4e0bccf7cddf428' locale='en_US' original-version='18.1' source-build='2026.2.3 (20262.26.0912.1023)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelExtractV2 />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='App' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;All apps&quot;'>
+        <calculation class='tableau' formula='&quot;All apps&quot;' />
+        <members>
+          <member value='&quot;All apps&quot;' />
+          <member value='&quot;DANA&quot;' />
+          <member value='&quot;GoPay&quot;' />
+          <member value='&quot;OVO&quot;' />
+          <member value='&quot;ShopeePay&quot;' />
+          <member value='&quot;LinkAja&quot;' />
+        </members>
+      </column>
+      <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+        <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+        <members>
+          <member value='&quot;Latest 500&quot;' />
+          <member value='&quot;Most helpful&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='dashboard_reviews' inline='true' name='federated.ewalletreviews01' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='dashboard_reviews' name='textscan.ewalletreviews01'>
+            <connection class='textscan' directory='C:/Users/Emelio Exaudi/Documents/Project/Data Analyst/EWallet Review Insights' filename='dashboard_reviews.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.ewalletreviews01' name='dashboard_reviews.csv' table='[dashboard_reviews#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Review ID' ordinal='0' />
+            <column datatype='string' name='App' ordinal='1' />
+            <column datatype='string' name='Peer Group' ordinal='2' />
+            <column datatype='string' name='Lens' ordinal='3' />
+            <column datatype='date' name='Date' ordinal='4' />
+            <column datatype='integer' name='Rating' ordinal='5' />
+            <column datatype='string' name='Version' ordinal='6' />
+            <column datatype='string' name='Theme' ordinal='7' />
+            <column datatype='integer' name='Theme Count' ordinal='8' />
+            <column datatype='real' name='Share Weight' ordinal='9' />
+            <column datatype='integer' name='First Row' ordinal='10' />
+            <column datatype='integer' name='One Star' ordinal='11' />
+            <column datatype='integer' name='Negative' ordinal='12' />
+            <column datatype='integer' name='Helpful Votes' ordinal='13' />
+            <column datatype='string' name='Snippet' ordinal='14' />
+          </columns>
+        </relation>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='App' datatype='string' name='[App]' role='dimension' type='nominal' />
+      <column caption='App in selection' datatype='boolean' name='[Calc_AppFilter]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1] = &quot;All apps&quot; OR [App] = [Parameters].[Parameter 1]' />
+      </column>
+      <column caption='Avg Rating' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[Calc_AvgRating]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Rating] * [First Row]) / SUM([First Row])' />
+      </column>
+      <column caption='DANA %' datatype='real' default-format='p0.0%' name='[Calc_DanaShare]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [App] = &quot;DANA&quot; THEN [Share Weight] END)' />
+      </column>
+      <column caption='Days Covered' datatype='integer' default-format='n#,##0;-#,##0' name='[Calc_Days]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;, MIN([Date]), MAX([Date])) + 1' />
+      </column>
+      <column caption='Gap Direction' datatype='string' name='[Calc_GapColor]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calc_Gap] &gt; 0 THEN &quot;DANA worse than peers&quot; ELSE &quot;DANA better than peers&quot; END' />
+      </column>
+      <column caption='DANA Gap vs Peers (pp)' datatype='real' default-format='n+#,##0.0;-#,##0.0' name='[Calc_Gap]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Calc_DanaShare] - [Calc_PeerShare]) * 100' />
+      </column>
+      <column caption='Has complaint theme' datatype='boolean' name='[Calc_IsTheme]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Theme] &lt;&gt; &quot;(no complaint theme)&quot;' />
+      </column>
+      <column caption='Lens in selection' datatype='boolean' name='[Calc_LensFilter]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Lens] = [Parameters].[Parameter 2]' />
+      </column>
+      <column caption='Share of App Reviews' datatype='real' default-format='p0%' name='[Calc_MixShare]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([First Row]) / MIN({FIXED [App], [Lens] : SUM([First Row])})' />
+      </column>
+      <column caption='1-Star Reviews' datatype='real' default-format='p0%' name='[Calc_OneStar]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([One Star] * [First Row]) / SUM([First Row])' />
+      </column>
+      <column caption='Peer Avg %' datatype='real' default-format='p0.0%' name='[Calc_PeerShare]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [App] &lt;&gt; &quot;DANA&quot; THEN [Share Weight] END) / 4' />
+      </column>
+      <column caption='Reviews per Day' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[Calc_PerDay]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([Review ID]) / (DATEDIFF(&apos;day&apos;, MIN([Date]), MAX([Date])) + 1)' />
+      </column>
+      <column caption='Reviews' datatype='integer' default-format='n#,##0;-#,##0' name='[Calc_Reviews]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([Review ID])' />
+      </column>
+      <column caption='1-Star Share of Theme' datatype='real' default-format='p0%' name='[Calc_Severity]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([One Star])' />
+      </column>
+      <column caption='% of Reviews' datatype='real' default-format='p0.0%' name='[Calc_Share]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Share Weight]) / COUNTD([App])' />
+      </column>
+      <column caption='Stars' datatype='string' name='[Calc_Stars]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR([Rating]) + &quot; star&quot;' />
+      </column>
+      <column caption='Date' datatype='date' name='[Date]' role='dimension' type='ordinal' />
+      <column caption='First Row' datatype='integer' name='[First Row]' role='measure' type='quantitative' />
+      <column caption='Helpful Votes' datatype='integer' name='[Helpful Votes]' role='measure' type='quantitative' />
+      <column caption='Lens' datatype='string' name='[Lens]' role='dimension' type='nominal' />
+      <column caption='Negative' datatype='integer' name='[Negative]' role='measure' type='quantitative' />
+      <column caption='One Star' datatype='integer' name='[One Star]' role='measure' type='quantitative' />
+      <column caption='Peer Group' datatype='string' name='[Peer Group]' role='dimension' type='nominal' />
+      <column caption='Rating' datatype='integer' name='[Rating]' role='dimension' type='ordinal' />
+      <column caption='Review ID' datatype='string' name='[Review ID]' role='dimension' type='nominal' />
+      <column caption='Share Weight' datatype='real' name='[Share Weight]' role='measure' type='quantitative' />
+      <column caption='Snippet' datatype='string' name='[Snippet]' role='dimension' type='nominal' />
+      <column caption='Theme Count' datatype='integer' name='[Theme Count]' role='measure' type='quantitative' />
+      <column caption='Theme' datatype='string' name='[Theme]' role='dimension' type='nominal' />
+      <column caption='Version' datatype='string' name='[Version]' role='dimension' type='nominal' />
+      <column-instance column='[Peer Group]' derivation='None' name='[none:Peer Group:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Rating]' derivation='None' name='[none:Rating:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Theme]' derivation='None' name='[none:Theme:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calc_GapColor]' derivation='User' name='[usr:Calc_GapColor:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Emelio Exaudi/Documents/My Tableau Repository/Datasources/dashboard_reviews.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/26/2026 09:50:00 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Review ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Review ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Review ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2339</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>App</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[App]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>App</remote-alias>
+              <ordinal>1</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Peer Group</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Peer Group]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Peer Group</remote-alias>
+              <ordinal>2</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lens</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Lens]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lens</remote-alias>
+              <ordinal>3</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>4</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>719</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rating</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rating</remote-alias>
+              <ordinal>5</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Version</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Version]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Version</remote-alias>
+              <ordinal>6</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>198</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Theme</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Theme]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Theme</remote-alias>
+              <ordinal>7</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Theme Count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Theme Count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Theme Count</remote-alias>
+              <ordinal>8</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Share Weight</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Share Weight]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Share Weight</remote-alias>
+              <ordinal>9</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>First Row</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[First Row]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>First Row</remote-alias>
+              <ordinal>10</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>One Star</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[One Star]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>One Star</remote-alias>
+              <ordinal>11</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Negative</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Negative]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Negative</remote-alias>
+              <ordinal>12</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Helpful Votes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Helpful Votes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Helpful Votes</remote-alias>
+              <ordinal>13</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Snippet</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Snippet]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Snippet</remote-alias>
+              <ordinal>14</ordinal>
+              <family>dashboard_reviews.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2318</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Theme:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Login, OTP &amp; KYC&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Fees &amp; charges&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;App bugs &amp; speed&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Hard to use&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Balance lost&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Ads &amp; promos&quot;</bucket>
+            </map>
+            <map to='#d9d9d9'>
+              <bucket>&quot;(no complaint theme)&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Failed transfer&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Paylater &amp; bills&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Customer service&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Security &amp; fraud&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Rating:ok]' type='palette'>
+            <map to='#4575b4'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#91bfdb'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#d7301f'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#d9d9d9'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#fc8d59'>
+              <bucket>2</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Peer Group:nk]' type='palette'>
+            <map to='#118dff'>
+              <bucket>&quot;DANA&quot;</bucket>
+            </map>
+            <map to='#b8bcc2'>
+              <bucket>&quot;Peers&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:Calc_GapColor:nk]' type='palette'>
+            <map to='#4e9f94'>
+              <bucket>&quot;DANA better than peers&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;DANA worse than peers&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='App' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;All apps&quot;'>
+          <calculation class='tableau' formula='&quot;All apps&quot;' />
+        </column>
+        <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+          <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+    <datasource caption='dashboard_market' inline='true' name='federated.ewalletmarket01' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='dashboard_market' name='textscan.ewalletmarket01'>
+            <connection class='textscan' directory='C:/Users/Emelio Exaudi/Documents/Project/Data Analyst/EWallet Review Insights' filename='dashboard_market.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.ewalletmarket01' name='dashboard_market.csv' table='[dashboard_market#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Metric' ordinal='0' />
+            <column datatype='string' name='Period Type' ordinal='1' />
+            <column datatype='date' name='Period' ordinal='2' />
+            <column datatype='real' name='Value' ordinal='3' />
+          </columns>
+        </relation>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Growth since 2021' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[Calc_Growth]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calc_V2025] / SUM(IF [Period Type] = &quot;Annual&quot; AND YEAR([Period]) = 2021 THEN [Value] END)' />
+      </column>
+      <column caption='2025' datatype='real' default-format='n#,##0;-#,##0' name='[Calc_V2025]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Period Type] = &quot;Annual&quot; AND YEAR([Period]) = 2025 THEN [Value] END)' />
+      </column>
+      <column caption='Metric' datatype='string' name='[Metric]' role='dimension' type='nominal' />
+      <column caption='Period Type' datatype='string' name='[Period Type]' role='dimension' type='nominal' />
+      <column caption='Period' datatype='date' name='[Period]' role='dimension' type='ordinal' />
+      <column caption='Value' datatype='real' name='[Value]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Emelio Exaudi/Documents/My Tableau Repository/Datasources/dashboard_market.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/26/2026 09:50:00 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Metric</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Metric]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Metric</remote-alias>
+              <ordinal>0</ordinal>
+              <family>dashboard_market.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Period Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Period Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Period Type</remote-alias>
+              <ordinal>1</ordinal>
+              <family>dashboard_market.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Period</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Period]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Period</remote-alias>
+              <ordinal>2</ordinal>
+              <family>dashboard_market.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Value</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Value</remote-alias>
+              <ordinal>3</ordinal>
+              <family>dashboard_market.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Click a heatmap cell to read those reviews' name='[Action_336C1F093FBE4E5C81D65AADC98C28A7]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='2 Complaint Map' type='sheet' worksheet='Complaint heatmap' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='Review KPIs' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='2 Complaint Map' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Average rating per app'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='11'>Average App Store rating (1-5)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dashboard_reviews' name='federated.ewalletreviews01' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+              <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.ewalletreviews01'>
+            <column caption='App' datatype='string' name='[App]' role='dimension' type='nominal' />
+            <column caption='Avg Rating' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[Calc_AvgRating]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Rating] * [First Row]) / SUM([First Row])' />
+            </column>
+            <column caption='Lens in selection' datatype='boolean' name='[Calc_LensFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Lens] = [Parameters].[Parameter 2]' />
+            </column>
+            <column caption='1-Star Reviews' datatype='real' default-format='p0%' name='[Calc_OneStar]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([One Star] * [First Row]) / SUM([First Row])' />
+            </column>
+            <column caption='Reviews per Day' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[Calc_PerDay]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Review ID]) / (DATEDIFF(&apos;day&apos;, MIN([Date]), MAX([Date])) + 1)' />
+            </column>
+            <column caption='Reviews' datatype='integer' default-format='n#,##0;-#,##0' name='[Calc_Reviews]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Review ID])' />
+            </column>
+            <column caption='Date' datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='First Row' datatype='integer' name='[First Row]' role='measure' type='quantitative' />
+            <column caption='Lens' datatype='string' name='[Lens]' role='dimension' type='nominal' />
+            <column caption='One Star' datatype='integer' name='[One Star]' role='measure' type='quantitative' />
+            <column caption='Peer Group' datatype='string' name='[Peer Group]' role='dimension' type='nominal' />
+            <column caption='Rating' datatype='integer' name='[Rating]' role='dimension' type='ordinal' />
+            <column caption='Review ID' datatype='string' name='[Review ID]' role='dimension' type='nominal' />
+            <column-instance column='[App]' derivation='None' name='[none:App:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_LensFilter]' derivation='None' name='[none:Calc_LensFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Peer Group]' derivation='None' name='[none:Peer Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_AvgRating]' derivation='User' name='[usr:Calc_AvgRating:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_OneStar]' derivation='User' name='[usr:Calc_OneStar:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_PerDay]' derivation='User' name='[usr:Calc_PerDay:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_Reviews]' derivation='User' name='[usr:Calc_Reviews:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.ewalletreviews01].[none:App:nk]' direction='DESC' using='[federated.ewalletreviews01].[usr:Calc_AvgRating:qk]' />
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_LensFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_LensFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.ewalletreviews01].[none:Calc_LensFilter:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.ewalletreviews01].[none:Peer Group:nk]' type='palette'>
+              <map to='#118dff'>
+                <bucket>&quot;DANA&quot;</bucket>
+              </map>
+              <map to='#b8bcc2'>
+                <bucket>&quot;Peers&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.ewalletreviews01].[none:Peer Group:nk]' />
+              <text column='[federated.ewalletreviews01].[usr:Calc_AvgRating:qk]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_OneStar:qk]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_Reviews:qk]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_PerDay:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[none:App:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run>Average rating: </run>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_AvgRating:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run>1-star reviews: </run>
+                <run><![CDATA[<[federated.ewalletreviews01].[usr:Calc_OneStar:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run>Reviews in lens: </run>
+                <run><![CDATA[<[federated.ewalletreviews01].[usr:Calc_Reviews:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.ewalletreviews01].[none:App:nk]</rows>
+        <cols>[federated.ewalletreviews01].[usr:Calc_AvgRating:qk]</cols>
+      </table>
+      <simple-id uuid='{A9E24D4E-C5B7-47C1-9BDD-59B57AF98731}' />
+    </worksheet>
+    <worksheet name='Complaint heatmap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='11'>% of reviews mentioning each complaint theme (click a cell)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dashboard_reviews' name='federated.ewalletreviews01' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='App' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;All apps&quot;'>
+              <calculation class='tableau' formula='&quot;All apps&quot;' />
+            </column>
+            <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+              <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.ewalletreviews01'>
+            <column caption='App' datatype='string' name='[App]' role='dimension' type='nominal' />
+            <column caption='App in selection' datatype='boolean' name='[Calc_AppFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1] = &quot;All apps&quot; OR [App] = [Parameters].[Parameter 1]' />
+            </column>
+            <column caption='Has complaint theme' datatype='boolean' name='[Calc_IsTheme]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Theme] &lt;&gt; &quot;(no complaint theme)&quot;' />
+            </column>
+            <column caption='Lens in selection' datatype='boolean' name='[Calc_LensFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Lens] = [Parameters].[Parameter 2]' />
+            </column>
+            <column caption='Reviews' datatype='integer' default-format='n#,##0;-#,##0' name='[Calc_Reviews]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Review ID])' />
+            </column>
+            <column caption='1-Star Share of Theme' datatype='real' default-format='p0%' name='[Calc_Severity]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([One Star])' />
+            </column>
+            <column caption='% of Reviews' datatype='real' default-format='p0.0%' name='[Calc_Share]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Share Weight]) / COUNTD([App])' />
+            </column>
+            <column caption='Lens' datatype='string' name='[Lens]' role='dimension' type='nominal' />
+            <column caption='One Star' datatype='integer' name='[One Star]' role='measure' type='quantitative' />
+            <column caption='Review ID' datatype='string' name='[Review ID]' role='dimension' type='nominal' />
+            <column caption='Share Weight' datatype='real' name='[Share Weight]' role='measure' type='quantitative' />
+            <column caption='Theme' datatype='string' name='[Theme]' role='dimension' type='nominal' />
+            <column-instance column='[App]' derivation='None' name='[none:App:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_AppFilter]' derivation='None' name='[none:Calc_AppFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_IsTheme]' derivation='None' name='[none:Calc_IsTheme:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_LensFilter]' derivation='None' name='[none:Calc_LensFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Theme]' derivation='None' name='[none:Theme:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_Reviews]' derivation='User' name='[usr:Calc_Reviews:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_Severity]' derivation='User' name='[usr:Calc_Severity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_Share]' derivation='User' name='[usr:Calc_Share:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_AppFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_AppFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_IsTheme:nk]'>
+            <groupfilter function='member' level='[none:Calc_IsTheme:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_LensFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_LensFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.ewalletreviews01].[none:Theme:nk]' direction='DESC' using='[federated.ewalletreviews01].[usr:Calc_Share:qk]' />
+          <slices>
+            <column>[federated.ewalletreviews01].[none:Calc_AppFilter:nk]</column>
+            <column>[federated.ewalletreviews01].[none:Calc_LensFilter:nk]</column>
+            <column>[federated.ewalletreviews01].[none:Calc_IsTheme:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.ewalletreviews01].[usr:Calc_Share:qk]' palette='orange_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.ewalletreviews01].[usr:Calc_Share:qk]' />
+              <text column='[federated.ewalletreviews01].[usr:Calc_Share:qk]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_Severity:qk]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_Reviews:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[none:Theme:nk]>]]></run>
+                <run> - </run>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[none:App:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_Share:qk]>]]></run>
+                <run> of reviews mention it (</run>
+                <run><![CDATA[<[federated.ewalletreviews01].[usr:Calc_Reviews:qk]>]]></run>
+                <run> reviews)</run>
+                <run>Æ&#10;</run>
+                <run><![CDATA[<[federated.ewalletreviews01].[usr:Calc_Severity:qk]>]]></run>
+                <run> of them gave 1 star</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#6b7785'>Click to read these reviews</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.ewalletreviews01].[none:Theme:nk]</rows>
+        <cols>[federated.ewalletreviews01].[none:App:nk]</cols>
+      </table>
+      <simple-id uuid='{A3B0F164-94B1-4BC1-9086-D9BD4DDB2E00}' />
+    </worksheet>
+    <worksheet name='DANA by app version'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='11'>DANA rating by app version (Sept 2026)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dashboard_reviews' name='federated.ewalletreviews01' />
+          </datasources>
+          <datasource-dependencies datasource='federated.ewalletreviews01'>
+            <column caption='App' datatype='string' name='[App]' role='dimension' type='nominal' />
+            <column caption='Avg Rating' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[Calc_AvgRating]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Rating] * [First Row]) / SUM([First Row])' />
+            </column>
+            <column caption='1-Star Reviews' datatype='real' default-format='p0%' name='[Calc_OneStar]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([One Star] * [First Row]) / SUM([First Row])' />
+            </column>
+            <column caption='Reviews' datatype='integer' default-format='n#,##0;-#,##0' name='[Calc_Reviews]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Review ID])' />
+            </column>
+            <column caption='First Row' datatype='integer' name='[First Row]' role='measure' type='quantitative' />
+            <column caption='Lens' datatype='string' name='[Lens]' role='dimension' type='nominal' />
+            <column caption='One Star' datatype='integer' name='[One Star]' role='measure' type='quantitative' />
+            <column caption='Rating' datatype='integer' name='[Rating]' role='dimension' type='ordinal' />
+            <column caption='Review ID' datatype='string' name='[Review ID]' role='dimension' type='nominal' />
+            <column caption='Version' datatype='string' name='[Version]' role='dimension' type='nominal' />
+            <column-instance column='[App]' derivation='None' name='[none:App:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Lens]' derivation='None' name='[none:Lens:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Version]' derivation='None' name='[none:Version:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_AvgRating]' derivation='User' name='[usr:Calc_AvgRating:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_OneStar]' derivation='User' name='[usr:Calc_OneStar:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_Reviews]' derivation='User' name='[usr:Calc_Reviews:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:App:nk]'>
+            <groupfilter function='member' level='[none:App:nk]' member='&quot;DANA&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Lens:nk]'>
+            <groupfilter function='member' level='[none:Lens:nk]' member='&quot;Latest 500&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Version:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Version:nk]' member='&quot;2.141.0&quot;' />
+              <groupfilter function='member' level='[none:Version:nk]' member='&quot;2.142.0&quot;' />
+              <groupfilter function='member' level='[none:Version:nk]' member='&quot;2.143.0&quot;' />
+              <groupfilter function='member' level='[none:Version:nk]' member='&quot;2.144.0&quot;' />
+              <groupfilter function='member' level='[none:Version:nk]' member='&quot;2.145.0&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.ewalletreviews01].[none:App:nk]</column>
+            <column>[federated.ewalletreviews01].[none:Lens:nk]</column>
+            <column>[federated.ewalletreviews01].[none:Version:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.ewalletreviews01].[usr:Calc_OneStar:qk]' palette='red_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.ewalletreviews01].[usr:Calc_OneStar:qk]' />
+              <text column='[federated.ewalletreviews01].[usr:Calc_AvgRating:qk]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_Reviews:qk]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_OneStar:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run>DANA </run>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[none:Version:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run>Average rating: </run>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_AvgRating:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run>1-star share: </run>
+                <run><![CDATA[<[federated.ewalletreviews01].[usr:Calc_OneStar:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run>Reviews: </run>
+                <run><![CDATA[<[federated.ewalletreviews01].[usr:Calc_Reviews:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.ewalletreviews01].[usr:Calc_AvgRating:qk]</rows>
+        <cols>[federated.ewalletreviews01].[none:Version:nk]</cols>
+      </table>
+      <simple-id uuid='{7A762165-2F04-4C87-83BA-7C5193270C42}' />
+    </worksheet>
+    <worksheet name='DANA vs peers'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='11'>DANA vs peer average (gap in percentage points)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dashboard_reviews' name='federated.ewalletreviews01' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+              <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.ewalletreviews01'>
+            <column caption='App' datatype='string' name='[App]' role='dimension' type='nominal' />
+            <column caption='DANA %' datatype='real' default-format='p0.0%' name='[Calc_DanaShare]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [App] = &quot;DANA&quot; THEN [Share Weight] END)' />
+            </column>
+            <column caption='Gap Direction' datatype='string' name='[Calc_GapColor]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Calc_Gap] &gt; 0 THEN &quot;DANA worse than peers&quot; ELSE &quot;DANA better than peers&quot; END' />
+            </column>
+            <column caption='DANA Gap vs Peers (pp)' datatype='real' default-format='n+#,##0.0;-#,##0.0' name='[Calc_Gap]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([Calc_DanaShare] - [Calc_PeerShare]) * 100' />
+            </column>
+            <column caption='Has complaint theme' datatype='boolean' name='[Calc_IsTheme]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Theme] &lt;&gt; &quot;(no complaint theme)&quot;' />
+            </column>
+            <column caption='Lens in selection' datatype='boolean' name='[Calc_LensFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Lens] = [Parameters].[Parameter 2]' />
+            </column>
+            <column caption='Peer Avg %' datatype='real' default-format='p0.0%' name='[Calc_PeerShare]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [App] &lt;&gt; &quot;DANA&quot; THEN [Share Weight] END) / 4' />
+            </column>
+            <column caption='Lens' datatype='string' name='[Lens]' role='dimension' type='nominal' />
+            <column caption='Share Weight' datatype='real' name='[Share Weight]' role='measure' type='quantitative' />
+            <column caption='Theme' datatype='string' name='[Theme]' role='dimension' type='nominal' />
+            <column-instance column='[Calc_IsTheme]' derivation='None' name='[none:Calc_IsTheme:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_LensFilter]' derivation='None' name='[none:Calc_LensFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Theme]' derivation='None' name='[none:Theme:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_DanaShare]' derivation='User' name='[usr:Calc_DanaShare:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_Gap]' derivation='User' name='[usr:Calc_Gap:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_GapColor]' derivation='User' name='[usr:Calc_GapColor:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_PeerShare]' derivation='User' name='[usr:Calc_PeerShare:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_IsTheme:nk]'>
+            <groupfilter function='member' level='[none:Calc_IsTheme:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_LensFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_LensFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.ewalletreviews01].[none:Theme:nk]' direction='DESC' using='[federated.ewalletreviews01].[usr:Calc_Gap:qk]' />
+          <slices>
+            <column>[federated.ewalletreviews01].[none:Calc_LensFilter:nk]</column>
+            <column>[federated.ewalletreviews01].[none:Calc_IsTheme:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.ewalletreviews01].[usr:Calc_GapColor:nk]' type='palette'>
+              <map to='#4e9f94'>
+                <bucket>&quot;DANA better than peers&quot;</bucket>
+              </map>
+              <map to='#e15759'>
+                <bucket>&quot;DANA worse than peers&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.ewalletreviews01].[usr:Calc_GapColor:nk]' />
+              <text column='[federated.ewalletreviews01].[usr:Calc_Gap:qk]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_DanaShare:qk]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_PeerShare:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[none:Theme:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run>DANA: </run>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_DanaShare:qk]>]]></run>
+                <run> of reviews   Peer average: </run>
+                <run><![CDATA[<[federated.ewalletreviews01].[usr:Calc_PeerShare:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run>Gap: </run>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_Gap:qk]>]]></run>
+                <run> percentage points</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.ewalletreviews01].[none:Theme:nk]</rows>
+        <cols>[federated.ewalletreviews01].[usr:Calc_Gap:qk]</cols>
+      </table>
+      <simple-id uuid='{7940E35D-7030-4280-94E5-FC2F407D7EF8}' />
+    </worksheet>
+    <worksheet name='E-money transaction value'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='11'>E-money transaction value per year (Rp trillion)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dashboard_market' name='federated.ewalletmarket01' />
+          </datasources>
+          <datasource-dependencies datasource='federated.ewalletmarket01'>
+            <column caption='Metric' datatype='string' name='[Metric]' role='dimension' type='nominal' />
+            <column caption='Period Type' datatype='string' name='[Period Type]' role='dimension' type='nominal' />
+            <column caption='Period' datatype='date' name='[Period]' role='dimension' type='ordinal' />
+            <column caption='Value' datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Metric]' derivation='None' name='[none:Metric:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Period Type]' derivation='None' name='[none:Period Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Period]' derivation='Year' name='[yr:Period:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.ewalletmarket01].[none:Metric:nk]'>
+            <groupfilter function='member' level='[none:Metric:nk]' member='&quot;Transaction value (Rp trillion)&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.ewalletmarket01].[none:Period Type:nk]'>
+            <groupfilter function='member' level='[none:Period Type:nk]' member='&quot;Annual&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.ewalletmarket01].[none:Period Type:nk]</column>
+            <column>[federated.ewalletmarket01].[none:Metric:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <text column='[federated.ewalletmarket01].[sum:Value:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.ewalletmarket01].[sum:Value:qk]</rows>
+        <cols>[federated.ewalletmarket01].[yr:Period:ok]</cols>
+      </table>
+      <simple-id uuid='{BAB3A6C9-E278-4214-B8F0-3F2F91D00B78}' />
+    </worksheet>
+    <worksheet name='Priority matrix'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='11'>Priority matrix: how common (x) vs how severe (y)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dashboard_reviews' name='federated.ewalletreviews01' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='App' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;All apps&quot;'>
+              <calculation class='tableau' formula='&quot;All apps&quot;' />
+            </column>
+            <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+              <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.ewalletreviews01'>
+            <column caption='App' datatype='string' name='[App]' role='dimension' type='nominal' />
+            <column caption='App in selection' datatype='boolean' name='[Calc_AppFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1] = &quot;All apps&quot; OR [App] = [Parameters].[Parameter 1]' />
+            </column>
+            <column caption='Has complaint theme' datatype='boolean' name='[Calc_IsTheme]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Theme] &lt;&gt; &quot;(no complaint theme)&quot;' />
+            </column>
+            <column caption='Lens in selection' datatype='boolean' name='[Calc_LensFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Lens] = [Parameters].[Parameter 2]' />
+            </column>
+            <column caption='Reviews' datatype='integer' default-format='n#,##0;-#,##0' name='[Calc_Reviews]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Review ID])' />
+            </column>
+            <column caption='1-Star Share of Theme' datatype='real' default-format='p0%' name='[Calc_Severity]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([One Star])' />
+            </column>
+            <column caption='% of Reviews' datatype='real' default-format='p0.0%' name='[Calc_Share]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Share Weight]) / COUNTD([App])' />
+            </column>
+            <column caption='Lens' datatype='string' name='[Lens]' role='dimension' type='nominal' />
+            <column caption='One Star' datatype='integer' name='[One Star]' role='measure' type='quantitative' />
+            <column caption='Review ID' datatype='string' name='[Review ID]' role='dimension' type='nominal' />
+            <column caption='Share Weight' datatype='real' name='[Share Weight]' role='measure' type='quantitative' />
+            <column caption='Theme' datatype='string' name='[Theme]' role='dimension' type='nominal' />
+            <column-instance column='[Calc_AppFilter]' derivation='None' name='[none:Calc_AppFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_IsTheme]' derivation='None' name='[none:Calc_IsTheme:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_LensFilter]' derivation='None' name='[none:Calc_LensFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Theme]' derivation='None' name='[none:Theme:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_Reviews]' derivation='User' name='[usr:Calc_Reviews:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_Severity]' derivation='User' name='[usr:Calc_Severity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_Share]' derivation='User' name='[usr:Calc_Share:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_AppFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_AppFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_IsTheme:nk]'>
+            <groupfilter function='member' level='[none:Calc_IsTheme:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_LensFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_LensFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.ewalletreviews01].[none:Calc_AppFilter:nk]</column>
+            <column>[federated.ewalletreviews01].[none:Calc_LensFilter:nk]</column>
+            <column>[federated.ewalletreviews01].[none:Calc_IsTheme:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.ewalletreviews01].[none:Theme:nk]' type='palette'>
+              <map to='#4e79a7'>
+                <bucket>&quot;Login, OTP &amp; KYC&quot;</bucket>
+              </map>
+              <map to='#59a14f'>
+                <bucket>&quot;Fees &amp; charges&quot;</bucket>
+              </map>
+              <map to='#76b7b2'>
+                <bucket>&quot;App bugs &amp; speed&quot;</bucket>
+              </map>
+              <map to='#9c755f'>
+                <bucket>&quot;Hard to use&quot;</bucket>
+              </map>
+              <map to='#b07aa1'>
+                <bucket>&quot;Balance lost&quot;</bucket>
+              </map>
+              <map to='#bab0ac'>
+                <bucket>&quot;Ads &amp; promos&quot;</bucket>
+              </map>
+              <map to='#d9d9d9'>
+                <bucket>&quot;(no complaint theme)&quot;</bucket>
+              </map>
+              <map to='#e15759'>
+                <bucket>&quot;Failed transfer&quot;</bucket>
+              </map>
+              <map to='#edc948'>
+                <bucket>&quot;Paylater &amp; bills&quot;</bucket>
+              </map>
+              <map to='#f28e2b'>
+                <bucket>&quot;Customer service&quot;</bucket>
+              </map>
+              <map to='#ff9da7'>
+                <bucket>&quot;Security &amp; fraud&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.ewalletreviews01].[none:Theme:nk]' />
+              <text column='[federated.ewalletreviews01].[none:Theme:nk]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_Reviews:qk]' />
+              <size column='[federated.ewalletreviews01].[usr:Calc_Reviews:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[none:Theme:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run>How common: </run>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_Share:qk]>]]></run>
+                <run> of reviews</run>
+                <run>Æ&#10;</run>
+                <run>How severe: </run>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_Severity:qk]>]]></run>
+                <run> of those gave 1 star</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.ewalletreviews01].[usr:Calc_Severity:qk]</rows>
+        <cols>[federated.ewalletreviews01].[usr:Calc_Share:qk]</cols>
+      </table>
+      <simple-id uuid='{9BDA9DA6-FAE9-434D-9C75-09D4941FB85D}' />
+    </worksheet>
+    <worksheet name='Review KPIs'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='11'>Selection at a glance</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dashboard_reviews' name='federated.ewalletreviews01' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='App' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;All apps&quot;'>
+              <calculation class='tableau' formula='&quot;All apps&quot;' />
+            </column>
+            <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+              <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.ewalletreviews01'>
+            <column caption='App' datatype='string' name='[App]' role='dimension' type='nominal' />
+            <column caption='App in selection' datatype='boolean' name='[Calc_AppFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1] = &quot;All apps&quot; OR [App] = [Parameters].[Parameter 1]' />
+            </column>
+            <column caption='Avg Rating' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[Calc_AvgRating]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Rating] * [First Row]) / SUM([First Row])' />
+            </column>
+            <column caption='Lens in selection' datatype='boolean' name='[Calc_LensFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Lens] = [Parameters].[Parameter 2]' />
+            </column>
+            <column caption='1-Star Reviews' datatype='real' default-format='p0%' name='[Calc_OneStar]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([One Star] * [First Row]) / SUM([First Row])' />
+            </column>
+            <column caption='Reviews' datatype='integer' default-format='n#,##0;-#,##0' name='[Calc_Reviews]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Review ID])' />
+            </column>
+            <column caption='First Row' datatype='integer' name='[First Row]' role='measure' type='quantitative' />
+            <column caption='Lens' datatype='string' name='[Lens]' role='dimension' type='nominal' />
+            <column caption='One Star' datatype='integer' name='[One Star]' role='measure' type='quantitative' />
+            <column caption='Rating' datatype='integer' name='[Rating]' role='dimension' type='ordinal' />
+            <column caption='Review ID' datatype='string' name='[Review ID]' role='dimension' type='nominal' />
+            <column-instance column='[Calc_AppFilter]' derivation='None' name='[none:Calc_AppFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_LensFilter]' derivation='None' name='[none:Calc_LensFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_AvgRating]' derivation='User' name='[usr:Calc_AvgRating:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_OneStar]' derivation='User' name='[usr:Calc_OneStar:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_Reviews]' derivation='User' name='[usr:Calc_Reviews:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_AppFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_AppFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_LensFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_LensFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.ewalletreviews01].[none:Calc_AppFilter:nk]</column>
+            <column>[federated.ewalletreviews01].[none:Calc_LensFilter:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.ewalletreviews01].[usr:Calc_Reviews:qk]' />
+              <text column='[federated.ewalletreviews01].[usr:Calc_AvgRating:qk]' />
+              <text column='[federated.ewalletreviews01].[usr:Calc_OneStar:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='18'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_Reviews:qk]>]]></run>
+                <run fontcolor='#6b7785' fontsize='10'> reviews   </run>
+                <run bold='true' fontsize='18'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_AvgRating:qk]>]]></run>
+                <run fontcolor='#6b7785' fontsize='10'> avg stars   </run>
+                <run bold='true' fontcolor='#d7301f' fontsize='18'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_OneStar:qk]>]]></run>
+                <run fontcolor='#6b7785' fontsize='10'> gave 1 star</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A0CA6D08-7F8A-4E2A-843A-4618E1D5DA7E}' />
+    </worksheet>
+    <worksheet name='Reviews per day'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='11'>Review velocity: new reviews per day</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dashboard_reviews' name='federated.ewalletreviews01' />
+          </datasources>
+          <datasource-dependencies datasource='federated.ewalletreviews01'>
+            <column caption='App' datatype='string' name='[App]' role='dimension' type='nominal' />
+            <column caption='Days Covered' datatype='integer' default-format='n#,##0;-#,##0' name='[Calc_Days]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;, MIN([Date]), MAX([Date])) + 1' />
+            </column>
+            <column caption='Reviews per Day' datatype='real' default-format='n#,##0.0;-#,##0.0' name='[Calc_PerDay]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Review ID]) / (DATEDIFF(&apos;day&apos;, MIN([Date]), MAX([Date])) + 1)' />
+            </column>
+            <column caption='Date' datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='Lens' datatype='string' name='[Lens]' role='dimension' type='nominal' />
+            <column caption='Peer Group' datatype='string' name='[Peer Group]' role='dimension' type='nominal' />
+            <column caption='Review ID' datatype='string' name='[Review ID]' role='dimension' type='nominal' />
+            <column-instance column='[App]' derivation='None' name='[none:App:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Lens]' derivation='None' name='[none:Lens:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Peer Group]' derivation='None' name='[none:Peer Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_Days]' derivation='User' name='[usr:Calc_Days:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_PerDay]' derivation='User' name='[usr:Calc_PerDay:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.ewalletreviews01].[none:App:nk]' direction='DESC' using='[federated.ewalletreviews01].[usr:Calc_PerDay:qk]' />
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Lens:nk]'>
+            <groupfilter function='member' level='[none:Lens:nk]' member='&quot;Latest 500&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.ewalletreviews01].[none:Lens:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.ewalletreviews01].[none:Peer Group:nk]' type='palette'>
+              <map to='#118dff'>
+                <bucket>&quot;DANA&quot;</bucket>
+              </map>
+              <map to='#b8bcc2'>
+                <bucket>&quot;Peers&quot;</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.ewalletreviews01].[none:Peer Group:nk]' />
+              <text column='[federated.ewalletreviews01].[usr:Calc_PerDay:qk]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_Days:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[none:App:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run>Latest 500 reviews span </run>
+                <run><![CDATA[<[federated.ewalletreviews01].[usr:Calc_Days:qk]>]]></run>
+                <run> days = </run>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_PerDay:qk]>]]></run>
+                <run> reviews per day</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.ewalletreviews01].[none:App:nk]</rows>
+        <cols>[federated.ewalletreviews01].[usr:Calc_PerDay:qk]</cols>
+      </table>
+      <simple-id uuid='{9E28063A-2E3B-41BF-BF7C-15496711C4A4}' />
+    </worksheet>
+    <worksheet name='Star ratings of selection'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='11'>Star ratings of the selected reviews</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dashboard_reviews' name='federated.ewalletreviews01' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='App' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;All apps&quot;'>
+              <calculation class='tableau' formula='&quot;All apps&quot;' />
+            </column>
+            <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+              <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.ewalletreviews01'>
+            <column caption='App' datatype='string' name='[App]' role='dimension' type='nominal' />
+            <column caption='App in selection' datatype='boolean' name='[Calc_AppFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1] = &quot;All apps&quot; OR [App] = [Parameters].[Parameter 1]' />
+            </column>
+            <column caption='Lens in selection' datatype='boolean' name='[Calc_LensFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Lens] = [Parameters].[Parameter 2]' />
+            </column>
+            <column caption='Reviews' datatype='integer' default-format='n#,##0;-#,##0' name='[Calc_Reviews]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Review ID])' />
+            </column>
+            <column caption='Lens' datatype='string' name='[Lens]' role='dimension' type='nominal' />
+            <column caption='Rating' datatype='integer' name='[Rating]' role='dimension' type='ordinal' />
+            <column caption='Review ID' datatype='string' name='[Review ID]' role='dimension' type='nominal' />
+            <column-instance column='[Calc_AppFilter]' derivation='None' name='[none:Calc_AppFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_LensFilter]' derivation='None' name='[none:Calc_LensFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Rating]' derivation='None' name='[none:Rating:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calc_Reviews]' derivation='User' name='[usr:Calc_Reviews:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_AppFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_AppFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_LensFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_LensFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.ewalletreviews01].[none:Calc_AppFilter:nk]</column>
+            <column>[federated.ewalletreviews01].[none:Calc_LensFilter:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.ewalletreviews01].[none:Rating:ok]' type='palette'>
+              <map to='#4575b4'>
+                <bucket>5</bucket>
+              </map>
+              <map to='#91bfdb'>
+                <bucket>4</bucket>
+              </map>
+              <map to='#d7301f'>
+                <bucket>1</bucket>
+              </map>
+              <map to='#d9d9d9'>
+                <bucket>3</bucket>
+              </map>
+              <map to='#fc8d59'>
+                <bucket>2</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.ewalletreviews01].[none:Rating:ok]' />
+              <text column='[federated.ewalletreviews01].[usr:Calc_Reviews:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.ewalletreviews01].[usr:Calc_Reviews:qk]</rows>
+        <cols>[federated.ewalletreviews01].[none:Rating:ok]</cols>
+      </table>
+      <simple-id uuid='{E808C3F6-349A-4DBE-9E12-577C1E5140A7}' />
+    </worksheet>
+    <worksheet name='Star-rating mix per app'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='11'>Star-rating mix (red = 1 star, blue = 5 stars)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dashboard_reviews' name='federated.ewalletreviews01' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+              <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.ewalletreviews01'>
+            <column caption='App' datatype='string' name='[App]' role='dimension' type='nominal' />
+            <column caption='Avg Rating' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[Calc_AvgRating]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Rating] * [First Row]) / SUM([First Row])' />
+            </column>
+            <column caption='Lens in selection' datatype='boolean' name='[Calc_LensFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Lens] = [Parameters].[Parameter 2]' />
+            </column>
+            <column caption='Share of App Reviews' datatype='real' default-format='p0%' name='[Calc_MixShare]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([First Row]) / MIN({FIXED [App], [Lens] : SUM([First Row])})' />
+            </column>
+            <column caption='Reviews' datatype='integer' default-format='n#,##0;-#,##0' name='[Calc_Reviews]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Review ID])' />
+            </column>
+            <column caption='First Row' datatype='integer' name='[First Row]' role='measure' type='quantitative' />
+            <column caption='Lens' datatype='string' name='[Lens]' role='dimension' type='nominal' />
+            <column caption='Rating' datatype='integer' name='[Rating]' role='dimension' type='ordinal' />
+            <column caption='Review ID' datatype='string' name='[Review ID]' role='dimension' type='nominal' />
+            <column-instance column='[App]' derivation='None' name='[none:App:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_LensFilter]' derivation='None' name='[none:Calc_LensFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Rating]' derivation='None' name='[none:Rating:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calc_AvgRating]' derivation='User' name='[usr:Calc_AvgRating:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_MixShare]' derivation='User' name='[usr:Calc_MixShare:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calc_Reviews]' derivation='User' name='[usr:Calc_Reviews:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.ewalletreviews01].[none:App:nk]' direction='DESC' using='[federated.ewalletreviews01].[usr:Calc_AvgRating:qk]' />
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_LensFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_LensFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.ewalletreviews01].[none:Calc_LensFilter:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.ewalletreviews01].[none:Rating:ok]' type='palette'>
+              <map to='#4575b4'>
+                <bucket>5</bucket>
+              </map>
+              <map to='#91bfdb'>
+                <bucket>4</bucket>
+              </map>
+              <map to='#d7301f'>
+                <bucket>1</bucket>
+              </map>
+              <map to='#d9d9d9'>
+                <bucket>3</bucket>
+              </map>
+              <map to='#fc8d59'>
+                <bucket>2</bucket>
+              </map>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.ewalletreviews01].[none:Rating:ok]' />
+              <tooltip column='[federated.ewalletreviews01].[usr:Calc_Reviews:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[none:App:nk]>]]></run>
+                <run>: </run>
+                <run bold='true'><![CDATA[<[federated.ewalletreviews01].[usr:Calc_MixShare:qk]>]]></run>
+                <run> of reviews gave </run>
+                <run><![CDATA[<[federated.ewalletreviews01].[none:Rating:ok]>]]></run>
+                <run> star(s)</run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.ewalletreviews01].[none:App:nk]</rows>
+        <cols>[federated.ewalletreviews01].[usr:Calc_MixShare:qk]</cols>
+      </table>
+      <simple-id uuid='{8F98D147-50CE-4F3B-92CC-D7ECF1EAEBCF}' />
+    </worksheet>
+    <worksheet name='What users wrote'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='11'>What users wrote (sorted by helpful votes)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dashboard_reviews' name='federated.ewalletreviews01' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='App' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;All apps&quot;'>
+              <calculation class='tableau' formula='&quot;All apps&quot;' />
+            </column>
+            <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+              <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.ewalletreviews01'>
+            <column caption='App' datatype='string' name='[App]' role='dimension' type='nominal' />
+            <column caption='App in selection' datatype='boolean' name='[Calc_AppFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1] = &quot;All apps&quot; OR [App] = [Parameters].[Parameter 1]' />
+            </column>
+            <column caption='Lens in selection' datatype='boolean' name='[Calc_LensFilter]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Lens] = [Parameters].[Parameter 2]' />
+            </column>
+            <column caption='Helpful Votes' datatype='integer' name='[Helpful Votes]' role='measure' type='quantitative' />
+            <column caption='Lens' datatype='string' name='[Lens]' role='dimension' type='nominal' />
+            <column caption='Rating' datatype='integer' name='[Rating]' role='dimension' type='ordinal' />
+            <column caption='Review ID' datatype='string' name='[Review ID]' role='dimension' type='nominal' />
+            <column caption='Snippet' datatype='string' name='[Snippet]' role='dimension' type='nominal' />
+            <column-instance column='[Helpful Votes]' derivation='Max' name='[max:Helpful Votes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[App]' derivation='None' name='[none:App:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_AppFilter]' derivation='None' name='[none:Calc_AppFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calc_LensFilter]' derivation='None' name='[none:Calc_LensFilter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Rating]' derivation='None' name='[none:Rating:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Review ID]' derivation='None' name='[none:Review ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Snippet]' derivation='None' name='[none:Snippet:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_AppFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_AppFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.ewalletreviews01].[none:Calc_LensFilter:nk]'>
+            <groupfilter function='member' level='[none:Calc_LensFilter:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.ewalletreviews01].[none:Review ID:nk]' direction='DESC' using='[federated.ewalletreviews01].[max:Helpful Votes:qk]' />
+          <slices>
+            <column>[federated.ewalletreviews01].[none:Calc_AppFilter:nk]</column>
+            <column>[federated.ewalletreviews01].[none:Calc_LensFilter:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='30' />
+            <format attr='width' value='400' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.ewalletreviews01].[none:Review ID:nk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.ewalletreviews01].[none:Snippet:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run><![CDATA[<[federated.ewalletreviews01].[none:Snippet:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#6b7785'>Helpful votes: </run>
+                <run fontcolor='#6b7785'><![CDATA[<[federated.ewalletreviews01].[max:Helpful Votes:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='9'><![CDATA[<[federated.ewalletreviews01].[none:Snippet:nk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.ewalletreviews01].[none:App:nk] / ([federated.ewalletreviews01].[none:Rating:ok] / [federated.ewalletreviews01].[none:Review ID:nk]))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{02AEE86F-69FB-4186-8648-8233AEF5815B}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='1 Market &amp; Scorecard'>
+      <style />
+      <size maxheight='800' maxwidth='1300' minheight='800' minwidth='1300' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+          <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+          <members>
+            <member value='&quot;Latest 500&quot;' />
+            <member value='&quot;Most helpful&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='13' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='10503' id='1' type-v2='text' w='78000' x='615' y='1000'>
+            <formatted-text>
+              <run bold='true' fontcolor='#1f2d3d' fontsize='15'>E-money grew 4.3x since 2021, but satisfaction is split in two</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#6b7785' fontsize='9'>GoPay, DANA and ShopeePay average 3.2-3.7 stars; OVO and LinkAja sit below 1.6, with most reviews at 1 star</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='10503' id='2' mode='compact' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='20385' x='79000' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='12684' id='3' type-v2='text' w='24400' x='615' y='11701'>
+            <formatted-text>
+              <run bold='true' fontcolor='#1f2d3d' fontsize='20'>32.0 bn</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#6b7785' fontsize='9'>transactions in 2025 (3.9x vs 2021)</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#f4f6f8' />
+            </zone-style>
+          </zone>
+          <zone h='12684' id='4' type-v2='text' w='24400' x='25315' y='11701'>
+            <formatted-text>
+              <run bold='true' fontcolor='#1f2d3d' fontsize='20'>Rp 3,362 tn</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#6b7785' fontsize='9'>value in 2025 (4.3x vs 2021)</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#f4f6f8' />
+            </zone-style>
+          </zone>
+          <zone h='12684' id='5' type-v2='text' w='24400' x='50015' y='11701'>
+            <formatted-text>
+              <run bold='true' fontcolor='#1f2d3d' fontsize='20'>1.07 bn</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#6b7785' fontsize='9'>e-money instruments (1.9x)</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#f4f6f8' />
+            </zone-style>
+          </zone>
+          <zone h='12684' id='6' type-v2='text' w='24400' x='74715' y='11701'>
+            <formatted-text>
+              <run bold='true' fontcolor='#1f2d3d' fontsize='20'>Rp 105k</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#6b7785' fontsize='9'>average per transaction, 2025</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#f4f6f8' />
+            </zone-style>
+          </zone>
+          <zone h='34682' id='7' name='Average rating per app' w='30000' x='615' y='24682'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='34682' id='8' name='Star-rating mix per app' w='36000' x='30900' y='24682'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='34682' id='9' name='Reviews per day' w='32185' x='67200' y='24682'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='32700' id='10' name='E-money transaction value' w='50000' x='615' y='59859'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='32700' id='11' type-v2='text' w='48385' x='51000' y='59859'>
+            <formatted-text>
+              <run bold='true' fontcolor='#1f2d3d' fontsize='12'>What this means</run>
+              <run>Æ&#10;</run>
+              <run fontsize='10'>- The market is growing fast (transactions 3.9x, value 4.3x since 2021), so trust and reliability, not awareness, decide who wins.</run>
+              <run>Æ&#10;</run>
+              <run fontsize='10'>- DANA gets the most reviews per day (20) and a 3.3 average: large, active, but 36% of its latest reviews are still 1 star.</run>
+              <run>Æ&#10;</run>
+              <run fontsize='10'>- Apps are compared as equal-size snapshots of their latest 500 reviews. Those 500 reviews cover 25 days for DANA but 847 days for LinkAja, so no cross-app time trend is claimed.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#f4f6f8' />
+            </zone-style>
+          </zone>
+          <zone h='5946' id='12' type-v2='text' w='98770' x='615' y='93054'>
+            <formatted-text>
+              <run fontcolor='#8a94a0' fontsize='8'>Sources: App Store public reviews, iOS Indonesia, 26 Sep 2026 (names not stored, personal data masked); Bank Indonesia Tabel 5e. Classifier precision 0.80 / recall 0.64 on 100 held-out hand labels. Independent analysis.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{3A6669E9-1F12-45EA-9BB9-8128B5F0EA15}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='2 Complaint Map'>
+      <style />
+      <size maxheight='800' maxwidth='1300' minheight='800' minwidth='1300' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='App' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;All apps&quot;'>
+          <calculation class='tableau' formula='&quot;All apps&quot;' />
+          <members>
+            <member value='&quot;All apps&quot;' />
+            <member value='&quot;DANA&quot;' />
+            <member value='&quot;GoPay&quot;' />
+            <member value='&quot;OVO&quot;' />
+            <member value='&quot;ShopeePay&quot;' />
+            <member value='&quot;LinkAja&quot;' />
+          </members>
+        </column>
+        <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+          <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+          <members>
+            <member value='&quot;Latest 500&quot;' />
+            <member value='&quot;Most helpful&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='22' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='10600' id='14' type-v2='text' w='98770' x='615' y='600'>
+            <formatted-text>
+              <run bold='true' fontcolor='#1f2d3d' fontsize='15'>Failed transfers, poor support and login/OTP issues drive most complaints</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#6b7785' fontsize='9'>Click any cell in the heatmap to filter the star ratings and the actual reviews on the right. Click again to clear.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='7000' id='15' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='16000' x='615' y='11400'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='7000' id='16' mode='compact' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='16000' x='16800' y='11400'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='7000' id='17' name='Review KPIs' show-title='false' w='66385' x='33000' y='11400'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='74400' id='18' name='Complaint heatmap' w='54000' x='615' y='18600'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='21400' id='19' name='Star ratings of selection' w='44385' x='55000' y='18600'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='52500' id='20' name='What users wrote' w='44385' x='55000' y='40500'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='6000' id='21' type-v2='text' w='98770' x='615' y='93500'>
+            <formatted-text>
+              <run fontcolor='#8a94a0' fontsize='8'>Sources: App Store public reviews, iOS Indonesia, 26 Sep 2026 (names not stored, personal data masked); Bank Indonesia Tabel 5e. Classifier precision 0.80 / recall 0.64 on 100 held-out hand labels. Independent analysis.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{9953075A-2F52-4A31-AF2A-46A096E8D62D}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='3 Priorities for DANA'>
+      <style />
+      <size maxheight='800' maxwidth='1300' minheight='800' minwidth='1300' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='App' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;All apps&quot;'>
+          <calculation class='tableau' formula='&quot;All apps&quot;' />
+          <members>
+            <member value='&quot;All apps&quot;' />
+            <member value='&quot;DANA&quot;' />
+            <member value='&quot;GoPay&quot;' />
+            <member value='&quot;OVO&quot;' />
+            <member value='&quot;ShopeePay&quot;' />
+            <member value='&quot;LinkAja&quot;' />
+          </members>
+        </column>
+        <column caption='Reviews' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Latest 500&quot;'>
+          <calculation class='tableau' formula='&quot;Latest 500&quot;' />
+          <members>
+            <member value='&quot;Latest 500&quot;' />
+            <member value='&quot;Most helpful&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='31' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='10600' id='23' type-v2='text' w='98770' x='615' y='600'>
+            <formatted-text>
+              <run bold='true' fontcolor='#1f2d3d' fontsize='15'>DANA&apos;s standout problem is Paylater: 12.8% of its reviews vs 5.6% at peers</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#6b7785' fontsize='9'>DANA beats the peer average on failed transfers, customer service and login, but trails on Paylater and lost balance / auto-debit</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='7000' id='24' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='16000' x='615' y='11400'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='7000' id='25' mode='compact' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='16000' x='16800' y='11400'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='45400' id='26' name='Priority matrix' w='49000' x='615' y='18600'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='52600' id='27' name='DANA vs peers' w='49385' x='50000' y='11400'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='29000' id='28' name='DANA by app version' w='49000' x='615' y='64500'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='29000' id='29' type-v2='text' w='49385' x='50000' y='64500'>
+            <formatted-text>
+              <run bold='true' fontcolor='#1f2d3d' fontsize='12'>Recommendations for DANA</run>
+              <run>Æ&#10;</run>
+              <run fontsize='9'>1. DANA Cicil: users see a credit limit they cannot use. Show why and when it unlocks, in the app. Biggest gap vs peers (+7.3 pp).</run>
+              <run>Æ&#10;</run>
+              <run fontsize='9'>2. Auto-debit and bills: confirm before each debit and send a receipt, to cut &apos;balance lost&apos; reviews (+2.0 pp vs peers; 90% of them are 1 star).</run>
+              <run>Æ&#10;</run>
+              <run fontsize='9'>3. Watch release 2.145.0: rating fell to 3.05 from about 3.4, with more customer-service and fee complaints. Not yet significant (p = 0.10); track the next release.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#f4f6f8' />
+            </zone-style>
+          </zone>
+          <zone h='6000' id='30' type-v2='text' w='98770' x='615' y='93500'>
+            <formatted-text>
+              <run fontcolor='#8a94a0' fontsize='8'>Sources: App Store public reviews, iOS Indonesia, 26 Sep 2026 (names not stored, personal data masked); Bank Indonesia Tabel 5e. Classifier precision 0.80 / recall 0.64 on 100 held-out hand labels. Independent analysis.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{9F8EC51B-7EBC-4ACB-9A18-2D7C9BEEFE83}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='30'>
+    <window class='worksheet' name='E-money transaction value'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D2A5EC67-0556-4719-A37D-5D3AF628480D}' />
+    </window>
+    <window class='worksheet' name='Average rating per app'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F0F0923A-59B1-4077-A455-BD8C6DA9C477}' />
+    </window>
+    <window class='worksheet' name='Star-rating mix per app'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D32F0527-D016-4641-BFFD-E0045CAE7AFC}' />
+    </window>
+    <window class='worksheet' name='Reviews per day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6545950C-F392-42E6-90E7-7B8070DAB8BB}' />
+    </window>
+    <window class='worksheet' name='Review KPIs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{64034D71-482E-4026-B299-CAEB73EBA1C7}' />
+    </window>
+    <window class='worksheet' name='Complaint heatmap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D17F79DB-1204-494E-B2E1-6C3F599767B1}' />
+    </window>
+    <window class='worksheet' name='Star ratings of selection'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FEACB0AD-3F0B-4DA8-B214-DF9AD2E6FC48}' />
+    </window>
+    <window class='worksheet' name='What users wrote'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B3481011-B10F-4BA3-86A3-63E53EF083AE}' />
+    </window>
+    <window class='worksheet' name='Priority matrix'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BF3F4E68-FD44-4348-A416-60D9756188D9}' />
+    </window>
+    <window class='worksheet' name='DANA vs peers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DC5FD104-9D02-476A-AD14-B8B928CF9759}' />
+    </window>
+    <window class='worksheet' name='DANA by app version'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D18E937B-F759-4639-810D-6A2E5EADA2B6}' />
+    </window>
+    <window class='dashboard' maximized='true' name='1 Market &amp; Scorecard'>
+      <viewpoints>
+        <viewpoint name='Average rating per app'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='E-money transaction value'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Reviews per day'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Star-rating mix per app'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{4DC96CAC-3E4D-4595-8FD9-F0095DDEE4AA}' />
+    </window>
+    <window class='dashboard' name='2 Complaint Map'>
+      <viewpoints>
+        <viewpoint name='Complaint heatmap'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Review KPIs'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Star ratings of selection'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='What users wrote' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{277A5EFD-139E-4155-A833-691DC98B20C4}' />
+    </window>
+    <window class='dashboard' name='3 Priorities for DANA'>
+      <viewpoints>
+        <viewpoint name='DANA by app version'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='DANA vs peers'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Priority matrix'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{68123BF4-5CF5-47B9-A05B-3FE569E6A19E}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='1 Market &amp; Scorecard' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAAgAElEQVR4nOydd5RcxZW4v855Ok3OWWGUJYSECDJpSca72MfGYQ0OOOGfF7xe54CXdcAY
+      G9skm5xFRiQhJIQA5Zwmp57Q0z2dc+73fn/0aKRhRlkggeY7R0fT71XVq7pV972qW7eqJKIo
+      ikwyyRmK9FRnYJJJTiWTCjDJGc2kAkxyRjOpAJOc0UwqwCRnNJMK8ElByBKOxk9hBkScQ0NE
+      E+lTmIcjk02niCWSo7/HKUD37k1886Zf89Nb/sRPb7mL6EeavQ+HdNTHt771fR57c+uY63f+
+      +U9894e/4vrv/Zh1e/uOOr0f/+xWkkcOdqjccMcf/sS3bvoF1934MzodQcIeOzd874d8+Zs3
+      8eLaXROGEdIJnl/2FN/95T8mTjY0yE23PXKEZyd48ZV3jzG/B8dJcdPP/jhhqGUP3MUdj77C
+      gCt4xBRffPXN0b9v/c2teFJHnxt7+y5uf/iVo4/wAWy7NvC3Z94h6e3nx7c/iuyWW265ZcwD
+      OvfhUVfw25uu4+KlC1EedK997052tHTz6orVyNVa3nxjBX3+FFNrynD0d/HA4y9gc8eY0VhF
+      y46ttPU5ePmVFcj0+ZQVGNm6/l2eenk1OksRsriXHV1uqkqsdDXvxpWQk2/UArBtw/s898a7
+      DA8HqW6s4p1VazHo5azZ2kZ1oZ6HH3+GrS19zJg+hXVr3sZSUYNvoIt1+/ppqCzhrVXvUlVX
+      PardD953H1UNjQQEDYuaqkfLM2feAv79yks4q1rPw2/upkQVx59RY5DEeHtrB/WVxQC07N7G
+      Uy+txB3NMqW6lLQoMq2umlWr1uIYsvH8G+9SVdeIQSPn7TdX8PJb6ymrriMddPKvx56jz5ug
+      qaESCQBp8qzVfOM/r6FYHubtNj/dm1aw4NNf5yff/Ay3/O5OrvnMpzB+IIyFIC5BRfvuVj5z
+      xdLxNZsIsmzlFgL2Hmy+JNNqy3ln1Wryq2pJ+exsaXPSs28jf/nnC0RjYeqnz0Ijh2Q0yJPP
+      vMiGna1UVNUQ9dl54tlX2Lavi8bGRjasfeOgOHNRyzI01FWPkYk6HeAv/1xG44wmpjU2sGfz
+      uyx/ax1RUUVtWQFhn4tHnniO5gEfcXcft9/9CNFonNLaRlRyGdMaq4n5XTzw2DPs7BigaVoj
+      w32dbGvpZuWbq/AkpNRXFgGglEsQ5BpqSi2seO013li7GY0pn2JLHgD93W089uyrdDuCNE2p
+      ZsVbb9O+dw9rtrbS1DSVsLOPZneGpWdNJZ05RBdo24b3ufPeh7nzkZfGXG/esYltnR6WNJXw
+      v/94grMXL+KRx54EIckvbr2LK6++ilDHRp5du49dm9ezft8gl5w/i3/ctwxvXzMPr9zHt6+7
+      hr//9W70VhN33fcIAvDI489iMBkB6N2zgXuXb+Xyi89j+bLniQOvvPQyd9z3FBaLmbvv/AfT
+      zrmIGZYU/3x+LfbuZjbuG2DVyjUsX/UeCHFefPN95CN5Hu5tZkAoZEFtwbhypkNu/njHP/jN
+      A2/y/a9+mtrqcm77813c9td7Kams2B+KP9z5GJ//7KcpzFMD8MLIG+yV558nIOpptEh44o31
+      vP/6c6ztjPD5qy9CIRH47R/v4nPXfh7vvvdYu29oJD01M6ZX0dO2h7ufe5erl86ns3uIWdNr
+      kCi0VKiyuFPjw0ydvYDPXbrosH3WYCjCueefx8bXlrGx08OK5a8RzkB4eIDVm1uoq6/FbLSy
+      6Kw5aEYE9OqzTyJY6rj8vHkkE0kSiQwXXXwR1doY9z23ZlycF15dMU4m5vxCii15zJs/hwKj
+      Fp3Ryhf+/TIeu+ce/BmBn//698w553wWTKuksroWsymPRWfNIU8t55XlK0kDt/7uz8w9dyk1
+      mgh/fvR1BrpaeGH1di64YAn3P/ToaBnj/iFWrNvD4L4tvL7HzReuvhiZkBm9f+vt93LV1VdS
+      X2xGAJ5e9izF9dMxpZ3cvWz1AWFlIrywYv3E8myY2sTVl1/E1RctIuUf5Ns3/YK7ns5V+ty5
+      c5nRWENVTS1NUxuw5mkg5EQsaqSxsoR/v2Ipu/e2AbBo8WKmz2hEmRXo7OjC6x7iH/c/DdkY
+      vqyZJdVqNuxpIyAvoCxPAUBbWzuXXfFvNNbVjH4RECXc/N83sWR2A809A7z7+nLW7rbh93m4
+      YMlCNm7ZyVBMYHGJki3bdlI5Y95oWW77891YTWreXLeTvTu2MRw60HnRWoq49pqruHBWOcte
+      X4feWsaF043YKWZWpXUklIIrl87if2/7Oxub+xgzba4wcNH5C5hWW0k2m2X7nhY+e81VlJdX
+      UJIP3V0uHn34Cfr8SRwOx2i0Na89z+8fWsEdf/499cV5KJVSEqlcJSYyoJSND3M0lJRXMLWh
+      lksvmEdvv33c/cqaKox5JubOakI9ogDnLL2QXe++wd8eep60KGGgp52nnn+VnW39RKOxCeN8
+      UCYGcz4FJgNNM5owqbO8/c46lr38JqFwmHgmTFQo5OymWpqm1FNWUYkxz8DcWU0YDiSINwGL
+      m2q55KpL6dmXaz9z5s1l2pQGTDrFuLIU10/HnHTyf3+9n+FgbPT65688n9vv+AdvbtyLIIBS
+      b2bBjEauvmwp3b3ju7kTKkAyEScYChP0h5Cay/nnnb/j+1+87NCSzysi6+zCE4qxdt1Wpk2p
+      HxekpqYSo7mIm75/Az/9wXex6uHaa6/mtz//LedfculouKnTpvLic8+xctUamm3u3EWZGqM+
+      1xmrLy/inEuu4Ic/+DZfvGwx5dPnMLBrLVKVhcXzp3DHvU9zwTkLR9O77oYbWNRUS1mRFbPV
+      ikYh8uTTy8mkI6xZt5v84hJmN9XT3W0j5Opnoy1LSbafbV3DIykkaJx1Pnf/6de0vvs2kUNL
+      gVnTGnnjzTWEQwGGvSLllSa+9JUv8dObv8O5M2sAEBI+bntoJd/+8lUM9fdidwc456zZvLB8
+      FQPd+/CpLJjS48ME/F56bIPE4jF6bP2ksrBu7RqCBw1GopEIoWCAFWt3MqOxGqlMYHjYw+6W
+      zpEQcqIhN/5giHQ2dyWWkvLb3/ycr1w4nZff2cYLr73Hjd/7Ggubag4Z53Ay8fS24lOUcMOX
+      PoNRqwQMqBimtd81qpTJaBhPIETyQILkybO02X3sWL+J8sa6w0g5hz8Q5hvf+y5/+tnXeeqZ
+      10ev51c28o/bf4s4tIseX5psKoE/FGH5G2uY2TR1XDrjxgAAAwMD9A3Y6RtwM/esmRysf/nF
+      pVgMaqRKLQ1VJQBMbWxkdkMJ9z70FMriKVz3mfOQAkWl5Zh1SkDO/LPPxiwJ8fRLKwll5Mxp
+      qsNgLuLtVWu46cbrUEpzPWRzUQWzqvOJSzQM2bq57MpLUAANDbXIgPnzZ7H6jddZu3kfNQ2N
+      FOdbUAoJZp99Dk2N1Ti9KT596ULkueQoLi6hvKyEQouR0qo66kpNbN/RzKw5TezctIFnX1nJ
+      QCDLzd/5Mj3tLVx65ae5dMkctjfbmFZXDsDG997hmVff5tzLrmB2bVmuzA21MJIvKaAxmFh6
+      wbn4evfxytubqZ/WxL8tmcnTz77Mrk47s2Y1kadVkYlH8UfjDAzY6RuwozEWcOHSc+nZtYGV
+      mzv40X99C4MsOy5MxGlj1bqdlJUW0N7VS0NtOX958DWuufxcRkRHIhpm9bsbOPffrmbJjCpK
+      i628tPxN8suqmdpQR01ZKVZdludeX8ucsxaikUPI5+SRp16g25vl69dewdQqK488tZyCiloa
+      62omjDOloW5CmdTU1WHJL6C/eRvr9/WxaMEcpk2bwtKFM3nuuZfodsc5e1YjpRYty15+i8aZ
+      c8nTyGloqGXRnGk8+uiT2CJKbvr6Z1HJpOSZ8ynNzxsjbwCF2kBNsZHnnnuJ1ZtauO6rX6DY
+      YgCgeedWnnjhDarmnMfF8+t5+aWXGXK4kFhr+MZnL0QqkaAxmKgqtoBUieTUOcPFufWXf8Iy
+      81xu/MJFo1ed3S386aGXyKbimKpm8tvvf+HUZO80Z6innaS+jJpC/anOymnNN37wUx78+8SW
+      K+BUKsAkk5x6JifCJjmjGacAAa+Hlo4ebEPuMddbWtpobevAHz38rEVHRwet7Z24AzFAYP2W
+      3QC0t7Tgi6UZcrgA6GptZjh05BmQvoGc9WTIbqetswd3IEpXT/9RFe5gmptbaWltJxjPHDnw
+      iZBJ0drZy67WntxvIUVrew+7mrsQRoL09trYu6+NWFoEBGy9fezdvYfh8Fh5uD2+o36srddG
+      a0c3A8N++gZyJte+gSHcTgctHT102IaOkAL0DY7IeqSOktEQkaQwen+op5/99pZkyMu2tlw9
+      eP2BQ6bp9QcIeHzsL1n3BHUXdA4RPMIE8rDDwb6OA1Yct9NJa2cvkfihI3r9AVwjMuzqnbjN
+      yD94we4OUF1WiDeaZqC/n1gyg8ZgRqnWUlFswDbswyckSQigVkipLjFh9wtUFufs+FKFisaa
+      Klo7upEnVOSbDQyFUkjVOhz9/aiUckAgK9ficw5RlFdNPBphwOlBqdHjdzkQsiINU2votg2T
+      TKWpqighnkggVWjJN+robG0h6A9QVVOO3RVAqVAgzSRAKkFjMBPyuslIFRQbNYTiCTR6M0qN
+      jop8Nf1OH8NiHAEZCqlIZaEeZ0xJhUlBR78DARkquYQigxJXTCAcjaNWKklGfCj1VoxqCQ6X
+      n9rqEnrsXkRRxKpXEo8nMBVVUGTSYNarsPtGmopUydSGKnbu7Rg1oZqNBoKh6MhvKdU1VTS3
+      dVFoUBLzu+l0RakoMrO7uZ1Zs2aQjATwhJPkaxX44ym0ahWCIFJVVUY4GCffaiCaytI0pY7m
+      9i7kSMgIKaKJDNFYmukj1wEioSBDLi9agxXXUB+ZrJTp0yro6vOQTKepKi8hFs+5VGSTMZJS
+      LS1b9yEqFBSrlYSDAYIZKWFfCJ1URABCoQgyMYvT5cZSVotVHmdnt4fqimLi8QT+wSGIJphV
+      VUokHKK9qxu1zkTU7yYpyqk0KiCdYGdbH1K5gjydCoNKRjAjRS5kqKoopbC4mHD8QCPuHRhC
+      p89j1AIA9PbbkaYjKK1VpMJ+ZFIJtv4+YskaggE/be0xdOZyKgrVbNnaTJYJvgAiIlpDHuFg
+      gEgyw5SGGqLhAH6vhwF3gppCFdGMSDgSw6iELS1DFBcaP5CIQFaAflcAqUzC8MAgIKHYpMYZ
+      iON32AmmBDzBEAD+QBCpVEYoHEap1lJTZMQx5KGyoQ6rUQdAbW0tFfk69nbYMJot1BQZ6XcG
+      aGysRZLNkBGlTKmvJRYcxuVLIBFhyO1DIpEhCFm8Hjf2oEipUUpGlBCORNHJsmzv8lBi1REJ
+      hUavk07R7YkiRoJIZJJcQ5WpaKwuwR8MI8aj9Dv8VNfXoJCBy+1DqlCSTefec0VFxcjTKdIA
+      YpZde9qYPn0KAfcwA8M+TGYLRUYV/kjOhpmM+FFoTUgAtSEPpSRLOJ6mtLiAQrOGQCBGOBIl
+      kUjROLWBYmsemVSCSFwg35qzfuwfyoki1JQa2by1nZKK8oOu5/73BULI5ApC4QAqrY5KSx6D
+      Dh91U2ux5GnHVKOQSZIWRPR5RixGLZBlT5uNfLMBn9+HkIxgc4aJx5P4AkEUMpFAMI5MpcOg
+      lBAKRUgkkxjzjNRWlQKgUGmYUl9LNOzG5YkgF0XSQDLsxVhShVouQUWagVAKMRkmkcp9gSQS
+      yZi86Qx5NE2tpc82MHotlUqRlWvxdO9BojWTSKYwW6xUlxWi1uqZOqWSZCQBiOjzTBRYzePN
+      oHkaBR02OyqNjiKTFtuAg+LSMsymPMqK85EA3kAEvV5HRUUZTucwpWY1nUMh8k06wqEgTpef
+      6upq1ColFWWlyKUiWq0Ga0EB8WgYlc5AY3UZJo0CiUqDmE4SS6bIM+aRp9Og02rIy7di7+lD
+      plRhNRkYdjpw+cOUFBejUcnRaTVYCyzYevrQG42EAz6C4ShlVXWopCmkShXVJVaCsSSmPCNW
+      i4myIiuIGXyhGAaDnsqKEhxDLipKCsZcry61Ek6I1FQW4vWF0Ov15Om16LQawuEwyBTU1FYy
+      ZOvHH4nTWFVCLJHBbDYhzSbp6ncgV2swyLIkMgL+SJJ4LE5JeSkmvZKOzj5iGQkVBXo8kRSp
+      ZJry0pxsk4kEkVgSnV6PUpIlkZWQTsZRqbUUWs3odBrikSiJZBoFKbwJMOlUiJkk/fZhikvL
+      MOQZicaiVBRZ0Mihq8+ByWwhT68hmUiQSGUwGY3otWp0Wg2WQhO27n7kSg0Wo550Mo7D5UOn
+      z0OlVqOUSdBq1Wg0GurrK/AMu8kvKqO6qoJMIkoslkCnVZPKgsViRinJEojE0ep0GLRqLBY9
+      tkEvBWYDmVSCIaeH8soaVLIsErmSfHMeWlM+QUc/MpWWqrICYrEsJrUUY2EJarmUYaeDQCiK
+      XK0hHApj1KmxDTooKS2ip89BodWEWgqiSotEqqCy1IoEMOnUDHnDmPN06LQaQIZGowAk6LTq
+      E7MC+b0e5FojaoUEuVyO5MhRPjR8gSAWk/HIAQ/C63ahyrOgV43rCR6RdDKOze7CZLFSYDo1
+      psh0JoNCfux5P5lEwyHiWSn5p0gGQjaDKJUjO87GN2kGneSMZtIMOskZzaQCTHJGM6YDmUp/
+      yDbyTyBymQzpiCkuncky2aM8NmRSKTJZ7j2czQpkBeEIMU4uYxQgnckeKtwkh0AmlcLI8D+T
+      zSIIkwpwTMg5oACC8JG3wcku0CRnNJMKMMkZzaQCTHJGM6ECpOIx9uzdR3OHjezBgzpRxNbd
+      xc69bSQzhxisiAJtLS3sau1mXHc4E+VfTxz/iv6PC+FQCJ8/gC8QOuYxQSIWYfeevbR09SEc
+      YkB9uDBuh53N23Zhdx9wUBNFgZ6uTnbu6yCd/WgHmSdCNOjHHz70Vi/hgJfN23bhDuxfkyYS
+      CARyst//LxAeE2fXlg1saT3gVDduGnGobQdf/emdTKmvIR50M5zQ8vi//ogqOsy3bv4VGbUZ
+      o0qkxxnj8Qf/RolRdVBsgT/8+udsG0pjIIqydCb33XrjAS3LRLn/yVf51leuPk6RfDz4yX/d
+      yEDKgE4hYh/2ccONP+CrVy05YryePRv59m/uY0p9DWGvk4DEzBP3/g6DUnpUYZY//TB/f+Zd
+      5jbV09tt5+5H70Xts/HtH96CNK8AvSxFv0/kyQfvIP+gdbb3/uV2lnz2m8yqMn8o8jhWEpEg
+      Tz/9DA88vZyf/N9fufqcxnFh+lp38PX/uZ2ZM6ayZ187v7v9TyyeVsCPb/oRw4mRdGIRPFIr
+      21++ezTeri0biJYuZOG0KmACBbBUTuGNFx5BKZMCIjd/+5ts2tvPojIJ3//Jr1g8I7dW9Naf
+      /TfvbGnhS5fMHY072LKVVZ0pVjx5B0rSXP/l61jX8lnOn1485hkuxwDb9nYxY9ZsKostCKkY
+      u7uGqCs2snH7PspqGphRX37CgjyV/M8vb+H8aYW4+lu4+vrf8R+XL0Ea8THgjSNPBem0e1l0
+      9lmY9erROCV1s1jxwiPIpRJA5DvX/Sdb25xcOKv0iGEWFie58+n3efapf1KgV4EoIgKuZJr/
+      +c2tLJia2+Xi5zd/j/d3dPEf500DoK+niy079qCo2U3CY2X23Jk4bV3oLMUMdrfhDCa54LzF
+      aBQfXW955avL8WJi8ayaQ4b51/0P8fX/+jFfvmQum1e9zF/vf5rFf/kf/vXIA6Nh7rvjd/hM
+      s8dHFjJsXL+ehEw/vguk1uqQIxKLhFnz1gr6E3oWNlVgKasZbfxuey+bW+xMra8YE3fP3hYW
+      nr0AlUyCRKZkydmz2bm3ZewDIm7ufPB5Wpv38uWv3UjXcJiUb5Cvfe/H/Py2+2hubeWGb/+A
+      /uAx7JZ0GmMpKESeTZERwda8nRv+66c89dp7bHx3NV/49i+IH2T10+h0SESBaDjIW6+/ikdW
+      xLzGojHpHSrMzm3baFpwFs1bNvDwUy/SMeBCIoGi6obRxu/s62BHl5cpI2t4AVr37cEZiLJj
+      y2beWrOeRBaeePBevvmDn/Pqu9t57slH+fPDr34kstrPZ774VX50w+cx61SHCJFm1x4b5y3O
+      Ne6zFp9F554WDm4xcZ+dZav38bXPXzou9orlL7NxdweP33/3+C8AwLsrXuL2h1/GF07xs1/8
+      4qDPpcia11/m9/98nht/+BPm1eSPiRcORTHoD1wz6vW4Qx/YW05fwO9/eTMABqK8tmYL3/lU
+      BcbSGu667VcAdO7ciNMfp9Ko5OPKay+/wJ73NWxZv46Lrr0WsxyGgLpZZ/PrH30HELnx69ex
+      udXB0hklo/FWvbSMvz/1Bv6YwK9/80tMatm4tCcK4/cH2Ld9C+VmJXp5lhtuuJE77r6bBfVF
+      IAq8+fLz/PnhV7j5Z79ietmBbVYuu/oaVq9YwdVf/RrnTyscvf7173yfq89pZMvbr/DIxuFx
+      eTi1xIiEteTpc+9vqV6PPhwlBqMbuT237BnOvfIaSgzj29Dl//E5brzmfJLBSyZWgE9d9Tk+
+      ddXnCHqHufmHP0Op+zmXL6jn8XvvZPkuD/f/6y5qisf3F40mA/6+A4MvXzCIserQe9oUWi20
+      TLCf5an0Kj1ZmEwm9mxZg3nqOdzy3c9OEEJCUZGVSGTsC+Kyz32Zyz73ZXyuIX5w88/Q6G9l
+      6czKI4bRG/TMW/Ipfvr/vgqARRZn9fvbWVB/Of+68zbWdCV55KF7KM8/uj2GDmTzdKwNHUZT
+      FF8wg8koJxMMEjEZ2O+Pmo64eezVTTzwxHcPm4rKaB3fBRqy20mPWC6M1kIaqwrpG3Di6tnN
+      AyvbeOjv/zu28WcSbNm+m3gG5syZyZb1GwinBLKpKGvW72bBnOkTPlwU0ry3eScNDYfu532c
+      OXfpRfztr3/Ev+89Hli+btz9RNjLln12ptQd6I4MDtrJjMjeUlhCXZmFPvvIEtKOdiLJzCHD
+      zF8wnx3r3sM9ssjG7fFhMhoYaNnKso0OHrzz14ds/EqlYpwino7YB/roHnACcubNbmDVO5sB
+      ePeddUyfM3P0bb78+eeZdeFVVFs1h02vc/uW8V+AvVve448PvUpFWQnxsB9RX8Y/L13Inrdf
+      IOAZ5OprvjQa9vobb+b6c0r52vd+xKsrV1HbMJf/vKCKa750A2qSNF3w75zdMHZLwmJ1hv/8
+      1s2E/B7Kpi/iM+c1Ibg6Tkwypykag5V7/v4HrvvO/6BRK5lrgLZt7/PVb/fgcDi46tqv01Bw
+      oJK2r1vF355cRUVZMdGgD0V+DT9cOoeoq4frvn8Lzz3/6CHDGNVyfvCFxVz75W9SVpBHWMzj
+      oZsXs+nVx/E5erjy3784+pzv/vCnfOGiA8aLSy+9kF/+6mc8XVHJHXf96SOV0UTc/r+/YV2L
+      HbfLyep9t/KgRsXd9z/A8mcep5dK/vyjr/LdG7/L135wC+veeA77cIC//f12ALKJIA899w5/
+      eeDBiROXKtnw5ktsWfkSAw7P2PUA0Xju7ZFJJRlyulBq9BQVmI+5S+IZdpBARXmRZcL76WSS
+      REbAoDu8hn4cUCsVo74s8WTqsHb/5g2ruP31du79xddApkCjGt8/TacSOJxuVDoDRVYTAC88
+      eh/x4rP4yr/NP2SY/URCAVz+KNWVZQcvlz0i8UiYWFaC1fjRLmxRyGUoFbn3cCqdOSZfoEw6
+      ia3fQXllBWrF+LHSIRFFQqEwWoNh4jGAXKmisrJioltHRX5RyWHvK1QqFIca4J8BaLS6Q95T
+      KNXjZF81czHz580+bJj96PNM6PNME947bJ70Bj5uryO5QkV9XfWxR5RIyDPmuoMTfgEmOXqO
+      5QswyXhO5AtwMpj0BZrkjGacAsRiJ3bMzv74/sCRTwo5VDjH0BDtXTaSGRFbr41+h4dENExn
+      dx8OdwCP20WPbYDIyHE8/f0DhMJhOnv6sLtyGyFlUwk6unoZ9oaOLh9eD53dNvzhBEN2O119
+      DrLpJJ3dNvqG3AjZNB09g4BId+/AEdM7mJDXf9gTZcbJQBTo6bHR2TeEkEnmNgTzR/B53HR2
+      9xKMphgcGKDHNsT+92X3yMZPw/YBQonc1YDXS2ePDW8oxtEwZLfT3mUjlRXp6ell0OklEgrQ
+      2d2Hyx8mHg3TN+Qmm4rTO+g6JhmcGgT8H/AF2s/+djpmW5R0Jsv2HbsQ5WoS0RBOb5hsKsaA
+      w4tOCZ19TkLRBOl4hGFvCINWga1/iGRWJBr04wpEsdl6ySBDKZchl2TptA2RTAuE/F6G3W4k
+      chUD/XYEqRydRkU8niQSDuIY9hJPi+TpNKjVGtQkcHp8iBor6Ygfk9VKgdVI/6CTeDxBRUUZ
+      OrUSEHC6A5QWF2LK09I/5KIo30yvbZDauhrsdjvZbJZMKoFEoSbg96PRavB6/TidDhIZMOg0
+      yBUKzAYtg8PDJBNgVmaIKvIoL7IwNORAp1ETiSWwmo2kwn6y6jzUcsmYFWGZbBaXx4dOq8bj
+      DeDzenEHo0iTSeQGJZFIhkg4hJBKMOAYBrkajUpOPJ7E7XYxPOxCqslDI5egzzPhc7nwhyLU
+      1NUwZLdTXFyEUa/G7goQjUaoqa5EIZOSDLmISo3opClsfQNIDIUY1TJUGg06tQKHy08mnSIW
+      i6PVafF4fWhVUjy+EAP2YaSK3IBcrdGgyERxev3IjSXEgh4KCvLJNxvotw+j1WiIRWNYrVZc
+      Lhf5lhP3HRqzIkwQci+dngHiqSx5ei2paIA2mxO328OwJ4BZrxzfphRaHPYBgtEUyWQSvVaF
+      2xdGp9UQj8cZdjpxDrtR6zT02OxIZVJ27mlBo5vAFcJssVJRbGXI5aeusoREMk0q4MMbCmMo
+      KAMxgyAIZNJpEokkSKW43F6C0QS1FcXkGc1UlRYSDIXps7tprK8mFgkTSaRpqC8h6A2TyWRJ
+      jyy/DATDeIMx6murSMZytmiPy4knKac0T4FSrUYqkYCQZndzN/V11VSUFeF1DZb6dfsAACAA
+      SURBVNM94AKSIKqRSCQMDjqQy3Oz1hVlBXR22/CFYhjVItvbHajkEnSyDLZ+O5G0lGwmO7oM
+      NBYO0d7voqG6GJlMiUohRRCgpaWd8spK9AbDiP8NWPLUeEMTv9Pl6Ti2ATspqZJkKoPb483d
+      EFIEwil8/iD9dicSiQyP1zsqg1gyS2NNEX5/HKQy+nq7MRcWIZFKUUglSCQSIqEA3XYfDdUl
+      lJUU0tXWgj8hEPRFMZp0NLf3IJeCz5/7oojZNAMOD0qlgnjIhyecQgJEgyFsA060OjUZQSA9
+      sk+/y+kkKGoo0MhQq5VIJBKyqTh7OvppqKvCZMwbtQh+WCMd35CdqCDF4wvQb7Ph9XjJKyxD
+      q1ZhkklonaBN+fps2INpPP4AYiJCV+8Acm3OmhUMhUlmBGqLDfgi6Vx5s1BUWECR1TheAfK0
+      KvqdHqxmExIJxOJx5CoVKqUKlVyCRqVCIZcjZJIEIgkEQUSjzt3rGXBiNWjosbtQq1SUFhhp
+      67QhVSjRatSADLVCjlKjIp7Iueyp1aqRe7m/Ady+IGImSVZrJTDQTQopww43Or0Gry9IMBAk
+      lkxh0OsANUgShAJ+0qIECfv31JQglYiUlRThCqSYUWUhksqiMRXi8/qoLDagUB7Ih9PjQ62Q
+      4g9lETIherwpNEkvWYUGvz9AMODHFwji8ARwB+IUmNQfFB0A5uIS3J4gpUY50UQatVqNUq1C
+      KlUR8Q8TTWYozDcjiCJWs2msDCQy1CoZpKP4olnCoRAl+Ub2tnWjVOsYdvtQysAfCuP1BhFk
+      KrQKKeb8PPzeIHPmzKKmqpySAhNujw+P14dUmqtiiVKPVp5FFKGyvABfJItKKkGjUoxuhejx
+      B8mmEsiNBTh7OhAkcoacHvQaJT5/iGGnE18gSCASR/IhrX02FhSgELNYLSYqq6sxGQ2o5BLU
+      ahUqjZqKCdqUzlKARS3BajZRXF6OyxPErMmZRdUqFRqNGolciUImGy2vWiFh2Bv8ZFiBhuxD
+      FJSUoDgWw/dxI9I/6KSyPGfqPV2sQH0DQ1RVlB454Ekgm07g8MYoL554nudYONlWoFDARzwr
+      p8h6dC4fnwgFOJWcLgrwceVUm0HHTIRJP5I36CeMg0QmlUhB+vFZcXU6cPCmtxKJ5CNvg5Nb
+      I05yRjM5ETbJGc2kAkxyRjOpAJOc0UwqwCRnNOMUwGnvI3CYvViOnyxtbZ1HDgaIQpbOtmY8
+      gcOdy358ZOJhBp3eI4aL+Yd4f+s+ALxez5h74YCPvr4+XB4/77+zauSwu5NL0DtMW2fP2H2Z
+      ToBUNMiQ23/sETNxbIPOCW6IrF711vi9n8Y800+fw3PoAIh4vUeui8OSTdDZMzj6s6vz6NrY
+      fj6gACIvPP0Qz7+yinQyRjiaQMykCISihHwuum25o+79fj9+v59sOkFbayvxVM6dYLCvB28g
+      53zmHLThOEjg7s7t3Pm3u+j2xEknonjcLvrsw0AWn8dDZ1fP6PT6M4/+iz6nj81bthLo280f
+      7n4CfyhCPOyntSMXzu/3Ew0HSGYEbF1t+MMjDl/ZNP5QBL/fTyIWprWtg4wg8vLDd/DO9g4S
+      iTi+YISA34/X7cDl25/fPtzewKhz2SuvrGDunCZWvbKMX/3+r2Ok9PQTj9De2cmQy8O8GbUs
+      f/2dYxL6kUgFB7nroWdw9nfS2T3IH277I30DQ4hClu6ONgKRnAwjsTj+EXln0wlCkRh+f4BY
+      2E9bRzeCmOXhO/7I9o5+ksk4gVAUv9+P2zGAb2SzgoPrDAT8Pi9dnV3EoyFsgw4QMnh9wdGG
+      6vPlnA2H2jaRVJcSjwSIx+OEInF8riFs9twC+njYT9vujby3ox2AWDQy0m4CI6dlpnn4nr/y
+      z8deGC13NpWgvaOTdCrJHX+8jY5+O4KYpaezHV8oOq7MuWQCrFjxLl09fYjAypUryCTjhKMJ
+      4pEQiXSWSMBD50GnREZCQfx+P4FgeKwzXMTZhi1eSNTVxVmzG3ho2ZvoUwN0ejO8/tqbpD1d
+      hDXlPPTXXzMQBLNSwB8K8eLrqxHdnewajPDqq68wo0zH8vdaaN68hvq5i9DIJax8/Q0+d+3V
+      vL+lA3NqgCdW7qR/93voK6u5+4/3YNLE2GaLM6OhHJ+jj617O1m05HwkESfv7+5h1vRaHn3w
+      UfJUKTa1uNnw1jJ2t/YQd/fTG4I1b73JokULkYT6ufGnf0BjKiITchHy21m9vou0v5uUupAK
+      o8CqnQM0v/86IUHOa6++gVXqZ/WuQTa8+iqzLroANbBh6zYWn7WAuikzsHU2s3Dh2WQyGQRR
+      ZPP7awjFkhRX1lNdXcem999m/vx5J00BJAi89/bbaKzlLJzTyMpVqymvqkWeidDv8vPc8y9S
+      Zcjwh3ueoqisguJ8E+GBvfzsD/dgKion5BrAb29nfVcQf/c+1IUVFCgirGvzsnHl0whyHa++
+      8RZSv220zi664DwgyS0/vwUx5mL1jn62rn6LBRfM5rXXt6GM9PD6O+tIqQqoLcvnrVff5Lwr
+      LmPb64/z1MotFJmUvLxyPZ6unagLSnnw/kcxqERiCiuzGyuxdbXQ2tGNw+GhorYKGTLmnjWX
+      Pdt3s3BhbqXbg/fcic6cTzKdYeumTRRWVKMhgc3h5dnnXqAmL5src3ll7lw3gEyE515+G23G
+      SZtPQdhlo9ok4Z02P5HudfjlBbz49LNIwoMMixaqiky07N5Ot60fTzA29guwbu16Bnv20tPW
+      gi1mQJb2s7XFwbwKBa5wAnleAUpSFFRN4ztf/RxtbXsZdgeIhEN02oa54opLqSwtZMDWTTKd
+      obisjGQiDYjsbWlm1dvrad2zBYAZcxZwwcKZOFx+KmsbueSyi/Hbc2fZnnvZNfzXd67nmccf
+      oaS8nNLKeqoscjQFDSy99HICQ11I1CZuvPF7+IbsZFIRygpL2H9i7KxFF/KZi89h755dBGIJ
+      Qj4v5eXlzJi3EL1qpMhyLRddchEWnYqeThsXX3EF9ZUHXAmkE4yONq99k/Vb9/K9//4F37rh
+      m7z1Su7tJTnJPSCJMo9f/u9vmVkksuytHZSWlbFo/mz6OtoYdAwTiuS6hhde9TkWNhby5JNP
+      MhxKsujCq7j4nNns2bWDWCKNzxuivLyMeQsXcqDYZi656CJ0KumYOttPZd1Uzp47g+mz51NX
+      Usj+EyPmLj6Xjeu3Mm9GPQDJjBSVPDdp9bkvf5MiZYpwIk1eQQmRwXZKZ5zNovmzRtMN+j0M
+      Dg4yOOjgUFOFl19+Oa17d2IbClFeVsbChXOxd7XTN+QkED5Q5nPmThsTr7p+GpddfAFDDse4
+      NLNhF0OBGGgtaGS577vH5WRwcBCHyz1WAWJKCz+9+fv86sc30tvdy8Lp1WSNJZhKpjCzVEco
+      mkCv01JRkVuOp5DJiMZilJSUctXVl/P8Y4/Q1mNn1qKlKJI+EmkBrVpFOuxg7kXX8q1vfYcL
+      5tQTzcDGtSt5e88Qi2dW0tWyk38+9DyXXvkpAN598yUefWIZtVNnIjMUI3G3s6MnSoHCw333
+      PsDii/+NiooKJMDSKy7DZ7cjKJWoAOTq0beDTAKxWJrSsiKmzJjH6hcew5dSUVJgpqSsFClQ
+      WlbGp666mlXPP8autp6DJCdBAN5c/gxen59nlr/Jkouv4oJFc3jxqQe59557mLHwfIRkEFFp
+      OESVHh/J4BB33XUPa7b3sGR+E/MbKnhg2XKUSgXRaJTC4hLUejMFJgNyfT7XX3895UX5lBTk
+      nOskQCwtUlZkYca8Jl547DGScj1FljzKSnO7UJSVja2zHFJKy3JpW/J0FJWVIpcqKSsp4P33
+      N/On237De+9uAKCpwUJzlwtzQQkGjZziKfMp1QlEEymKG+YS793KG+/tpMiS88lZsORirr/+
+      eq6//guoARIBHnnkKby+Yd7dtAuA3t5edHodao2aeU3VPPbYC0hVCuKRCEUHlRmy3Hffv0ay
+      rCQddnD/s2/x6YuXUFpWhqmkko4tb7O724WxuI6z6iwEwjEMutxS1Iuv+izXX389X/jMZSdv
+      Jri3dScbd7YSF1R84ysT7YNzAHvzJrpSBVwwtw4I89QTa/nSVz59MrJxXDh6W3ln4078cYHv
+      feMrSID+5s10hHVcvGjGYeOuXv4MDedcSVXBqTkl8UQ4ljr7IGI2wSNPvMj1133pI9/HKRNx
+      0+uHhoqCIwc+ApOuEIchm80ikx1+t4GjCfNJRchmkUhlp+feWUfJpAJMckYzORE2yRnNpAJM
+      ckYzqQCTnNFMKsAkZzSTCjDJGc1HrgDCCZwEfqrinupnfxicjDydLmmIosjxGjMn3Bz3w6S1
+      vZvoce4+J4rimDWkH1XcY4k/f07TuHkBQRBGtyc5XeiyB/nna20nlMaJyvRkpbF/l6L588pQ
+      KXOyn2MRKepai8bbOxoq0u8j0DrWXeK4FEDMpmhr70Kq1NBYVzM6EWLv7yUUjVNUVo0lTzth
+      3HAkQjB08t2cTxdEUaS5uZnBwUHmzJlDUVERfr+fHTt2MHv2bGw2G4lEgiVLlqBQKI6c4BFw
+      Owfx+EMUllRiNY3MRmfj7GnuQa3T0VBbNWEDiybS7O31nfDzTyeKasyo1TmZNqoFsu5+GDqg
+      5JlOB/EdvWPiHJcCdLS2UT2lCYVEJBnx0dU/TJ7JTCKRYerUaezb10xEryaSApNBQ3FJKcNO
+      JyUlh982/ZPCtGnT0Gq1dHV1UVRUxObNmykvL8dqtfLee+9x6aWXIpefjI9vmqHhIDNmTAWJ
+      hN6udqLxDI0NxajzipFHHLiDAXxOB+b8YjKpFGoZ6POLjpz0GcJxfZfTogRZNsG76zbQM+Bg
+      +vSphIM+4uEALa0tlFZWkognGXYNY9ZIaG1pIZb9+B54d6xEo1F6e3tRKnNl9vl8WCwWVq5c
+      yaJFi1i7di12u/0IqRwNAlKpAq/Lwe69zcRSGaZW5NHrjNDX00lKrUOSiCGTKRgeHsbvdTPs
+      9aE8vXpjp5TjEkV9VSnNHT3kGY1UFOfT3NyKUqMnv7iU6dObsBo1xGJJdDodalMJHrebmrIT
+      30Xs40J7ezvZbBaVSkVbWxuzZ89m3759lJeX09nZiSiKWCwnQx4qNIo0vmAYs9mKUiLQ3Ouh
+      osjEtKbpTK2vIRGPI4giOp2ecquWhEx/Evrcnxw+dF+gWDiAOxinamQrwVA4zPE+8UQcz07U
+      ae1o4+cZxjewTCZzkro8J0ZvZzultY2oZBLCsSRD3hNb+noyHAFPRhqCICCRSDDmqUc31jIo
+      QBnzIUsfKGM2kSYdGbv74UfuDBdOZBElx9uIM8hkx9eQTiTuRPFlEtAdZa/udFGAg0mlM6Sz
+      J1b12UwWmfwEFeAY0pDLpKPHtsoPXoWUTiDhwC5zQkbgaN+yx10rgpAlmUyhUuW0LptJg1SO
+      TCKSzooo5FKyWRGZVEIqnUGpzI3Or30ZNg4d71NPpBGdaAMcG396Pqz7KrS2thIOh1mwYAFS
+      qZS2tjaCwSALFizA7Xaj0+nQaD7c07dSqSQiUpQKORKJhFQqhUKpJJNOI5fLc2ZYmYxMOoVc
+      rkAikdBs8/GT+7d+qPk62Vy4tBatNteOLigU0IxUSdXqvyBPhEbXlPc8v5VsPD1xIh/guIdD
+      gYFuOgedbN++k6wo0tm+j/ZOG0SHeW3tVkQxSk/3MKHhPt7buve4JypOd4qKishmswwO5nYm
+      KCwsRCaT0dXVxebNm3FMsEzvZNOydw/9vZ309DsRkiFWvPUeoiiya+s6Bl0herpzK932bX0P
+      2/DEJ6acqRy3AogilFVWU1eoxh0ViCUhEQ0gilBRZMY25EEUwTYcoFwvEkp9MhUgGo3S1taG
+      bmS5XTweZ+/evVgsFubPn/+RDDh1BiMNU6aTivrp6bYxr6mcXmeIvIIyAsN9CKKIkAiAoZKA
+      s/dDO9zi48gJGMREIuEQfe440oANmc6MLJsilBIw5JcS8zkQyZJMJNFbLAz02k5apk8XBEGg
+      u7t79Mignp4eurq6KCwsxOl0snXrVnbs2EEmkzlyYidAOpXE5RxAotQRjieRKPSE3blzzOor
+      i+kZGMbWO4jZpCWVTCF8Qr/Gx8Nxd4xNpVWkvH6mzpyFVMxSUKYCoYxURqBaKkdqmUNGlCKp
+      LkKtUpA/chKLSQWFE08SHxEREclxrkA9kbgTxbeoQSqVcv755yOK4qglo7q6evT3zJkzAT50
+      BSgtLSEtyphSZyKZLEKtVpOfn49EIkGlUnHu2RoUCgUqlZqywnwgN6A0609sbkaEE14PfCxp
+      6FQyNCMHYsvlEkaNRxoDB58KLrPkQ+LoxgAfuRXoRMxeJ2JNOVFLzKl89ofByTA/noxynYw0
+      9jvUHY+/1UdeK15fgEz2+E4BEbJZpMdZaScS94PxFXI5Bfkf74k9fyTJ7u7j2CrxIAQhi1R6
+      ojb8o0+juEiPTC7FpBDRykGSSaEbbiM+HCIdTR7XeGuMAgiZFL29NvTmAmRiFmtB/jF94tzO
+      IYLRBGXlFWhUEzt69dj6P/bOcHqdloJ8Cxs2bMDv97N06VJ0Oh2bNm3C5/OxZMkSBEFg27Zt
+      XHLJJcf1DJ/biScQpaaqhEBEoMByDNuuZJO0d/WhN5opLcqfsGEMuCLctmzXceXtVLHfDDrT
+      JFCmBXnUh/adewis6yDce7g9SA/NGAUY7O5EV1SNQSWlvXkPbreT4vI6gu4BMlI1RUYtQ14v
+      BmMBSjGBJxClvq6Knu4eDJZCQsEItdWVtHZ0YDKoSKPCpNdgsVrx+/xYrB/vt+YHaWpqYsOG
+      DUQiEXQ6HfPmzWPnzp34fD7a29tJpVLHnXaPbYBZs2ZAJsru3V1UVBRTXpBH/9AwJeXVBFwD
+      RFMCUxpqR+WvEHJ10lBlQVSYCTsG8WrkeJ3DFJWWk0llUEsFlHknfr7vJ4Uxnaby+kbCzj66
+      bXZkCg1TpzXgtrUSEQzI4xH6B5yU1DUS8Dppb2snE3axZfNOAmmR3t5eEpEgHV3dWIuKyWYE
+      +vv7kGUi9Pb34T7Eubofd1QqFZGRrQo3btyIXq9HFEX8fj8tLS0kRgb/x0p9TSUte/cSSmYo
+      LK5Akk3SO+Bg6tSp2Pt6CUeT1BWo2bRp16j899dJvyfKgK2blFKDPJNGKpXR1zeAY2iA/iEH
+      iklnuFHGiCIS9JNFhihmUavVIJGg1JlJhRx44inU0iy9XR0gU2PNt6A05NNYV45cFCkvKyPP
+      UsD0pibKCg243QGUShXGoip62zuorSo+VWX8UBAEge3bt5NIJNDpdPT29uZ2Xna7MZvNfPGL
+      X+Tyyy/PyfE48Hi9KBUyMlkJKpUCpVKJUaukvb0Nld5I0OehzeZmSkPFqPz310mhUUt941Rm
+      NU3F6/EgIqJUKSnKU5OQaiad4Q5inBVov2PRwUISBQERCS6bDUN1FVqJFIlERBBEpFIpoigA
+      4+MgkRCPBLG7g9TXViEBunv6iCePr2sgCgKS41xZdSJxPxhfrVJSX1t11HGPx9IhiiIiIP1A
+      Y81mc4PG3p4eamprkEgkB8mf0To5KCEEMXcCaE/bPgpqpmFQyehzhnhxne2Y8vRBcs86MWU6
+      ljSmTslHqZRTphExKUVkqRjWtrcJdDpJeCLHpdiTZtCPwbM/DCbNoDlOSq2IQhYR6VFp8q49
+      raPbex/7gzjsrIlCoeDcRfMRRZFQKITRaARyh2kMDw9TVVWF1+slnU5TVVV12q3TPRkcbcNu
+      6fPzf09ObAU6a34pZpOGpUUHFqxLhAxVb985/nmAkMlie3nnceb4ZEynHT/HpACDPb0U1lSj
+      FJK4g2msJi3JVJpsYACfspJykwIyUVa+u5PLLj4Pj9dDvjV/xGtUiUQiIZ1Jk0od3SzdsbL/
+      W7Zr1y56e3u55pprAFi/fv3orOyWLVtYvHjxx74f3NPTS21tDR6PB6vVSjqVRKbIjRGmTZsO
+      QEfzdmSGCqoK1ERFDXolIJEhl8vIZAX84YkNE5FEBlUqQ/Ygd2lJNgOx4JhwoxJMZ8h63R9C
+      KT98jkkBMplMzpFKliHki9LRvAOVTENVjRG/x4kQUyFG/cyoK2Y4nMbn9qCWS7H12VAaSphS
+      W3qkR5wU5s6dSzB4oLIsFgu7d++mqakJtVrNpk2buPLKK0eXLH4c2e9eEQwECQw7yGp0pOJp
+      EDK0NTdTN20aWameTMSDmGfAk5ThjwzSPxzg/HMWneLcnz4cdx8gmxXJM1sps5rJAIMDdrQ6
+      Hd6An3hawNnfQzabZWjIgTW/iFTio3PD7enpobu7G5fLRV9fH1qtFqPRiMvlIj8/n0wmc0I2
+      +tMJISuQFSVU19SgkkuJhvxEUyKx4T5CySw+r59UViCbieANpFGcmTu5H5Jj+gIUFudj6+ig
+      uKyM0lIzWVGHSioFucinzq0nEQ3SOG0GeXl5BPw+bP2DlJSV4PLHqKr4aN7+AAUFBVxzzTVo
+      NBpMJhMFBQVEIhEKCgoIBoNMmzYNvf7jd6DFwagVEnr6BikpLUEUBeTknOKKSwpRyiQEYhnO
+      nlNDJhnFZe9DmVeI1RREqsk/1Vk/rfjQrEDpZJx4GvL0Y1dDpVKp4zZHZjMZZIexGEjgkBaF
+      M9kK5Pf5MJrNY0yqh1sSKZNJkUhA/oFhkjQzdswwWh9ibiB8PBypTo8GQRBySyJPJ2c4hUqD
+      QjX+eiKZPGmL4tVqFaqPcT/+o8I8wQ4UyXSWIW8ctVqOUStHPSJWSTqJMjDer0ZIZ0mExs5q
+      ny6L4nNzTiCRnEIF8AwPISp0mHRKUKhRSLLEkwLpeIhwUqS0qACJBFrauk6aM9zUxloqy0vZ
+      smULM2bMQKfTkUgk2LBhA0ajEYPBgMPhwGAwMGvWrCMn+Akgk4ozYHdRXllJJpVAo9EQj8dR
+      qxT09w9QUFKOVqWgyx7kJ/dvpbHByhXzLNSPnPOncXdTuvnxcelG7X6G1rR+xKX58DkphnDf
+      UC+BtJyQowdfOERXrwNPfw/eoI8ue+D/t/fm0XFd54Hn79W+L6gFQBUK+w5CoCiLoiiSWizJ
+      S2R34vSJ3dNO0vGJO5lOb2cypzvndM8knT6ZzElPzpzpjNsdp+2O20s7dtK2I9qWpYiWRIoW
+      xRUg9h1VqEIVat/X917/ARAkRYAiKVCAxPr9g8Kreve779X76t773W9BI2ZYCr7HiuA7UCqV
+      yGaz5PP5rWNHjx7F7/fT3d1NZ2fnhzYeeTvGxydpdDcwPjHB/MI8siwzPz/P5Pg4dlcjU+Pj
+      9zwCfxjZFQVYS+bp9Lro8DUSzasRSwkiuSrGcpxGXycubweF1P0JDtfr9Xg81xfYKpWKn/zk
+      Jxw+fBhBEBgdHeXgwYP3RfZ+RKnRYjCaUSmg2aIltB5GbXQiK5RYjAa0WhXUo4K32BUFaGts
+      4PLVKa5M+2ltsqIVZERBhbWpjcD0ZaauXsHmbt0NUbeQzWYZHx9ndHSUubk5lpaWtrI05HI5
+      WlpaHqgqjnK1xMLCHJKgweHr5NLZt+lsb0KrlJmbX6BY2X+p2veSXbMCVStlUKhQqZQgSUiA
+      UqFAEqtUa6DRbOSsmZia3bX06K0+D03uO6sV+6BYgWRZplwuo9VqEQSBWu1aQq+N4xqtFoUg
+      MBtI8ucnp2lpsfB4rwXvZpy2NhXCMfnTW9otxbLELq3cImtfpEe/9gh/EJzhqtXqPfvgfBBS
+      I97ruYIgvK++SbVa7T0/ePvGCrT5CL/nkMj3A4VC8Z4ueK/O3WvZu40gCLvSp/3Qxp57g94N
+      7+VXbq/O3WvZ94Pd6NN+aeO9jGT1SvF1HmiUf/AHf/AHe92JbZFlFmcniedrNNjMIMtMT14l
+      EAzTYLcwNnaVVLaIy7F9gLd/cY7AahA0Rox6DSsLMyz7A+hNNuamJlhbj+N2u7ddNxVzKebm
+      l4gmMricDVQKacbGp8kUyoiFFAtLS6A2YTJss9UNyGKVN8+ew+vzoRBgfnqCZX8Qu6OBq1fG
+      iKezuJyOe1mz7SrR0AoLS35qgorg4iwlUUEmGcditW7roR8KLBFYDVKWlASX5giE1lEKNeYX
+      /VitRtZjWSymd8l6JktcfOs0FncLs5NjhMIxBKnM4nIQs0lLPF3EZLx9GGk+HWV6bhmFWksk
+      sMiyP4hKpWBubh6D2UJkPYrVYr5tG8GVBVZDa/u7TGpbZzeyuOF/ItXKyGoD3R4Lo1en8PWN
+      IFYLO57r6+jGatBs5SDKlWo81N/FwtwkenszLrOSdGH7uASd0YJOJWwtrsJrIboHhqmVcsTS
+      eR56aIRY2L+j7MX5OQybuUIByqLMQ12NjF4Zxdk5hEKu7ov0hOvJHMPDwyQjq0iCinjITyqb
+      I5nefqe+uaUdh9VIuZRB0FrocOuZ9scxqGUWloMU81neLeN6OLCMUqOlkMugNbtotqlZXEui
+      U4os+UPkcxmkd2ljbm4RhSAjI1OsCgx1e5lbWEKv07C4sEShUKBcvb1vUrVSplgq72MFeEdc
+      MoKAJEnUaiJarZpatXbb/ZzFmQlUliaanRtRYbIsI0kiKpUaURSRxJ1jUQVBoLWjg2I+uxWX
+      W5OkzXKcEmwYebcXLJaJp/IkomGSmfym7A2ri06rpVqp3nHu+vvN1uxXUNHW6sNgs6FRqYhG
+      ti/fFFicpaww0e5tQpJEajWJ3r5eDAYjUi6LyaohGMncRqBEOJqgkEmRSKURRRFRlOjp7UWv
+      11MrFtHrBNaT+Z3bANQ6A/2DQ6wHA8iyhFgTcbd00mCzoBVqmMwGVgKR27aRK9UYGRnev1Mg
+      WZZYWVogmytgMGjJFmWEao5YXmZooIfA/BQmuwvbDkNdLLpOuVREpdGSSmUw6ZQsrsboGxgk
+      FwtSEnR43dtPQ9LxKCura5isdqRKgQZ3E0uz01gdTbhtRmZml2jr6kGn2caGoFDhbfFiNptx
+      2AxE4lm0CpFArMiBA4Osr8ygMdlw2Kx7PgUyqGF6doGWjh4MahG1wYFc5tXBWQAAIABJREFU
+      yaI1Nmw7lYnHY5TLJQS1AbmcJllW0uF1U6qKtLQ0srq6jq/Vg2qn0FhBoMnjwWo10+D2Ukyu
+      kZM0tDa7KNdEvM1OQpEkLd5mlLcJr7UYtMzMzuNo9GBQSQTWs3R3tlKpVGhu8RIJhmhqaUGn
+      3tnGo6RGIBCqL4LrPNjs3ylQnTrvA3UFqPNAU1eAOg80HzoFGD37d7x46q0d36/kE3z5S3/G
+      N779PfLl66ayualxsqUaU+OXKd/fehYfamqlDN/51jf565OvcPHMy8R2tlRvi1jO8V+/+lUS
+      uRLINf7rf/r/CCZ3biQTXeZL//+f89//+m+pbGODjQXnWY3tnJBhf6Ure8/IzAVTSFKCtQU9
+      oWoD60sTCOUM6WyWnsd/gUEXOLzd2MUEgUiUlfG3iRVkymszuIfyWOQM1H7O+ZkQCoUar0ki
+      msrgGzzG4yOde32B+55aKUswmuEzTz5HYPRnvPyj72OwOGi3C1wcneGJIw/zyptXeGS4h/ml
+      AI2+Hj52/BB//Z1vkcrXOPTwIKFYFqVCIBNewtrk48qVCeZKQeKFCpbGDiKzV6iKMs///c+j
+      K2Vp7TtEMTzO3OQoF8YmcTd6kasVmq0qRIUCTYOaUyf/BqXRjtOkptmpJ1ZtoJZd/3CNAOXs
+      OnPzi6wuzZHXNTPz9stIahOxbJWjD/eR2yyduTh1iUsrGdyqHLG8RDwWw9fRxUceGSGfzVAq
+      FHn46DPoFVVC8SxPHhkhV7i3LM8PGmqjk3/yW7/Oy//juxQFFc889zFqpRSLy6tQyxNLpBg+
+      8gxSJoLF5cWkVyNVC4h6J0893EVZaaZvYACrQcuVi5dIFUpMT16lXBF57pOfIBYKoLe6Of5w
+      F6vRjT2HiQtvECpqyIQWMTuaMJtMSKUM04E4No1INOwnW1XjbrBiUsmMBgrkVy8g6h37dx/g
+      Xsgl4/R/5DgnHhsmXQSNVODAI0dwmQROv/kW7s4DtDjNOD0dHDnQSqwgU8pl8fh8HBzo4tL4
+      PF0dPhxOFyaLDaNWRbeviTfOvImpqYdOr2OvL3HfUy2k+dFLr9DY2U9/hw+b3YVGpUQhVtGZ
+      7XR19+BwOOjpbGVlaQmrw43X46GcWmMpUeHoI8Oo1BrczgayZZnnn30Wu17BWsjP7FKIo8eP
+      c+n0KSp6N8cfHUYpCLR0DdPvNWDxdJMMhzaylHc1IeodtDW7sTV3oijEELRGDh0cpFxT4bIa
+      6Rt+6MHYB5geO08gXuapE0+gVt7d7tPi1Cizq0mefvo42vdYFb3OvRNYWqSxrRONQmJx0U9n
+      Z/uutPtAKECdOjvxoVoD1Klzt9QVoM4DTV0B6jzQfMj2Aep8WNhwX7//y9O6AtTZl0iSTOk+
+      FVK5kfoUqM4DTV0B9gHR6PtTXqiYTZIr1R2dbuQmBbh8+iW+/JWv8tVv/4/7IuzihYu711gp
+      xYXxeQBOnTp1z828/uI3Cb5/xWtuYeqtv2MuUuBHf/MN/stffIXvv/T6tp+buXKR3Due3VOn
+      TpENTvDi65f53re/TZkip06d3VGWVqvme9/7693s/geem9YAoeVZPv4r/5wO2/Vjl0+/xOhS
+      jHwui0ENnYeexiVHeePSJP0jR3GyzsW5dTIlkX/yq5/mm9/6LrK+gRPDLRSM7WgzcygaH8Iu
+      xfna175GNFPGWMmRrqXo6BrhwtvnKIsqvvD5T/KVr/wVglzi2V/+Nebe+gmxXI1PfOZXOP3D
+      vyKSKfO5f/QFLr36A1aiRQY77Py3k2+j/s0vUK3UqOTifP2b30VpdPJrn33uprZ6PDZeeull
+      Pv7x53j55VdpMCoZm5xl6Mjz5FIJKmKFl396mqce6+f0TJIGcZ3LUwscOv5xDvb6GD/3Khfn
+      IpQlNV/47Mf41uY1/oNPPMbf/uwCklLPZz/9PCdPnuQXXniBl3/6U7o9dl47P07v8GM064u8
+      eX4Md8cQndYKM8E0Dd4ejj3cx5mrS/zmF5/lS68n+ae/88/5j//Pn5I90s03vvsTxFKJz/7G
+      F3Gb4Ttf+xqew8s891gfVyaX0FjcKCs1xEqJVK5EMZFERkmtWiS+Osd3X3wVZ0sXTw4188PX
+      LpLPZPjN3/mnuDVFgpkaXssHe/m3EgjS5vPe1Tmp+DrobBsp/IFcPn/rFOgH3/lLvvU3J1ma
+      vMhffucHhJZnefLTn4eayG/86i9x9eI4Pzs3xm//499i8sLrRAILPPrsL6EppTh/9u/IYCEx
+      f56iycOrL/2EM+cm8DWaafC0M9A/yMefOcry7BiOro/Q39mCo8FKcukiwVQJSe3glz76EUan
+      FllcmMfmasGqV9PgdKCpJrl85QoToRpf+I1f5cjBIfpHHmOkv5252TnOvvIDjn761xl01rgy
+      v3ZTWyCw7p9ndeEqiZoZm9WK29PM6VOvbl61xNzcAlIpzUIgwo9ffpXW1lZ++uOTAJvX+Bk8
+      RPjRS69sXeO0f51zEwF++YXnANCXoly4epVQssoPf/QSra2tnHrlJSxWGzaHm3NnThMLLZNR
+      ODj2cN+GaGGjsk01E+VP/ugP0bf0oi6lUTV08PkXHueV0xcBLUMHBvjU3/9l5EyE+WiFTzz9
+      GHOzc+/49jau4wcnX+HXv/hb1EKzrK5H8PQ9ynCLBn+8TLvXxXLw1gIY+xOJ3/+//l8Afv9f
+      /QtOT0U4/+rf8vKlFb753R/seNY3vn3zKPf1b/8NAGPnXmfMn9o6fvbcxVsVoGdgmP7uDjoG
+      H+Effe4XtxWglipMz8xQEq/7xggIOFxuNBodz77wS7Q0ebErkkhGJ5pN95tqMcNSYA3QMzDQ
+      ycyF1yjpmtCpFUgbxc43qXHso59GmZjmtVM/40qwhN2sQ1YZKCdWmZ4aJ4+OZGiFaGKjGqTL
+      3cj42BWml9ZwWHW3lJ596rEh/vjP/oqnTnyEF396it6OlhtSkyhIJde5PDoBgM1mp8nbyqc+
+      8fzW+f6FWWaCGbrbGreusdmipbd/YCsI/MlPfoqv/Ic/4cRHn8HZYKPB7eEXP/1Jvv/DFxkc
+      7N2oZAIMDAxstXutC2qLiy9+4fMkgitURIhGQpw9dxGvtxkAnU7J9MQkVWnj/Nt5NDVadVwZ
+      n2ItVUS/9RVtnJFKZ7BZb58zZ/+gwKYRyJSyeHseYm5iirGZEIcGfcRDy3z5K1/lj//zd1n3
+      z/Olv/hv/N7v/wcWlxZ56dXX+fNv/JAa4J+f5KVXX+dr33sJgL/7yYv87//6/2AuWmBmZuFm
+      b1BHoxexnAeFCk+Te+uY3WahzefFYnPi9TTx+JFDzM4t8rFfeIFmrw+H3Upbawut3Qdo0FQo
+      SFp8TQ2sLU1z4NgncVs3Eh11d7URTxd56OAwNosFt6eVzHqQh48+SXNTE+0tTTgbm2lyu6GS
+      RjK3cOLY4+hqGVr7H6arvZVDD/Wwtp7C295Lq0OLrDYy2N9D14FHkNJBWg8cocfnweu51pYT
+      o16L1e2hxdtCt6+RNo+LZEXD448M097dj91mp8VtweBs5UB/F088dohAIEhzSysmg46lyYtk
+      FTae/9jzdPf0Y9+8xo6OdrzNbszGjTpolWqN1fU0n3j6cYYODLO26sfR6OWRkUH84SRPnXgc
+      X0c3TrsNrXrjtye+MoO6sYvB7nbcnjaGulvIZxJcmF7lsWPP8NiBLgDae/qIhdfo6BvC43Zg
+      0Gnwer00uD00N7ro6enEarHR4vXwyGNHCC7OcuSZ5/F6PDS6HHh8bTjsFl478zbPPXVkD0tT
+      3xmyLFMTJcqxZcbmwrj6DpMJTpMsVHju2KNcGJ/jf/tnv8Ubr7/Gow/14Y+kSK7O0X/8U6TW
+      /PzL//XXUADWBhczc4v8iy/+L6zMTdL56PP0WUvktB4WJkbvnzNcJZ9kbD7MR0YG3v3D+5zI
+      6iJ6ZxsW3e29QRenxzG4W2lqsNxx23KtyOWJJQ6NDG4dE0sZVmJFOlsa77nP25FPBPGnFAx0
+      Nu9qu/cDUZQoVaqkV8b5h7/3n/kvX/uP/Ojbf0GqauN3f/uz/NGffol/87u/wx/96ZcYcmkx
+      Dj7B+ZPf4u/99r/l5F/+Gc+88Is8eqAHgD/89/83v/grnyW1cAE6noSl16HjSd780ffq3qB1
+      9ifXFAC5ypXxJQ4O9xINh6goDXhdtq1F8EogSLPDzNlLU7T5mnE3t1DLxhhbjHD80WEAYuEQ
+      8+E0/T4H6GxQSoHORjoRrStAnf3JlgLcZ+obYfuAWqVCTaqXLtoL6gqw65T5k3/3h3z1K19m
+      ciVKOBigWKlRKpXI5XKcP/c2oiSysryCKMlUSgXOvnyS+fU93I37ALCRi7RGrVajXMhTfS+/
+      F2KFfGljdPlg74bsUwxmO26bgZlLZ6kqtZTybyOmAjT1HSafCJOPBpAsDs6PTZMJL2NSKXDv
+      daf3Obl0kvGLV7C0t2GqlDD4ujGqFBj1WtKpJGarDcVmAuViPofWYKSQL2CxmCmXighKNWrV
+      xu99LbuOP2Ogr8VWHwHuBxqdniee/wwj7VbWo0l8vhYsbh8ff/ooAKVKlc7ODmrlPKgMOO13
+      bjV6oJBlarUasixjsTtp8Xhp7+5BrxFYWwszMT7OyvwUuWKZq+OTAEyOXSSeSnH6jTdYnLxK
+      plojvBbh/IULpAJTvPbWKPlShWopx/jUXH0E2H3U/L3PfJoGmxn7weM8oxxFa2vmQF8nggAn
+      njyO3Wzg4uUxXvjUp8hEVkhkq7Q2GN+96QcNuYZ/eRlPWxc69Y07Fwpa2zuIzBdJJpMoizV0
+      ehMAKq2BVl8r+VyeBrVMIRVlPZ2nWttwpBoYPoiNCD+7MMahRx7eXSvQblT8q1MHtrcCpaNR
+      9C4XlUQUpdVFPhHFrFezGAhjtFhp9TYTi67jdLmJRqPolSAYjCzPL1FFoM/nRNS7MZEjWlRS
+      zcXvTQFkWSIeT2Ex6lHodBRzOYxGI6Iovvear3UeWBQKxVbRvPfLDHpPUyD//AyhdIl2swlV
+      s531SI7BHjMKWa6PAA8QZ86cIZ/P8/TTT6PRaDh79iyZTIann36aixcvolKp8Hg8TE5O0t7e
+      Tm9v7153+RbuehFcysaIFUBRK1OTqrx9fozO9tZ971tSZ/c5cuQISqWSZDIJwOHDh9Hr9YyO
+      jpJMJvF6vTgcDk6cOMHc3Ds9V++MVCzM1NQUpapEJrHO5PQcknzzcVmsEo6sgyyxsLBwx21L
+      knT3CqDUmPA1OxBFEQQ1J556gqnxceobyg8e4XCYQqFAbXOBub6+TjabJZlMotPpePPNN4nF
+      Yvz4xz/mueeeuycZNVT097YzMzXDwvIq3S12puZWbjoe8K/gDwRAUKCsFsiUr28SVIpZZmam
+      yeTLxCPBLQWSqiVee+3U3SuAWqvD7XZz9Ikn8PX3YFZqOfTwQ/W5/wOGKIpMT08DkMlkmJyc
+      3Pp/aGiIVCqFTqdjdnYWu93O0tLSPckxG9RcvDhOV28nao0WjcmJXMnccLyb1o5udJtpK1s9
+      Dvxria3zA8tLaIxWjDoFwUiCnlYHM/N+FGodzc2euhm0zr2hVCp59tlnAYjFYtjtdgYHr3u0
+      trS07IqcqxMzjBw6hEKh2Chtmg6j0jfcdPxGSqUSOp2ZbDaL2WzG09ZNrZxjfHoBARlRrCEI
+      1xbaYt0MWufOmA3ESed3N0W8Sa9loM257XvXrECBpXnKoozN0YheUWU1mqG3u4PVG46X0lFK
+      NQlrg5v11WV6+zqZW44x2NdBKZ/GvxrG195FNZ8gkizQ3dWOAOTS92gG3Ym6Anx4+fdff4ML
+      M6FdbXOw3cUf/+OPbvvePZlBZZF4MoOjwX7Hp9y9K4Qssrw4TygSo5zPU5Nl0ul0fRFcZ+8R
+      lHf18MO9KIAk4Wr2sba6QmI1RDwdJRTLsOdVnx9wUqkUb7zxBpnMRtWUeDzOmTNnWFtbIxAI
+      cPHiRWRZplwu35WpcN8gVZmdniIQul4BPhDwA1AuZEhmNqrL53K5m967HbIk3cMiWKkmHVug
+      VJWRqHHl8iQnjh5HliQkSaqPBHtEOp1meHiY06dP87GPfYxLly5x8OBBLBYLJ0+epK2tjcXF
+      RRYWFkilUrS1td1V+7K8+/EK8qaz2zVu3Am+hVqWomTEIZSYXgjQ67OyOD2D1t6MHF5lKlnh
+      yUcPEgis0N/biX92CoXJjdeuA1liaWEeWa2no6WR+flFHE0+FsbO370CVAoZMoUaSllCVmo4
+      duIJ5sanGHloCIVCUV8D7BFms5mf/exnPPvss6hUKrq6upiYmEAQBCwWC16vlzfffBOtVrs1
+      SqhUd/71X7Oc7CaCINy+D1KV2dl5fF196DcPOZrbCI2NsbKY4uFjT7AyP49bDz2tTSz4N0aH
+      1cVF+o+cILgwj9d+gJW5KWwtPYSX55mdjGJweJidnsTpbLy9AtSqFYqVGhqVEq1WC4DGYKG3
+      xwSCgGJz2nNw5MB7vxt13hMvv/wyLpeLeDzO0tISCoUCURTRaDRks1neeOMNjh07hizLnDlz
+      5oOxb6NQ09u/mVShApIoElldRGdxko4FECIRcoUcbr0Rg72J1PQoslpFIptHjIbJFfLIgFqt
+      IpWIk0ilcZk1VGsiHq+HWjZ5ewU4+f3vUtbYMKrghRdeuN6vnYapOnvG5z73OQDK5TJKpRKf
+      z7dllZNlGVEUUavVN332A4XKjFUfR9A56XHayTktmEwmXE4XKqWAQgW9vd3kKqBWyJhMJhqd
+      LiQZnE0+Eqk0Go2GngMHWVlcRG9342hy3l4BjHod87NT9I88/n5dZp07oFSpUSjtbCI02Vwk
+      s9ds9jd8rnj7xLg2s25rVN93KNR0dvds/Wsybfj/Gzf/AqAzYtdd/1e/+Z6gUVMqFRgYPIAg
+      KGnvut7ObRWgsdnDsMaMw10vD3q3lEolNBoNCoUCWZaJRqOYTCb0ej3hcBi73Y4oipRKJRyO
+      u7u/r11e5ss/vLDrff72//kZjDrNrre71yiUato7urZ/73YntvcM8Mgjj7CyMEvdtnPnZLNZ
+      vv71r5NKbeShnJmZYWJighdffJHz58+ztrZGNpvlxz/+MWfPniUW+6Dk6nz/WVlZ3tX2rplJ
+      U5serLcdASavnGc1msHt697VTnzYMZvNHDlyZOt/q9XKW2+9hcFg2HIOy2QyOJ1OOjs7CYfD
+      OJ3buwQ86BQKeYrZFIFQGJ3Jhk4tkIyG8fjaWQkEUao0+NxWApE4FrsTb+O1+1hjfnqBqkJJ
+      b7uH6bkl7HY709OT9PYPo1EJpNbDO48AZ0+9xEo4ueH2zA25ZsUKk5MTXJ2cIR1ZpyTLrKys
+      1O3/N1AqlQiFQqytrREKhfD7/YyMjCAIAo2NjXR3d1MoFIjH48zMzOByufa6y/saSRJBUBIK
+      rbLmX6Kle4hAwM/g0CBIVebm5hCrVVaWl7fOkUUJEYlQKMTC/CI9A0N4PB6amz20eBpJxGKY
+      LbqdR4Cjz3yct994hdHZFSyFwvU3BCW9fX2Mjl4ln4Ll5DpuZ+uGUFlGqid4QpIk+vr6UKlU
+      LC8vc/jwYQKBAB/96Ecxm80sLi7y1FNPUSwWyefzuFyuu7pv9+vHRpJ2/v7k+zEJfsfzIgjC
+      tubZ1UAAld6ELIPWaMGoVeG0mpiYmCCTyeN12ijLanwON8HgKl5vC6V0hFRxY2PW1WBhamqK
+      RncjtXKBUGSjIo9SZ7v9FCicLNDq9VLMxpHZHAUEuHr5Mt39wxRWVxBFsb4+eAc6nY729nbg
+      ulvwjTuvPT09W5+z2+/Od+VBY2BgCJCpVkW6uq4/rkazFXWuhMFoor1nEFEUUSiVBPwrAOgb
+      fDxirqJUDyEAVreIIChpdNqRZBlP48aou6MCZNIpjh4/QSERpqAwbU2BxGKGqqAlHArhttoY
+      bHSztrwMDjOCIDxwewTJbJHf/U8v73q7X3zhEI8P+bZ9735tYikUO39/wv0Ier3j50VArb75
+      UTVaG+i3Nmz9f80DobX1+g+NanPfA0ChuOahIKC84f7tqACxNT8XRidRqrX0Dh28Lshg5/Ch
+      m3+1Ojo67uAi9gZZljl37hwmk4kDBw4gyzIXLlxAo9HQ3NzM5OQkiUSCrq4uIpEInZ2ddHff
+      +aJfkmTi6eKu97tcEXe9zTq3sqP6uZq8NLkdVMsFlpYD72efdp3Ozs4t8xdsKGw+n8ftdnP4
+      8GHMZjPr6+solcr3rWJjnbsntR5iIbC7MQk7jgCRcIi23od44kk3SsU+3R28AwRBwGw27/j/
+      uXPneOyxxzhz5gwjIyNMTk7uRTfr3AHBaGKjppTPw/TEGJVqjY7+hwguTG6+HmZtcQa10UZH
+      WwuVQpbl1RAqrQmTXkU2GcPhbiK4to7JbKPN17zzCNDdP0ybt/F9f/hlWd5VK4coily4cIFQ
+      KMT58+dZXl7mwoULrK2tkUqlcDqdW96S1/LX1NknbMYAFKsSyDWia2sk19dIFkVkhZqHHhrC
+      v7B4w+t5Cvk8bHquypKILAushYJE1/w4W7oJrSwiijWWljeC9PckKF6WZa5cuYLf78dkMrG2
+      tgbAs88+y89//nP6+vpuCrB+LyiVSo4fPw5s7NCaTKabHnKbbaMm7MjIyK7Iq7OL3OANGvfP
+      0/voCZpNEuPTC2QTESareWxNvazMXNp83UkpqWQtFKCj1UNwdRVBpUNGRqExYjVqKTU0ECvU
+      aGvdMN3fkwLUKiVEQY1SEhE0aiqlEjqd7t1P3EQQBA4ePEg4HOaJJ57gG9/4BoIgcPHiRTQa
+      DfF4/F66BcAboytk8uV7Pn87PE4zh3r3f12tDzOO1utZ5YaHepmcrNLfP4BCoSAdc229Fhss
+      tG9afDr7D1CrVum9wajR2NqFSxQRNq1P96AANebHziN4DmLJhdF6XQT9MQ70b+9stBP5fB6N
+      RkOhUKC3t3crXG9oaIgrV67cfbc2+f7paRZDyXs+fzuODbfWFWCfMTg4tO1r5TsCbG40hV5D
+      cUPQ1j0ogIr+/m5msoBc4+dvXeKjTz69tQt8p/P3fD7P448/jlqtRq/fiPc5evQoZ8+epbe3
+      96ZQubvhfuySyrK0Y3+uuYrsNpK0s8z7tdsu1sQdZe55SOR94u4VQKyyEggRKRgxGFUcO36E
+      yYkJHr7LkMjGxuslQA8fPrz1+qmnnrrrLt3I/dgkEgTFjqF79ysEVKHYWeb9ekiUKuWOMvck
+      JPLdqJVIFSVsZsPdnMT89BzhaIz27r57UACFksaOIRoBtVqDQiEwcmD7WsCvXVnm9Oi7R+ff
+      DWqVgt/7h8d2tc06+5exC2+hMrvQyEWq1Rr2Ji+FQhWzsozObieVFlkPzFOtijibmyhUtaQD
+      k/R+5CiRgJ9sMore5qan89oOsYru/gGq8hQtze57UABBccuCd6dfwVAsu+vJlLTqetD9g4Ss
+      0jHY18Xrr/4Uh7uJfKFCKZekJAgMuq2slqpEQkGcjU0USgoKGT9Gi4W5y+ewtg1jqubJ5vNI
+      bL/r+2A57tT5wGGzbbjdtLS0oNFosdtt2Ex6tEYrCCoMeg1ebwsajR673YJarGBvG6RUlWh1
+      mwABsVqlnE+wnrzuDWAwbEyb6slx6+xr2to3pi5dfdctPViuWxzbvID3ulOcbWRjPek8+gQA
+      nb3X95P0N5Rhu+adWx8B6jzQ1BWgzr7nfkYb1hWgzr5m6uplguGdPXSvlV6SKoVb0rdPTU5t
+      vY74F7g8OQNcD4iHXVwDSJu5QW/EadEx0Lq7KVU0auVtN586mqxoVbur1x6ncUeZCoFdv0bY
+      qIyyk0yrUXNfZLKZQGs7Wlwm8sXdldnmttwk75aAKrGCPxjhgMvL1ctvI0rg6x1kYfQyzrZu
+      On3NFAobSXEVYpFkTs3y9BgqjQJTQycA/qU5XN5OYtkiGllGAlLpFDqNAn9w7YNfH+BBkHnt
+      h+X93CXd6/t6rT7A6JVRRg72MDkRZnCgkcnpVaqVGiMHNxbFo6NXGBk5CLkwUwkNQi5M/2Ar
+      05MJ4uFJdI52Hhnu5PXXz2I3KLC0P0wxEcBlMxPPFnfXCrQX4ZAPgsy9yOO5X+6r0WQEDAhS
+      mrHRBL7eQbKx6zXAlIhMT0/R2uzEoFUhSAZAicGgRd85gIoKgWU/Bw4fw2FUsLiwjAxUKhVk
+      SdrdEeBOkGWZpfkZilWB/v5OZienMTubMKkkQutxnE0taOUi6YqC1ubdSRdSKxeYW1hGa7LS
+      aNWx6A/R1tVLOrJKpliho6Md//ISKp2J7o7WXZGZioUJrcdxNbdSy8VI5mv0dLWyOL+IoDXg
+      smhZW0/gaPTS6LDuiszA0jyZQpXuvh5W5mbQmBpwWjT4gxFszkY8bgezM1N09gywG7NEqVZh
+      dm4epdZIW5ONmfkVPG3dVLLrJNJ52rr6CC1No9RZNkrp3oUe369C2YVsCn84QX/PxhRpTxbB
+      LW2dGIUis5NzODoHSEbDGCx2ervaiKyFEWUFxXx29wQqVPT295NJRFlcCTE02Id/aYlGbytu
+      i5pYqkhXbz+5dGLXMlwYLA30dLURCfmJpsp4bBpCsRxdPX1UMklMjkY62rysRyLv3tgd0uht
+      xWlSsDgzi87ZQikTQ6E109/bTTQcIRZaIRJNIu6SX5uMQHdfP8Vsgtl5PwMHDhDyL+Bwe2hv
+      thJaC5MtSLT6vLsjcBcwmG1bDz/sgQIIQGBxFsHSjFEFBq0KhSBQziUZnV5mYKCHhoaGd23n
+      blAoZMYuXaK9ux+lSolCoURAJry6SKqmw9doYWrsEr6Onl3LfVDOJbk6vUJ/XycqlQa1Ro0k
+      SkyNX6GxrQtFrYLfv4pGs3u5OMOrS2RlIy6LHp1Wg0ohUC3nuTQ2SX9/F5Ozi9RKWRKpzK7I
+      UyoVTF65RHNrDyqVEoWgQCEIJCJBVuJVetqbafG6OH/ubWr7NHHa+64AslwjGk9TyqVp8DQz
+      efkSgkbPanANk05FPJ5kZXmBeHSdTGF3AlvS6yFEtYF4PIbdrOOJqhZAAAADm0lEQVTK6BhW
+      h4tINIlULrC+tkpR0pCMx9gtp9/V4BoGnYp4qoRCzDK9FMairVGsKUgnYqyvR5AFxS6WlpKI
+      rMcRy3k0tgYCs5MUJDXxcBCDQU8skeH4k0/R09ODw25+9+bugGIqQkHWkEzEcDWYGRsbRW91
+      shZZRylVSMSTxBNJtEYTyn0aVv6+rwHeyYZ44f0rMSZv5Dh7PxeW127xTTI3+4FwXzLubC/z
+      PrPdd3mv/bhfa4B3sucKUKfOXlLfCa7zQFNXgDoPNHUFqPNAU1eAOg80dQWo80BziwLkshkC
+      wXXE92QbkolEEzu+Wy2XCITC5EvVe0p/ks5eC22TSGcK5PKF237+Gnf6uWufzWUz+EMRapJM
+      PBZjLbrhRlsolm75/PU+3X0fZLHGajBMOlckl80SXN+4d8VCnkAoQrm2/e5EOpUisBZDlkSC
+      oTCFikg0GiUcSyFWK6yGIpSqG+dGoveebOyd3PqdydRq754eJp25s3v0bhQyuRtrX9507++k
+      HzdyizNcJJrA1+qjWsyzlsljMplQIiBKNcRKmYqsQq4WMZgtFLI5NHoDtUoBrX5js8NiNpJP
+      xllPl3G7qqysxNAadAhShUpVxuNtIhKNY3O4UAsic4shfM1uUvkCJpOFTCKK0WiiWK1iMVsx
+      qmoEYnkMeh16jRJRksik0+TzecxWC5lsAYtJSywaQ1JqcDdYCARWMRiNFMtVjHo1So0Jubbx
+      0MbjcYpVGZNei0KqIOgtVHMZchURl7MBvWbjltREkVQ6R5vHhT8cpZgv0Nu1EUYXT6SoGHUU
+      y2V0Bgv5dJJsuYZYqZAvVzEbdBTKFXR6A6V8DrVWj1QtodYZUAgyuWyWRDqPx9uESgBRkmlu
+      duFfXUeslrA7XZvfRZzGZg9KqUIglMFsNpFJJVBq9HgbHeiNRiqFCAurUVq9jYTDEZrcDlZD
+      EYLFPBqdHo1KQTkbB42ZtbUwZUlBc4OJWCKNtcFGLJZBlmqotVqMGiX5cg2zUUO+WKOp0UEq
+      kaBULmOy2Mmk02h1WuKxBD5fC1qhxloyh9WsIxhK4m1qIFsoYDGZiMbTWM0GSuUyVpuNRCxB
+      sSpitWyULg1HIlSqMg67mVQ2h8VsIhpLYzToECUZm0lLMpvHbLaQjCfR6HQYNApShQomWQKL
+      CblYIJzIIkoy5WIBSaEhnUzg8Xoo5jJICg1NThvB0BpVUQJZSVOjjXgihdlkJpXJ8T8B5sQo
+      OhMTXTIAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

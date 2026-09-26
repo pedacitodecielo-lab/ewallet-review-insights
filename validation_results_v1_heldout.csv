@@ -1,0 +1,12 @@
+theme,support,tp,fp,fn,precision,recall,f1
+Balance lost / unauthorised deduction,13,7,3,6,0.7,0.54,0.61
+Failed / pending transfer or top-up,36,19,4,17,0.83,0.53,0.64
+"Login, OTP & verification",23,21,4,2,0.84,0.91,0.87
+Account security & fraud,5,4,4,1,0.5,0.8,0.62
+Customer service,35,25,3,10,0.89,0.71,0.79
+Fees & charges,8,2,0,6,1.0,0.25,0.4
+Hard to use,7,3,0,4,1.0,0.43,0.6
+App performance & bugs,24,15,5,9,0.75,0.62,0.68
+"Paylater, loans & debt collection",2,2,1,0,0.67,1.0,0.8
+"Ads, notifications & promos",3,2,1,1,0.67,0.67,0.67
+ALL (micro),156,100,25,56,0.8,0.64,0.71
