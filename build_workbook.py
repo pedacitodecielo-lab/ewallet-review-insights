@@ -482,7 +482,7 @@ def windows():
     names = [n for n in ("E-money transaction value", "Average rating per app", "Star-rating mix per app",
                          "Reviews per day", "Review KPIs", "Complaint heatmap", "Star ratings of selection",
                          "What users wrote", "Priority matrix", "DANA vs peers", "DANA by app version")]
-    w = "".join(f"<window class='worksheet' name='{q(n)}'>{CARDS}<simple-id uuid='{uid()}' /></window>" for n in names)
+    w = "".join(f"<window class='worksheet' hidden='true' name='{q(n)}'>{CARDS}<simple-id uuid='{uid()}' /></window>" for n in names)
     for i, (d, sheets) in enumerate(DASH_SHEETS.items()):
         mx = "maximized='true' " if i == 0 else ""
         vp = "".join(f"<viewpoint name='{q(n)}'>" + ("" if n == "What users wrote" else "<zoom type='entire-view' />") + "</viewpoint>" for n in sheets)

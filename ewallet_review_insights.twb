@@ -2078,7 +2078,7 @@
     </dashboard>
   </dashboards>
   <windows saved-dpi-scale-factor='1.5' source-height='30'>
-    <window class='worksheet' name='E-money transaction value'>
+    <window class='worksheet' hidden='true' name='E-money transaction value'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2101,7 +2101,7 @@
       </cards>
       <simple-id uuid='{D2A5EC67-0556-4719-A37D-5D3AF628480D}' />
     </window>
-    <window class='worksheet' name='Average rating per app'>
+    <window class='worksheet' hidden='true' name='Average rating per app'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2124,7 +2124,7 @@
       </cards>
       <simple-id uuid='{F0F0923A-59B1-4077-A455-BD8C6DA9C477}' />
     </window>
-    <window class='worksheet' name='Star-rating mix per app'>
+    <window class='worksheet' hidden='true' name='Star-rating mix per app'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2147,7 +2147,7 @@
       </cards>
       <simple-id uuid='{D32F0527-D016-4641-BFFD-E0045CAE7AFC}' />
     </window>
-    <window class='worksheet' name='Reviews per day'>
+    <window class='worksheet' hidden='true' name='Reviews per day'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2170,7 +2170,7 @@
       </cards>
       <simple-id uuid='{6545950C-F392-42E6-90E7-7B8070DAB8BB}' />
     </window>
-    <window class='worksheet' name='Review KPIs'>
+    <window class='worksheet' hidden='true' name='Review KPIs'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2193,7 +2193,7 @@
       </cards>
       <simple-id uuid='{64034D71-482E-4026-B299-CAEB73EBA1C7}' />
     </window>
-    <window class='worksheet' name='Complaint heatmap'>
+    <window class='worksheet' hidden='true' name='Complaint heatmap'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2216,7 +2216,7 @@
       </cards>
       <simple-id uuid='{D17F79DB-1204-494E-B2E1-6C3F599767B1}' />
     </window>
-    <window class='worksheet' name='Star ratings of selection'>
+    <window class='worksheet' hidden='true' name='Star ratings of selection'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2239,7 +2239,7 @@
       </cards>
       <simple-id uuid='{FEACB0AD-3F0B-4DA8-B214-DF9AD2E6FC48}' />
     </window>
-    <window class='worksheet' name='What users wrote'>
+    <window class='worksheet' hidden='true' name='What users wrote'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2262,7 +2262,7 @@
       </cards>
       <simple-id uuid='{B3481011-B10F-4BA3-86A3-63E53EF083AE}' />
     </window>
-    <window class='worksheet' name='Priority matrix'>
+    <window class='worksheet' hidden='true' name='Priority matrix'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2285,7 +2285,7 @@
       </cards>
       <simple-id uuid='{BF3F4E68-FD44-4348-A416-60D9756188D9}' />
     </window>
-    <window class='worksheet' name='DANA vs peers'>
+    <window class='worksheet' hidden='true' name='DANA vs peers'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2308,7 +2308,7 @@
       </cards>
       <simple-id uuid='{DC5FD104-9D02-476A-AD14-B8B928CF9759}' />
     </window>
-    <window class='worksheet' name='DANA by app version'>
+    <window class='worksheet' hidden='true' name='DANA by app version'>
       <cards>
         <edge name='left'>
           <strip size='160'>
