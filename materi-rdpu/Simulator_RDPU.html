@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simulator RDPU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,600;7..72,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: satu kolom bacaan, alat hitung berupa panel dua kolom yang menumpuk di layar sempit */
+:root {
+  --ink: #0E1B2C;
+  --ink-2: #1D3A55;
+  --bg: #F7FAF9;
+  --surface: #FFFFFF;
+  --line: #DCE6E2;
+  --fg: #0E1B2C;
+  --muted: #56677A;
+  --mint: #138F77;
+  --mint-soft: #E3F4EF;
+  --gold: #C98A12;
+  --gold-soft: #FCF1DA;
+  --blue: #3F6FCC;
+  --slate: #7D8C9C;
+  --bad: #C9473F;
+  --bad-soft: #FBE6E5;
+  --font-display: "Literata", Cambria, Georgia, serif;
+  --font-body: "Plus Jakarta Sans", Calibri, "Segoe UI", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1622; --surface: #12233A; --line: #24405C; --fg: #EAF2EF; --muted: #A3B4C4;
+    --mint: #3CCBAA; --mint-soft: #123A36; --gold: #F2B33D; --gold-soft: #3A2E14; --blue: #7FA2EE; --slate: #93A3B3;
+    --bad: #F08A84; --bad-soft: #3A1E22; --ink: #EAF2EF; --ink-2: #1D3A55;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B1622; --surface: #12233A; --line: #24405C; --fg: #EAF2EF; --muted: #A3B4C4;
+  --mint: #3CCBAA; --mint-soft: #123A36; --gold: #F2B33D; --gold-soft: #3A2E14; --blue: #7FA2EE; --slate: #93A3B3;
+  --bad: #F08A84; --bad-soft: #3A1E22; --ink: #EAF2EF; --ink-2: #1D3A55;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55; padding: 0 16px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-block: 40px 64px; display: grid; gap: 48px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.1rem; font-family: var(--font-body); font-weight: 700; }
+p { margin: 0; }
+.eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+.lead { color: var(--muted); max-width: 62ch; font-size: 1.05rem; }
+header { display: grid; gap: 12px; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+nav a { color: var(--mint); font-weight: 600; text-decoration: none; border: 1.5px solid var(--mint); border-radius: 999px; padding: 6px 14px; font-size: .9rem; }
+nav a:hover, nav a:focus-visible { background: var(--mint-soft); }
+section { display: grid; gap: 20px; scroll-margin-top: 16px; }
+.sec-head { display: grid; gap: 6px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: grid; gap: 20px; }
+.tool { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 28px; }
+@media (max-width: 760px) { .tool { grid-template-columns: minmax(0, 1fr); } }
+.inputs { display: grid; gap: 14px; align-content: start; }
+label { display: grid; gap: 6px; font-size: .9rem; font-weight: 600; }
+label small { font-weight: 400; color: var(--muted); }
+.field { display: flex; align-items: center; border: 1.5px solid var(--line); border-radius: 10px; background: var(--bg); overflow: hidden; }
+.field span { padding: 0 10px; color: var(--muted); font-size: .9rem; white-space: nowrap; }
+.field input { border: 0; background: transparent; color: var(--fg); font: inherit; padding: 10px 10px; width: 100%; min-width: 0; font-variant-numeric: tabular-nums; }
+.field:focus-within { border-color: var(--mint); }
+input[type="range"] { width: 100%; accent-color: var(--mint); }
+.results { display: grid; gap: 16px; min-width: 0; }
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 560px) { .tiles { grid-template-columns: minmax(0, 1fr); } }
+.tile { border-radius: 12px; padding: 14px; background: var(--bg); border: 1px solid var(--line); display: grid; gap: 2px; }
+.tile .name { font-size: .82rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
+.tile .val { font-size: 1.25rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.tile .gain { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tile.best { background: var(--mint-soft); border-color: var(--mint); }
+.chart { width: 100%; height: auto; display: block; }
+.chart text { fill: var(--muted); font-family: var(--font-body); font-size: 11px; }
+.note { font-size: .85rem; color: var(--muted); }
+.callout { background: var(--gold-soft); border-radius: 10px; padding: 12px 14px; font-size: .92rem; }
+.formula { font-variant-numeric: tabular-nums; display: grid; gap: 8px; }
+.row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.row:last-child { border-bottom: 0; }
+.row b { font-variant-numeric: tabular-nums; text-align: right; }
+.quiz { display: grid; gap: 16px; }
+.q { display: grid; gap: 10px; }
+.q p.ask { font-weight: 700; }
+.opts { display: grid; gap: 8px; }
+.opts button { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1.5px solid var(--line); border-radius: 10px; padding: 10px 14px; cursor: pointer; }
+.opts button:hover:not(:disabled), .opts button:focus-visible { border-color: var(--mint); outline: none; }
+.opts button.right { background: var(--mint-soft); border-color: var(--mint); font-weight: 700; }
+.opts button.wrong { background: var(--bad-soft); border-color: var(--bad); }
+.opts button:disabled { cursor: default; }
+.exp { font-size: .9rem; color: var(--muted); }
+.score { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; }
+.score strong { font-size: 1.2rem; font-variant-numeric: tabular-nums; }
+.btn { font: inherit; font-weight: 700; border: 0; border-radius: 999px; padding: 10px 18px; background: var(--mint); color: #fff; cursor: pointer; }
+:root[data-theme="dark"] .btn { color: #0B1622; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn { color: #0B1622; } }
+.btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+dl { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; margin: 0; }
+dl div { padding: 12px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 180px) minmax(0, 1fr); gap: 16px; }
+@media (max-width: 560px) { dl div { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+dt { font-weight: 700; }
+dd { margin: 0; color: var(--muted); }
+footer { font-size: .85rem; color: var(--muted); display: grid; gap: 6px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Pendamping materi regenerasi divisi</p>
+    <h1>Simulator Reksa Dana Pasar Uang</h1>
+    <p class="lead">Ubah angkanya dan lihat sendiri bedanya menyimpan uang di tabungan, deposito, dan RDPU. Semua hasil di halaman ini adalah ilustrasi dengan asumsi tetap, bukan janji imbal hasil.</p>
+    <nav aria-label="Bagian halaman">
+      <a href="#simulasi">Simulasi pertumbuhan</a>
+      <a href="#nab">Hitung unit dan NAB</a>
+      <a href="#kuis">Kuis</a>
+      <a href="#istilah">Kamus istilah</a>
+    </nav>
+  </header>
+
+  <section id="simulasi" aria-labelledby="h-sim">
+    <div class="sec-head">
+      <h2 id="h-sim">Simulasi pertumbuhan</h2>
+      <p class="lead">Contoh awal: setoran Rp1.000.000, lalu Rp200.000 tiap bulan selama 2 tahun.</p>
+    </div>
+    <div class="panel tool">
+      <div class="inputs">
+        <label for="awal">Setoran awal
+          <div class="field"><span>Rp</span><input id="awal" type="text" inputmode="numeric" value="1.000.000"></div>
+        </label>
+        <label for="bulanan">Setoran tiap bulan
+          <div class="field"><span>Rp</span><input id="bulanan" type="text" inputmode="numeric" value="200.000"></div>
+        </label>
+        <label for="lama">Lama menabung: <output id="lamaOut">24 bulan</output>
+          <input id="lama" type="range" min="1" max="60" value="24">
+        </label>
+        <label for="rRdpu">Return RDPU per tahun <small>sudah bersih biaya, tanpa pajak tambahan</small>
+          <div class="field"><input id="rRdpu" type="number" step="0.1" min="0" max="15" value="4.5"><span>%</span></div>
+        </label>
+        <label for="rDep">Bunga deposito per tahun <small>sebelum pajak 20%</small>
+          <div class="field"><input id="rDep" type="number" step="0.05" min="0" max="15" value="3.75"><span>%</span></div>
+        </label>
+        <label for="rTab">Bunga tabungan per tahun <small>anggap sudah bersih</small>
+          <div class="field"><input id="rTab" type="number" step="0.1" min="0" max="10" value="0.5"><span>%</span></div>
+        </label>
+      </div>
+      <div class="results">
+        <div class="tiles" id="tiles"></div>
+        <svg class="chart" id="chart" viewBox="0 0 640 300" role="img" aria-label="Grafik keuntungan bersih dari waktu ke waktu"></svg>
+        <p class="note">Grafik menunjukkan keuntungan bersih (saldo dikurangi total setoran), bukan total saldo, supaya selisihnya terlihat jelas.</p>
+        <p class="callout" id="insight"></p>
+        <p class="note">Asumsi: bunga dan return dihitung bulanan dan diinvestasikan ulang. Deposito diasumsikan bisa ditambah tiap bulan supaya perbandingannya adil, padahal di kenyataannya deposito punya tenor tetap dan pencairan lebih awal biasanya kena penalti. Bunga tabungan di bank tertentu juga bisa kena pajak 20% jika saldo di atas Rp7,5 juta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="nab" aria-labelledby="h-nab">
+    <div class="sec-head">
+      <h2 id="h-nab">Hitung unit dan NAB/UP</h2>
+      <p class="lead">Nilai investasi = jumlah unit × NAB/UP. Unitnya tetap, harga per unitnya yang bergerak.</p>
+    </div>
+    <div class="panel tool">
+      <div class="inputs">
+        <label for="nBeli">Nominal pembelian
+          <div class="field"><span>Rp</span><input id="nBeli" type="text" inputmode="numeric" value="1.000.000"></div>
+        </label>
+        <label for="nabBeli">NAB/UP saat beli
+          <div class="field"><span>Rp</span><input id="nabBeli" type="number" step="0.01" min="1" value="1500"></div>
+        </label>
+        <label for="nabJual">NAB/UP saat jual
+          <div class="field"><span>Rp</span><input id="nabJual" type="number" step="0.01" min="1" value="1567.5"></div>
+        </label>
+      </div>
+      <div class="results formula" id="nabOut"></div>
+    </div>
+  </section>
+
+  <section id="kuis" aria-labelledby="h-kuis">
+    <div class="sec-head">
+      <h2 id="h-kuis">Kuis cepat</h2>
+      <p class="lead">Lima soal. Pilih jawaban, pembahasannya langsung muncul.</p>
+    </div>
+    <div class="panel quiz" id="quiz"></div>
+  </section>
+
+  <section id="istilah" aria-labelledby="h-ist">
+    <div class="sec-head"><h2 id="h-ist">Kamus istilah</h2></div>
+    <div class="panel">
+      <dl>
+        <div><dt>RDPU</dt><dd>Reksa dana yang seluruh dananya ditempatkan di instrumen pasar uang dan/atau efek utang dengan jatuh tempo, atau sisa jatuh tempo, maksimal 1 tahun.</dd></div>
+        <div><dt>NAB</dt><dd>Nilai Aktiva Bersih: total nilai aset reksa dana dikurangi kewajibannya.</dd></div>
+        <div><dt>NAB/UP</dt><dd>Harga satu unit penyertaan. Diumumkan setiap hari bursa.</dd></div>
+        <div><dt>Unit Penyertaan</dt><dd>Satuan kepemilikan investor di sebuah reksa dana.</dd></div>
+        <div><dt>Manajer Investasi</dt><dd>Perusahaan berizin OJK yang mengelola portofolio reksa dana.</dd></div>
+        <div><dt>Bank Kustodian</dt><dd>Bank yang menyimpan aset reksa dana dan menghitung NAB. Aset dicatat terpisah dari harta Manajer Investasi.</dd></div>
+        <div><dt>APERD</dt><dd>Agen Penjual Efek Reksa Dana: bank atau aplikasi tempat investor membeli reksa dana.</dd></div>
+        <div><dt>SID</dt><dd>Single Investor Identification, nomor identitas tunggal investor yang dicatat KSEI.</dd></div>
+        <div><dt>Subscription / Redemption</dt><dd>Pembelian dan penjualan kembali unit reksa dana.</dd></div>
+        <div><dt>Fund fact sheet</dt><dd>Laporan bulanan berisi kinerja, komposisi portofolio, dan biaya sebuah reksa dana.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <footer>
+    <p>Data acuan: BI Rate 5,75% (RDG 22 sampai 23 September 2026), tingkat bunga penjaminan LPS 3,75% (periode 1 Juli sampai 30 September 2026). Perbarui angka sebelum dipakai.</p>
+    <p>Halaman ini alat belajar, bukan rekomendasi membeli produk tertentu.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const rupiah = (n) => "Rp" + Math.round(n).toLocaleString("id-ID");
+  const parseRp = (s) => Number(String(s).replace(/[^0-9]/g, "")) || 0;
+  const fmtInput = (el) => {
+    const v = parseRp(el.value);
+    el.value = v ? v.toLocaleString("id-ID") : "";
+  };
+  const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+  function grow(awal, bulanan, months, annual) {
+    const r = annual / 100 / 12;
+    let bal = awal;
+    const path = [bal];
+    for (let m = 1; m <= months; m++) {
+      bal = bal * (1 + r) + bulanan;
+      path.push(bal);
+    }
+    return path;
+  }
+
+  function niceMax(v) {
+    const p = Math.pow(10, Math.floor(Math.log10(v)));
+    for (const k of [1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10]) if (k * p >= v) return k * p;
+    return 10 * p;
+  }
+
+  function shortRp(v) {
+    if (v >= 1e9) return (v / 1e9).toLocaleString("id-ID", { maximumFractionDigits: 1 }) + " M";
+    if (v >= 1e6) return (v / 1e6).toLocaleString("id-ID", { maximumFractionDigits: 1 }) + " jt";
+    if (v >= 1e3) return (v / 1e3).toLocaleString("id-ID", { maximumFractionDigits: 0 }) + " rb";
+    return String(Math.round(v));
+  }
+
+  function drawChart(series, months) {
+    const svg = $("chart");
+    const W = 640, H = 300, L = 62, R = 16, T = 16, B = 34;
+    const maxV = niceMax(Math.max(1000, ...series.flatMap((s) => s.gain)) * 1.02);
+    const x = (i) => L + (i / months) * (W - L - R);
+    const y = (v) => T + (1 - v / maxV) * (H - T - B);
+    let out = "";
+    for (let k = 0; k <= 4; k++) {
+      const v = (maxV / 4) * k, yy = y(v);
+      out += `<line x1="${L}" x2="${W - R}" y1="${yy}" y2="${yy}" stroke="${css("--line")}" stroke-width="1"/>`;
+      out += `<text x="${L - 8}" y="${yy + 4}" text-anchor="end">${shortRp(v)}</text>`;
+    }
+    const step = months <= 12 ? 3 : months <= 24 ? 6 : 12;
+    for (let m = 0; m <= months; m += step) out += `<text x="${x(m)}" y="${H - 10}" text-anchor="middle">${m} bln</text>`;
+    for (const s of series) {
+      const d = s.gain.map((v, i) => (i ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1)).join(" ");
+      out += `<path d="${d}" fill="none" stroke="${css(s.color)}" stroke-width="${s.main ? 3 : 2}" stroke-linejoin="round"/>`;
+      const last = s.gain[s.gain.length - 1];
+      out += `<circle cx="${x(months)}" cy="${y(last)}" r="4" fill="${css(s.color)}"/>`;
+    }
+    svg.innerHTML = out;
+  }
+
+  function simulate() {
+    const awal = parseRp($("awal").value), bulanan = parseRp($("bulanan").value);
+    const months = Number($("lama").value);
+    $("lamaOut").textContent = months + " bulan";
+    const rR = Math.max(0, Number($("rRdpu").value) || 0);
+    const rD = Math.max(0, Number($("rDep").value) || 0) * 0.8;
+    const rT = Math.max(0, Number($("rTab").value) || 0);
+    const modal = awal + bulanan * months;
+    const series = [
+      { name: "Tabungan", color: "--slate", data: grow(awal, bulanan, months, rT) },
+      { name: "Deposito (setelah pajak)", color: "--blue", data: grow(awal, bulanan, months, rD) },
+      { name: "RDPU", color: "--mint", data: grow(awal, bulanan, months, rR), main: true },
+    ];
+    series.forEach((s) => { s.gain = s.data.map((v, i) => v - (awal + bulanan * i)); });
+    const finals = series.map((s) => s.data[s.data.length - 1]);
+    const best = finals.indexOf(Math.max(...finals));
+    $("tiles").innerHTML = series.map((s, i) => `
+      <div class="tile${i === best ? " best" : ""}">
+        <span class="name"><span class="dot" style="background:var(${s.color})"></span>${s.name}</span>
+        <span class="val">${rupiah(finals[i])}</span>
+        <span class="gain">untung ${rupiah(finals[i] - modal)}</span>
+      </div>`).join("");
+    drawChart(series, months);
+    const diff = finals[2] - finals[1];
+    $("insight").textContent = `Total uang yang kamu setor: ${rupiah(modal)}. ` + (diff >= 0
+      ? `Dengan asumsi ini, RDPU unggul ${rupiah(diff)} dibanding deposito setelah pajak. Selisihnya datang dari return yang lebih tinggi dan tidak adanya pajak tambahan di tingkat investor.`
+      : `Dengan asumsi ini, deposito setelah pajak unggul ${rupiah(-diff)} dibanding RDPU. Ini bisa terjadi saat return RDPU sedang rendah.`);
+  }
+
+  function nab() {
+    const n = parseRp($("nBeli").value);
+    const b = Number($("nabBeli").value) || 0, j = Number($("nabJual").value) || 0;
+    if (!n || b <= 0 || j <= 0) { $("nabOut").innerHTML = `<p class="note">Isi nominal dan kedua NAB/UP dengan angka lebih dari nol.</p>`; return; }
+    const unit = n / b, nilai = unit * j, untung = nilai - n, pct = (j / b - 1) * 100;
+    const f4 = (v) => v.toLocaleString("id-ID", { maximumFractionDigits: 4 });
+    $("nabOut").innerHTML = `
+      <div class="row"><span>Unit yang didapat<br><small class="note">${n.toLocaleString("id-ID")} ÷ ${f4(b)}</small></span><b>${f4(unit)} unit</b></div>
+      <div class="row"><span>Nilai saat jual<br><small class="note">${f4(unit)} × ${f4(j)}</small></span><b>${rupiah(nilai)}</b></div>
+      <div class="row"><span>Keuntungan</span><b style="color:var(${untung >= 0 ? "--mint" : "--bad"})">${untung >= 0 ? "" : "-"}${rupiah(Math.abs(untung))} (${pct.toLocaleString("id-ID", { maximumFractionDigits: 2 })}%)</b></div>
+      <p class="callout">Perhatikan: jumlah unit tidak berubah dari beli sampai jual. Yang berubah hanya NAB/UP.</p>`;
+  }
+
+  const QUIZ = [
+    { q: "RDPU hanya boleh membeli efek utang yang jatuh tempo atau sisa jatuh temponya maksimal...", o: ["3 tahun", "1 tahun", "5 tahun"], a: 1, e: "Batas 1 tahun inilah yang membuat NAB/UP RDPU stabil." },
+    { q: "Kamu beli RDPU Rp1.000.000 saat NAB/UP Rp1.250. Berapa unit yang kamu dapat?", o: ["800 unit", "1.250 unit", "125 unit"], a: 0, e: "1.000.000 ÷ 1.250 = 800 unit." },
+    { q: "Apakah RDPU dijamin LPS?", o: ["Ya, sampai Rp2 miliar", "Tidak", "Ya, kalau beli lewat bank"], a: 1, e: "Penjaminan LPS berlaku untuk simpanan bank. RDPU dilindungi lewat pengawasan OJK dan pemisahan aset di Bank Kustodian, tapi tidak dijamin LPS." },
+    { q: "Siapa yang menyimpan aset reksa dana?", o: ["Manajer Investasi", "Aplikasi penjual (APERD)", "Bank Kustodian"], a: 2, e: "Bank Kustodian menyimpan aset dan menghitung NAB. Manajer Investasi hanya mengelola." },
+    { q: "Ada yang menawarkan RDPU dengan untung pasti 10% per tahun. Sikap yang tepat?", o: ["Ambil, mumpung tinggi", "Curigai dan cek legalitasnya di OJK", "Ajak teman supaya dapat bonus"], a: 1, e: "Reksa dana tidak boleh menjanjikan imbal hasil pasti. Pada 2019 OJK membubarkan enam reksa dana Minna Padi yang dipasarkan dengan janji seperti ini." },
+  ];
+  let answered = 0, correct = 0;
+  function renderQuiz() {
+    answered = 0; correct = 0;
+    const box = $("quiz");
+    box.innerHTML = QUIZ.map((it, qi) => `
+      <div class="q" id="q${qi}">
+        <p class="ask">${qi + 1}. ${it.q}</p>
+        <div class="opts">${it.o.map((o, oi) => `<button type="button" id="q${qi}o${oi}" data-q="${qi}" data-o="${oi}">${String.fromCharCode(65 + oi)}. ${o}</button>`).join("")}</div>
+        <p class="exp" id="e${qi}" hidden></p>
+      </div>`).join("") + `<div class="score"><strong id="skor">Skor: 0 dari ${QUIZ.length}</strong><button class="btn" type="button" id="ulang">Ulangi kuis</button></div>`;
+    box.querySelectorAll(".opts button").forEach((b) => b.addEventListener("click", onAnswer));
+    $("ulang").addEventListener("click", renderQuiz);
+  }
+  function onAnswer(ev) {
+    const qi = Number(ev.currentTarget.dataset.q), oi = Number(ev.currentTarget.dataset.o);
+    const it = QUIZ[qi];
+    document.querySelectorAll(`#q${qi} button`).forEach((b) => {
+      b.disabled = true;
+      if (Number(b.dataset.o) === it.a) b.classList.add("right");
+    });
+    if (oi !== it.a) ev.currentTarget.classList.add("wrong"); else correct++;
+    answered++;
+    const e = $("e" + qi);
+    e.textContent = (oi === it.a ? "Benar. " : "Belum tepat. ") + it.e;
+    e.hidden = false;
+    $("skor").textContent = `Skor: ${correct} dari ${QUIZ.length}` + (answered === QUIZ.length ? (correct === QUIZ.length ? ". Sempurna." : ". Coba lagi untuk yang salah.") : "");
+  }
+
+  ["awal", "bulanan"].forEach((id) => {
+    $(id).addEventListener("input", simulate);
+    $(id).addEventListener("blur", () => fmtInput($(id)));
+  });
+  ["lama", "rRdpu", "rDep", "rTab"].forEach((id) => $(id).addEventListener("input", simulate));
+  $("nBeli").addEventListener("input", nab);
+  $("nBeli").addEventListener("blur", () => fmtInput($("nBeli")));
+  ["nabBeli", "nabJual"].forEach((id) => $(id).addEventListener("input", nab));
+  try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", simulate); } catch (e) {}
+  new MutationObserver(simulate).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+  simulate(); nab(); renderQuiz();
+})();
+</script>
+</body>
+</html>
